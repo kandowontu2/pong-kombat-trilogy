@@ -12,6 +12,8 @@ dist/Pong Kombat Trilogy.exe
 
 Release size: 23,569,315 bytes. SHA-256: `5D9F93BFE9A0A90041D7A2068B610189D03C9D52009E138666ACB158BBC75478`.
 
+The current packaged build is also available from the public [GitHub Releases page](https://github.com/kandowontu/pong-kombat-trilogy/releases/latest).
+
 Global controls:
 
 - `Enter` / `Space`: select or confirm.
