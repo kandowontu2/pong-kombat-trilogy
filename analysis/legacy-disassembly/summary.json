@@ -1,0 +1,39 @@
+{
+  "pk1": {
+    "path": "analysis\\originals\\pk1\\v1.5-final\\PONGKOMB.EXE",
+    "sha256": "DA6FC8A34BB52470DDE974B77A6B41594E4A51A21EAAD6AEDA6043B3DA85338E",
+    "functions": 390
+  },
+  "pk2": {
+    "pongkom2.exe": {
+      "sha256": "907E82EE1DEB27CFD8A3BA1CF292D2F1EC34169848C8BB457D626525C934A23C",
+      "functions": 293,
+      "entries": 0,
+      "segments": 2
+    },
+    "knpg.dll": {
+      "sha256": "657DC59C0DA50FA7D966638687FE89DB3C7FA9A3C6150A5D5A9968530E70EC87",
+      "functions": 365,
+      "entries": 54,
+      "segments": 2
+    },
+    "knps.dll": {
+      "sha256": "071CCF192DAEFE01F21BCD61FEE2AF65B1240A442333BD3898A82F28F9B401BA",
+      "functions": 677,
+      "entries": 144,
+      "segments": 3
+    },
+    "dib.drv": {
+      "sha256": "3593D16875C97FBF3F6751D1E2D86DEDA141CF45B8D44D2CFD8CADCD56804B7F",
+      "functions": 211,
+      "entries": 27,
+      "segments": 7
+    },
+    "ibmjoy.drv": {
+      "sha256": "D896E860F4A2052335CB066D7328CEE0093D308DBB912924C31A7F837E18A6C0",
+      "functions": 44,
+      "entries": 4,
+      "segments": 3
+    }
+  }
+}

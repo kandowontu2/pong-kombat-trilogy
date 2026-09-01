@@ -1,0 +1,6355 @@
+# Pong Kombat 2 serialized game audit
+
+- SHA-256: `974A4A410D5F94A163AF0E13984FF2066B0ABAF826AE5D0038CF604DC80B2A2A`
+- File bytes: 3,403,598
+- Logical canvas: 640×480
+- Serialized frames: 6
+- Frame offsets: `0x9A0E`, `0xC805`, `0xF1FF`, `0x11BA7`, `0x14F9F`, `0x18B1D`
+
+Klik & Play stores PK2's game-specific behavior as frame/object/event records in the GAM rather than native x86 procedures. This inventory keeps every frame boundary and every null-terminated object/text record at its exact source offset. The separate NE indexes cover the native runtime, graphics, sound, DIB, and joystick procedures.
+
+| Frame | Range | Bytes | Declared objects | Object-label records | Game-text records |
+|---:|---|---:|---:|---:|---:|
+| 0 | `0x9A0E`–`0xC805` | 11,767 | 5 | 4 | 0 |
+| 1 | `0xC805`–`0xF1FF` | 10,746 | 3 | 3 | 0 |
+| 2 | `0xF1FF`–`0x11BA7` | 10,664 | 3 | 3 | 0 |
+| 3 | `0x11BA7`–`0x14F9F` | 13,304 | 8 | 2 | 1 |
+| 4 | `0x14F9F`–`0x18B1D` | 15,230 | 15 | 6 | 1 |
+| 5 | `0x18B1D`–`0x33EF4E` | 3,302,449 | 305 | 1995 | 356 |
+
+## Frame 0
+
+Object/text-bearing records:
+
+- `0x00009A8A` [object-label] Quick Backdrop 1
+- `0x00009B57` [object-label] Quick Backdrop 2
+- `0x00009EC8` [object-label] Quick Backdrop 3
+- `0x0000A0E0` [object-label] Machine Independant On
+- `0x0000A383` [serialized-string] warn
+
+## Frame 1
+
+Object/text-bearing records:
+
+- `0x0000C881` [object-label] Quick Backdrop 1
+- `0x0000C94E` [object-label] Quick Backdrop 2
+- `0x0000CBF4` [object-label] Machine Independant On
+
+## Frame 2
+
+Object/text-bearing records:
+
+- `0x0000F27B` [object-label] Quick Backdrop 1
+- `0x0000F348` [object-label] Quick Backdrop 2
+- `0x0000F59C` [object-label] Machine Independant On
+
+## Frame 3
+
+Object/text-bearing records:
+
+- `0x00011BB0` [serialized-string] ong Kombat 2
+- `0x00011C23` [serialized-string] Backdrop object 1
+- `0x00011E9E` [object-label] Quick Backdrop 1
+- `0x00011F6B` [object-label] Machine Independant On
+- `0x0001206A` [game-text] Debug...
+- `0x000120AA` [serialized-string] tive object 2
+- `0x000121A9` [serialized-string] tive object 2
+- `0x000122A8` [serialized-string] tive object 2
+- `0x000123A7` [serialized-string] tive object 2
+- `0x000123E5` [serialized-string] tive object 2
+- `0x000124E4` [serialized-string] tive object 2
+- `0x00012A81` [serialized-string] titlepk2
+
+## Frame 4
+
+Object/text-bearing records:
+
+- `0x0001501B` [object-label] Quick Backdrop 1
+- `0x000152B5` [object-label] Quick Backdrop 2
+- `0x00015382` [object-label] Quick Backdrop 3
+- `0x00015413` [serialized-string] RANDOM SELECT...
+- `0x00015451` [object-label] Active object 1
+- `0x0001555C` [game-text] Choose Your Paddle...
+- `0x0001559A` [object-label] Machine Independant On
+- `0x00015699` [object-label] Active object 2
+- `0x00016625` [serialized-string] Stopped
+- `0x00016683` [serialized-string] ssaver
+
+## Frame 5
+
+Object/text-bearing records:
+
+- `0x00018B99` [object-label] Quick Backdrop 2
+- `0x00018E47` [serialized-string] nter 1
+- `0x00019066` [object-label] Active object 29
+- `0x0001910C` [object-label] Shadow
+- `0x000192DD` [object-label] Active object 39
+- `0x00019383` [object-label] Dent 1
+- `0x0001955A` [serialized-string] secp
+- `0x00019796` [object-label] Score 2
+- `0x00019947` [object-label] Active object 24
+- `0x00019BC1` [object-label] Active object 43
+- `0x00019C67` [object-label] Shadow
+- `0x00019D33` [serialized-string] cdedc
+- `0x00019D43` [serialized-string] decce
+- `0x00019D52` [serialized-string] decede
+- `0x00019D5C` [serialized-string] dede
+- `0x00019D64` [serialized-string] cdde
+- `0x00019D7A` [serialized-string] cdecef
+- `0x00019D84` [serialized-string] ceef
+- `0x00019D93` [serialized-string] ceede
+- `0x00019DC2` [serialized-string] ffef
+- `0x00019DD8` [serialized-string] ddeef
+- `0x00019E06` [object-label] Active object 56
+- `0x00019EAC` [object-label] Shadow
+- `0x0001A046` [object-label] Active object 32
+- `0x0001A0EC` [object-label] Dent 1
+- `0x0001A253` [object-label] Active object 8
+- `0x0001A387` [object-label] Active object 45
+- `0x0001A61F` [object-label] Active object 58
+- `0x0001A88E` [object-label] Active object 28
+- `0x0001AB01` [object-label] Active object 6
+- `0x0001AC58` [game-text] Cyber Paddle Wins...
+- `0x0001ACBA` [game-text] Cyber Paddle Wins
+- `0x0001ADCB` [object-label] Active object 46
+- `0x0001AFB9` [serialized-string] ve object 47
+- `0x0001B136` [serialized-string] fghdbca
+- `0x0001B146` [serialized-string] hcgdeeb
+- `0x0001B14E` [serialized-string] hfgddeb
+- `0x0001B156` [serialized-string] hghebeb
+- `0x0001B166` [serialized-string] ebegdbe
+- `0x0001B16E` [serialized-string] babebce
+- `0x0001B178` [serialized-string] bdbbe
+- `0x0001B17E` [serialized-string] beecaac
+- `0x0001B18E` [serialized-string] fefadff
+- `0x0001B196` [serialized-string] geegehg
+- `0x0001B19E` [serialized-string] gfdeegf
+- `0x0001B1A6` [serialized-string] ggbgehf
+- `0x0001B1AE` [serialized-string] gfcefdc
+- `0x0001B1B6` [serialized-string] ffddeaa
+- `0x0001B1BE` [serialized-string] baeheca
+- `0x0001B1C8` [serialized-string] egdcb
+- `0x0001B1CE` [serialized-string] cbdgebc
+- `0x0001B1DE` [serialized-string] dhefbac
+- `0x0001B200` [serialized-string] Ball
+- `0x0001B205` [serialized-string] e object 7
+- `0x0001B25A` [serialized-string] UUUU0
+- `0x0001B583` [object-label] Quick Backdrop 1
+- `0x0001B650` [game-text] Bloodstone Wins...
+- `0x0001B6B2` [game-text] Bloodstone Wins
+- `0x0001B927` [game-text] Green Paddle Wins...
+- `0x0001B989` [game-text] Green Paddle Wins
+- `0x0001BA9A` [object-label] Active object 1
+- `0x0001BB99` [game-text] Magma Paddle Wins...
+- `0x0001BBFB` [game-text] Magma Paddle Wins
+- `0x0001BD0C` [game-text] Aqua Paddle Wins...
+- `0x0001BD6E` [game-text] Aqua Paddle Wins
+- `0x0001BE7E` [game-text] Spike Paddle Wins...
+- `0x0001BEE0` [game-text] Spike Paddle Wins
+- `0x0001BFF1` [game-text] Rock Paddle Wins...
+- `0x0001C053` [game-text] Rock Paddle Wins
+- `0x0001C163` [game-text] Shifter Wins...
+- `0x0001C1C5` [game-text] Shifter Wins
+- `0x0001C2D1` [game-text] Monolith Wins...
+- `0x0001C333` [game-text] Monolith Wins
+- `0x0001C5A6` [object-label] Active object 25
+- `0x0001C8B6` [object-label] Active object 27
+- `0x0001CAF4` [object-label] Active object 36
+- `0x0001CCFC` [serialized-string] SPIKONES
+- `0x0001CF76` [object-label] Active object 33
+- `0x0001D183` [serialized-string] spikewea 2
+- `0x0001D2C0` [object-label] Active object 57
+- `0x0001D3F1` [object-label] Active object 59
+- `0x0001D56B` [object-label] Active object 60
+- `0x0001D771` [object-label] Active object 61
+- `0x0001D8E1` [serialized-string] Frezzer
+- `0x0001DAE9` [serialized-string] Aqcommo
+- `0x0001DD45` [serialized-string] Green fatal
+- `0x0001DE76` [serialized-string] flam
+- `0x0001DF99` [serialized-string] Blow 2
+- `0x0001E1A3` [serialized-string] showup
+- `0x0001E1AA` [serialized-string] object 6
+- `0x0001E23D` [serialized-string] Suicide
+- `0x0001E245` [serialized-string] Blocking
+- `0x0001E24E` [object-label] Shadow
+- `0x0001E3C8` [serialized-string] You can pick me!
+- `0x0001E4D8` [object-label] Active object 62
+- `0x0001EA57` [object-label] Active object 2
+- `0x0001EFA3` [serialized-string] aquadis1
+- `0x0001EFAC` [serialized-string] ject 3
+- `0x0001F16F` [object-label] Counter 1
+- `0x0001F377` [object-label] Active object 4
+- `0x0001F599` [object-label] Active object 5
+- `0x0001F780` [object-label] Active object 7
+- `0x0001F9CD` [object-label] Active object 9
+- `0x0001FC20` [serialized-string] TIMES UP!
+- `0x0001FD29` [serialized-string] joystick error!
+- `0x0001FE9C` [serialized-string] uppfa
+- `0x0001FF9B` [serialized-string] lefa
+- `0x0002009A` [serialized-string] rigfat
+- `0x000200A1` [serialized-string] object 12
+- `0x00020199` [serialized-string] donfat
+- `0x000201A0` [serialized-string] object 12
+- `0x00020298` [serialized-string] b1fat
+- `0x000203D1` [serialized-string] b2fat
+- `0x000204F4` [serialized-string] joystick problem!
+- `0x00020603` [object-label] Active object 13
+- `0x00020874` [object-label] Active object 14
+- `0x000209EF` [object-label] Active object 3
+- `0x00020AEE` [object-label] Active object 10
+- `0x00020C3E` [object-label] Active object 11
+- `0x00020E39` [object-label] Active object 12
+- `0x0002117E` [object-label] Active object 63
+- `0x00021362` [serialized-string] bloodcom
+- `0x0002162E` [serialized-string] rocky
+- `0x00021634` [serialized-string] pon4
+- `0x0002189E` [object-label] Active object 15
+- `0x00021A7F` [object-label] Active object 64
+- `0x00021BEF` [object-label] Active object 65
+- `0x00021FD2` [object-label] Active object 66
+- `0x000221A5` [object-label] Active object 18
+- `0x000223E6` [object-label] Active object 19
+- `0x00022599` [object-label] Active object 67
+- `0x00022899` [serialized-string] upppp
+- `0x00022998` [serialized-string] doiwn
+- `0x00022A97` [serialized-string] leftee
+- `0x00022A9E` [serialized-string] object 30
+- `0x00022B96` [serialized-string] rthig
+- `0x00022E93` [serialized-string] pupl
+- `0x0002315F` [object-label] Active object 68
+- `0x000232EC` [object-label] Active object 16
+- `0x0002357F` [object-label] Active object 17
+- `0x000238BB` [object-label] Machine Independant On
+- `0x000238F9` [object-label] Active object 69
+- `0x00023B9A` [object-label] Active object 70
+- `0x00023D26` [object-label] Active object 20
+- `0x00023FC6` [object-label] Active object 21
+- `0x00024251` [object-label] Active object 34
+- `0x0002443A` [serialized-string] monofat
+- `0x0002465C` [serialized-string] shifstabb
+- `0x00024868` [serialized-string] magfatal
+- `0x00024A36` [serialized-string] shottongfal
+- `0x00024C78` [serialized-string] ve object 26
+- `0x00024F84` [object-label] Active object 30
+- `0x00024FC2` [object-label] Active object 31
+- `0x000252DE` [serialized-string] Spamality!...
+- `0x0002531C` [object-label] Active object 38
+- `0x0002535A` [object-label] Active object 40
+- `0x00025398` [serialized-string] CPUweapon1
+- `0x000256AA` [serialized-string] CPUweapon2
+- `0x00025918` [serialized-string] CPUweapon3
+- `0x00025956` [object-label] Active object 41
+- `0x00025B47` [object-label] Active object 42
+- `0x00025E63` [object-label] Active object 44
+- `0x0002607D` [object-label] Active object 47
+- `0x000262C6` [object-label] Active object 48
+- `0x000264F1` [object-label] Active object 49
+- `0x00026660` [object-label] Active object 50
+- `0x0002675F` [object-label] Active object 51
+- `0x0002679D` [serialized-string] Blow
+- `0x000267DB` [serialized-string] dinofatal
+- `0x00026819` [object-label] Active object 52
+- `0x00026857` [object-label] Active object 53
+- `0x00026A63` [object-label] Active object 54
+- `0x00026C43` [object-label] Active object 55
+- `0x00026E0E` [serialized-string] Mono 2
+- `0x00026E15` [serialized-string] object 30
+- `0x00026EB4` [object-label] Shadow
+- `0x00027031` [serialized-string]  object 6
+- `0x000270D1` [serialized-string] Suicide
+- `0x000270D9` [serialized-string] Blocking
+- `0x000270E2` [object-label] Shadow
+- `0x0002BEE8` [serialized-string] impact
+- `0x0002BF66` [serialized-string] flaw
+- `0x0002C0DE` [serialized-string] impact
+- `0x0002C266` [serialized-string] impact
+- `0x0002C518` [serialized-string] begin
+- `0x0002CDCA` [serialized-string] impact
+- `0x0002D48E` [serialized-string] impact
+- `0x0002D55A` [serialized-string] impact
+- `0x0002D804` [serialized-string] Stopped
+- `0x0002D9DA` [serialized-string] impact
+- `0x0002DC3A` [serialized-string] User animation 4
+- `0x0002DD7C` [serialized-string] boucee
+- `0x0002F888` [serialized-string] impact
+- `0x0002FBB6` [serialized-string] disman
+- `0x0002FC76` [serialized-string] offpad
+- `0x0002FD18` [serialized-string] offpad
+- `0x0002FDBA` [serialized-string] offpad
+- `0x0002FE5C` [serialized-string] offpad
+- `0x0002FEFE` [serialized-string] offpad
+- `0x0002FFA0` [serialized-string] offpad
+- `0x00030042` [serialized-string] offpad
+- `0x000300E4` [serialized-string] offpad
+- `0x00030186` [serialized-string] offpad
+- `0x0003021C` [serialized-string] offpad
+- `0x0003032E` [serialized-string] impact
+- `0x0003069A` [serialized-string] impact
+- `0x00030900` [serialized-string] impact
+- `0x00030C30` [serialized-string] bomsha
+- `0x00030C5E` [serialized-string] Stopped
+- `0x00030DC8` [serialized-string] impact
+- `0x0003102C` [serialized-string] impact
+- `0x00031382` [serialized-string] noguy!
+- `0x00031426` [serialized-string] wackee
+- `0x000316E6` [serialized-string] disman
+- `0x00031B62` [serialized-string] impact
+- `0x00031CCC` [serialized-string] impact
+- `0x00031F32` [serialized-string] impact
+- `0x00032256` [serialized-string] impact
+- `0x00032584` [serialized-string] impact
+- `0x0003280A` [serialized-string] impact
+- `0x00032AA0` [serialized-string] impact
+- `0x00032D32` [serialized-string] impact
+- `0x00033256` [serialized-string] impact
+- `0x00033576` [serialized-string] impact
+- `0x00033812` [serialized-string] impact
+- `0x00033A84` [serialized-string] impact
+- `0x00033F7A` [serialized-string] impact
+- `0x0003442A` [serialized-string] impact
+- `0x00034758` [serialized-string] impact
+- `0x00034A2A` [serialized-string] impact
+- `0x00034D58` [serialized-string] impact
+- `0x00034FF6` [serialized-string] impact
+- `0x000351D4` [serialized-string] impact
+- `0x000352EC` [serialized-string] impact
+- `0x00035430` [serialized-string] offpad
+- `0x000354D2` [serialized-string] offpad
+- `0x00035574` [serialized-string] offpad
+- `0x00035616` [serialized-string] offpad
+- `0x000356B8` [serialized-string] offpad
+- `0x0003575A` [serialized-string] offpad
+- `0x000357FC` [serialized-string] offpad
+- `0x0003589E` [serialized-string] offpad
+- `0x00035940` [serialized-string] offpad
+- `0x000359E2` [serialized-string] offpad
+- `0x00035A84` [serialized-string] offpad
+- `0x00035B26` [serialized-string] offpad
+- `0x00035D3A` [serialized-string] disman
+- `0x00036146` [serialized-string] spam
+- `0x00036310` [serialized-string] disman
+- `0x000365DA` [serialized-string] disman
+- `0x00036886` [serialized-string] disman
+- `0x00036A7E` [serialized-string] disman
+- `0x00036C4A` [serialized-string] disman
+- `0x00036E46` [serialized-string] disman
+- `0x00037760` [serialized-string] ofwall
+- `0x000377A6` [serialized-string] ofwall
+- `0x000377EC` [serialized-string] impact
+- `0x00037896` [serialized-string] impact
+- `0x00037934` [serialized-string] impact
+- `0x000379D2` [serialized-string] impact
+- `0x00037A70` [serialized-string] impact
+- `0x00037B0E` [serialized-string] impact
+- `0x00037BAC` [serialized-string] impact
+- `0x00037C1C` [serialized-string] impact
+- `0x00037C8C` [serialized-string] impact
+- `0x00037D2A` [serialized-string] impact
+- `0x00037DC8` [serialized-string] impact
+- `0x00037E38` [serialized-string] impact
+- `0x00037F04` [serialized-string] impact
+- `0x00037FA2` [serialized-string] impact
+- `0x00038012` [serialized-string] impact
+- `0x00038082` [serialized-string] impact
+- `0x000380F2` [serialized-string] impact
+- `0x00038144` [serialized-string] impact
+- `0x000381B4` [serialized-string] impact
+- `0x00038206` [serialized-string] impact
+- `0x0003826A` [serialized-string] impact
+- `0x0003B224` [serialized-string] Backdrop object 1
+- `0x0003B481` [serialized-string] Enter Code...
+- `0x0003B4E3` [serialized-string] Enter Code
+- `0x0003B5ED` [object-label] Active object 2
+- `0x0003B62B` [object-label] Counter 2
+- `0x0003B84D` [serialized-string] conyt
+- `0x0003BBEF` [serialized-string] unter 3
+- `0x0003BE05` [serialized-string] unter 3
+- `0x0003C01B` [serialized-string] unter 3
+- `0x0003C231` [serialized-string] unter 3
+- `0x0003C447` [serialized-string] unter 3
+- `0x0003C65D` [serialized-string] unter 3
+- `0x0003C873` [serialized-string] unter 3
+- `0x0003CA87` [serialized-string] You have discovered ...
+- `0x0003CB2C` [game-text]                     Click on Art Paddle to fight if you dare!
+- `0x0003CC69` [serialized-string] Art code 4
+- `0x0003D1E9` [object-label] Score 1
+- `0x0003D39A` [object-label] Your Score:...
+- `0x0003D3FC` [object-label] Your Score:
+- `0x0003D507` [object-label] Active object 31
+- `0x0003D545` [object-label] Machine Independant On
+- `0x000405A5` [serialized-string] ong Kombat 2
+- `0x00040618` [object-label] Active object 1
+- `0x000407D7` [object-label] Counter 2
+- `0x000409F9` [object-label] Quick Backdrop 2
+- `0x00040C70` [object-label] Active object 2
+- `0x00040E04` [object-label] Active object 3
+- `0x00040F19` [serialized-string] cdedc
+- `0x00040F29` [serialized-string] decce
+- `0x00040F38` [serialized-string] decede
+- `0x00040F42` [serialized-string] dede
+- `0x00040F4A` [serialized-string] cdde
+- `0x00040F60` [serialized-string] cdecef
+- `0x00040F6A` [serialized-string] ceef
+- `0x00040F79` [serialized-string] ceede
+- `0x00040FA8` [serialized-string] ffef
+- `0x00040FBE` [serialized-string] ddeef
+- `0x00040FEC` [object-label] Active object 4
+- `0x000411D2` [object-label] Active object 5
+- `0x000413EC` [object-label] Active object 19
+- `0x00041748` [object-label] Active object 7
+- `0x000418F8` [object-label] Active object 8
+- `0x00041B18` [object-label] Active object 9
+- `0x00041CFB` [object-label] Active object 10
+- `0x00041F1F` [object-label] Active object 11
+- `0x0004213C` [object-label] Active object 12
+- `0x000422E7` [object-label] Counter 3
+- `0x00042509` [object-label] Active object 14
+- `0x0004276C` [object-label] Quick Backdrop 3
+- `0x000427D5` [object-label] Counter 4
+- `0x000429F7` [object-label] Counter 5
+- `0x00042C19` [object-label] Counter 6
+- `0x00042E3B` [object-label] Counter 7
+- `0x0004305D` [object-label] Counter 8
+- `0x00043265` [object-label] Active object 13
+- `0x000434C7` [serialized-string] 10 Pong Balls
+- `0x000435D4` [object-label] Counter 1
+- `0x000437F6` [object-label] Active object 18
+- `0x00043AE3` [serialized-string] Shifter...
+- `0x00043B45` [serialized-string] Shifter
+- `0x00043C4C` [game-text] Aqua Paddle...
+- `0x00043CAE` [game-text] Aqua Paddle
+- `0x00043DB9` [object-label] Active object 17
+- `0x00043F9E` [serialized-string] Bloodstone...
+- `0x00044000` [serialized-string] Bloodstone
+- `0x0004410A` [game-text] Cyber Paddle...
+- `0x0004416C` [game-text] Cyber Paddle
+- `0x00044278` [game-text] Magma Paddle...
+- `0x000442DA` [game-text] Magma Paddle
+- `0x000443E6` [game-text] Rock Paddle...
+- `0x00044448` [game-text] Rock Paddle
+- `0x00044553` [game-text] Green Paddle...
+- `0x000445B5` [game-text] Green Paddle
+- `0x000446C1` [serialized-string] Monolith...
+- `0x00044723` [serialized-string] Monolith
+- `0x0004482B` [game-text] Spike Paddle...
+- `0x0004488D` [game-text] Spike Paddle
+- `0x00044A0C` [game-text]  Purple Paddle
+- `0x00044B8D` [game-text]  Red Paddle
+- `0x00044D0B` [game-text]  Blue Paddle
+- `0x00044E8A` [game-text] Cigarette Paddle
+- `0x00044F9A` [game-text] Rock Paddle...
+- `0x00044FFC` [game-text] Rock Paddle
+- `0x00045107` [object-label] Machine Independant On
+- `0x00045206` [object-label] Active object 48
+- `0x000454A4` [game-text]   Acid Paddle
+- `0x00046D9F` [serialized-string] purp
+- `0x00046E5B` [serialized-string] blue
+- `0x00047507` [serialized-string] acidtast
+- `0x0004A013` [object-label] Quick Backdrop 1
+- `0x0004A2A9` [object-label] Machine Independant On
+- `0x0004A3A8` [object-label] Quick Backdrop 3
+- `0x0004CD2F` [object-label] Quick Backdrop 1
+- `0x0004CFCE` [object-label] Machine Independant On
+- `0x0004D0CD` [object-label] Active object 54
+- `0x0004D2A1` [object-label] Active object 41
+- `0x0004D486` [object-label] Active object 45
+- `0x0004D712` [serialized-string] Mono 2
+- `0x0004D719` [serialized-string] object 30
+- `0x0004D7AC` [object-label] Shadow
+- `0x000500E3` [object-label] Quick Backdrop 1
+- `0x00050351` [object-label] Quick Backdrop 2
+- `0x0005043E` [serialized-string] Backdrop object 1
+- `0x00050593` [object-label] Quick Backdrop 3
+- `0x00050628` [serialized-string] To redefine controls...
+- `0x0005068A` [serialized-string] To redefine controls, press CTRL + Y
+- `0x000507AE` [object-label] Machine Independant On
+- `0x00052F69` [object-label] Quick Backdrop 2
+- `0x0005320E` [serialized-string] nter 1
+- `0x0005342D` [object-label] Active object 29
+- `0x000534D3` [object-label] Shadow
+- `0x000536A4` [object-label] Active object 39
+- `0x0005374A` [object-label] Dent 1
+- `0x00053921` [serialized-string] secp
+- `0x00053B5D` [object-label] Score 2
+- `0x00053D0E` [object-label] Active object 24
+- `0x00053F88` [object-label] Active object 43
+- `0x0005402E` [object-label] Shadow
+- `0x000540FA` [serialized-string] cdedc
+- `0x0005410A` [serialized-string] decce
+- `0x00054119` [serialized-string] decede
+- `0x00054123` [serialized-string] dede
+- `0x0005412B` [serialized-string] cdde
+- `0x00054141` [serialized-string] cdecef
+- `0x0005414B` [serialized-string] ceef
+- `0x0005415A` [serialized-string] ceede
+- `0x00054189` [serialized-string] ffef
+- `0x0005419F` [serialized-string] ddeef
+- `0x000541CD` [object-label] Active object 56
+- `0x00054273` [object-label] Shadow
+- `0x0005440D` [object-label] Active object 32
+- `0x000544B3` [object-label] Dent 1
+- `0x0005461A` [object-label] Active object 8
+- `0x0005474E` [object-label] Active object 45
+- `0x000549E6` [object-label] Active object 58
+- `0x00054C55` [object-label] Active object 28
+- `0x00054EC8` [object-label] Machine Independant On
+- `0x00054F06` [game-text] Cyber Paddle Wins...
+- `0x00054F68` [game-text] Cyber Paddle Wins
+- `0x00055079` [object-label] Active object 46
+- `0x00055267` [serialized-string] ve object 47
+- `0x000554AD` [serialized-string] Ball
+- `0x000554B2` [serialized-string] e object 7
+- `0x00055507` [serialized-string] UUUU0
+- `0x00055830` [object-label] Quick Backdrop 1
+- `0x000558FD` [game-text] Bloodstone Wins...
+- `0x0005595F` [game-text] Bloodstone Wins
+- `0x00055BD4` [game-text] Green Paddle Wins...
+- `0x00055C36` [game-text] Green Paddle Wins
+- `0x00055D47` [object-label] Active object 1
+- `0x00055E46` [game-text] Magma Paddle Wins...
+- `0x00055EA8` [game-text] Magma Paddle Wins
+- `0x00055FB9` [game-text] Aqua Paddle Wins...
+- `0x0005601B` [game-text] Aqua Paddle Wins
+- `0x0005612B` [game-text] Spike Paddle Wins...
+- `0x0005618D` [game-text] Spike Paddle Wins
+- `0x0005629E` [game-text] Rock Paddle Wins...
+- `0x00056300` [game-text] Rock Paddle Wins
+- `0x00056410` [game-text] Shifter Wins...
+- `0x00056472` [game-text] Shifter Wins
+- `0x0005657E` [game-text] Monolith Wins...
+- `0x000565E0` [game-text] Monolith Wins
+- `0x00056853` [object-label] Active object 25
+- `0x00056B63` [object-label] Active object 27
+- `0x00056DA1` [object-label] Active object 36
+- `0x00056FA9` [serialized-string] SPIKONES
+- `0x00057223` [object-label] Active object 33
+- `0x00057430` [serialized-string] spikewea 2
+- `0x0005756D` [object-label] Active object 57
+- `0x0005769E` [object-label] Active object 59
+- `0x00057818` [object-label] Active object 60
+- `0x00057856` [object-label] Active object 61
+- `0x000579C6` [serialized-string] Frezzer
+- `0x00057BCE` [serialized-string] Aqcommo
+- `0x00057E2A` [serialized-string] Green fatal
+- `0x00057E68` [serialized-string] flam
+- `0x00057F8B` [serialized-string] Blow 2
+- `0x00057FC9` [serialized-string] showup
+- `0x00057FD0` [serialized-string] object 6
+- `0x00058069` [serialized-string] You can pick me!
+- `0x00058179` [object-label] Active object 62
+- `0x000581B7` [object-label] Active object 2
+- `0x000581F5` [serialized-string] aquadis1
+- `0x000581FE` [serialized-string] ject 3
+- `0x00058233` [object-label] Counter 1
+- `0x0005843B` [object-label] Active object 4
+- `0x0005865D` [object-label] Active object 5
+- `0x00058844` [object-label] Active object 7
+- `0x00058A91` [object-label] Active object 9
+- `0x00058CE4` [serialized-string] TIMES UP!
+- `0x00058DED` [serialized-string] joystick error!
+- `0x00058E2B` [serialized-string] uppfa
+- `0x00058E69` [serialized-string] lefa
+- `0x00058EA7` [serialized-string] rigfat
+- `0x00058EAE` [serialized-string] object 12
+- `0x00058EE5` [serialized-string] donfat
+- `0x00058EEC` [serialized-string] object 12
+- `0x00058F23` [serialized-string] b1fat
+- `0x00058F61` [serialized-string] b2fat
+- `0x00058F9F` [serialized-string] joystick problem!
+- `0x00058FDD` [object-label] Active object 13
+- `0x0005901B` [object-label] Active object 14
+- `0x00059059` [object-label] Active object 3
+- `0x00059158` [object-label] Active object 10
+- `0x000592A8` [object-label] Active object 11
+- `0x000592E6` [object-label] Active object 12
+- `0x00059324` [object-label] Active object 63
+- `0x00059508` [serialized-string] bloodcom
+- `0x000597D4` [serialized-string] rocky
+- `0x000597DA` [serialized-string] pon4
+- `0x00059A44` [object-label] Active object 15
+- `0x00059C25` [object-label] Active object 64
+- `0x00059D95` [object-label] Active object 65
+- `0x0005A178` [object-label] Active object 66
+- `0x0005A34B` [object-label] Active object 18
+- `0x0005A58C` [object-label] Active object 19
+- `0x0005A73F` [object-label] Active object 67
+- `0x0005AA3F` [serialized-string] upppp
+- `0x0005AB3E` [serialized-string] doiwn
+- `0x0005AC3D` [serialized-string] leftee
+- `0x0005AC44` [serialized-string] object 30
+- `0x0005AD3C` [serialized-string] rthig
+- `0x0005B039` [serialized-string] pupl
+- `0x0005B305` [object-label] Active object 68
+- `0x0005B492` [object-label] Active object 16
+- `0x0005B4D0` [object-label] Active object 17
+- `0x0005B50E` [serialized-string] fatalone
+- `0x0005B54C` [object-label] Active object 69
+- `0x0005B7ED` [object-label] Active object 70
+- `0x0005B979` [object-label] Active object 20
+- `0x0005BC19` [object-label] Active object 21
+- `0x0005BEA4` [object-label] Active object 34
+- `0x0005C08E` [serialized-string] monofat
+- `0x0005C0CC` [serialized-string] shifstabb
+- `0x0005C10A` [serialized-string] magfatal
+- `0x0005C148` [serialized-string] shottongfal
+- `0x0005C18A` [serialized-string] ve object 26
+- `0x0005C1C4` [object-label] Active object 30
+- `0x0005C202` [object-label] Active object 31
+- `0x0005C240` [serialized-string] Spamality!...
+- `0x0005C27E` [object-label] Active object 38
+- `0x0005C2BC` [object-label] Active object 40
+- `0x0005C2FA` [serialized-string] CPUweapon1
+- `0x0005C4AF` [serialized-string] CPUweapon2
+- `0x0005C4ED` [serialized-string] CPUweapon3
+- `0x0005C52B` [object-label] Active object 41
+- `0x0005C71C` [object-label] Active object 42
+- `0x0005CA38` [object-label] Active object 44
+- `0x0005CC52` [object-label] Active object 47
+- `0x0005CE9B` [object-label] Active object 48
+- `0x0005D0C6` [object-label] Active object 49
+- `0x0005D235` [object-label] Active object 50
+- `0x0005D334` [object-label] Active object 51
+- `0x0005D372` [serialized-string] Blow
+- `0x0005D3B0` [serialized-string] dinofatal
+- `0x0005D3EE` [object-label] Active object 52
+- `0x0005D42C` [object-label] Active object 53
+- `0x0005D638` [object-label] Active object 54
+- `0x0005D818` [object-label] Active object 55
+- `0x0005D9E3` [serialized-string] Mono 2
+- `0x0005D9EA` [serialized-string] object 30
+- `0x0005DA89` [object-label] Shadow
+- `0x0005DC06` [serialized-string]  object 6
+- `0x0005DCA6` [serialized-string] Suicide
+- `0x0005DCAE` [serialized-string] Blocking
+- `0x0005DCB7` [object-label] Shadow
+- `0x0006209D` [serialized-string] impact
+- `0x0006211B` [serialized-string] flaw
+- `0x00062293` [serialized-string] impact
+- `0x0006241B` [serialized-string] impact
+- `0x00062C9B` [serialized-string] impact
+- `0x00062EE3` [serialized-string] impact
+- `0x00063175` [serialized-string] Stopped
+- `0x0006334B` [serialized-string] impact
+- `0x000634F7` [serialized-string] User animation 4
+- `0x00063639` [serialized-string] boucee
+- `0x00064C97` [serialized-string] impact
+- `0x00064DDB` [serialized-string] offpad
+- `0x00064E7D` [serialized-string] offpad
+- `0x00064F1F` [serialized-string] offpad
+- `0x00064FC1` [serialized-string] offpad
+- `0x00065063` [serialized-string] offpad
+- `0x00065105` [serialized-string] offpad
+- `0x000651A7` [serialized-string] offpad
+- `0x00065249` [serialized-string] offpad
+- `0x000652EB` [serialized-string] offpad
+- `0x00065381` [serialized-string] offpad
+- `0x00065493` [serialized-string] impact
+- `0x000657E7` [serialized-string] impact
+- `0x00065A4D` [serialized-string] impact
+- `0x00065C83` [serialized-string] bomsha
+- `0x00065D3D` [serialized-string] impact
+- `0x00065FA1` [serialized-string] impact
+- `0x0006645B` [serialized-string] impact
+- `0x000665C5` [serialized-string] impact
+- `0x0006682B` [serialized-string] impact
+- `0x00066B4F` [serialized-string] impact
+- `0x00066E7D` [serialized-string] impact
+- `0x000670F7` [serialized-string] impact
+- `0x0006738D` [serialized-string] impact
+- `0x0006761F` [serialized-string] impact
+- `0x00067B43` [serialized-string] impact
+- `0x00067E63` [serialized-string] impact
+- `0x000680FF` [serialized-string] impact
+- `0x00068371` [serialized-string] impact
+- `0x00068867` [serialized-string] impact
+- `0x00068D17` [serialized-string] impact
+- `0x00069045` [serialized-string] impact
+- `0x00069317` [serialized-string] impact
+- `0x00069645` [serialized-string] impact
+- `0x000698E3` [serialized-string] impact
+- `0x00069AC1` [serialized-string] impact
+- `0x00069BD9` [serialized-string] impact
+- `0x00069D1D` [serialized-string] offpad
+- `0x00069DBF` [serialized-string] offpad
+- `0x00069E61` [serialized-string] offpad
+- `0x00069F03` [serialized-string] offpad
+- `0x00069FA5` [serialized-string] offpad
+- `0x0006A047` [serialized-string] offpad
+- `0x0006A0E9` [serialized-string] offpad
+- `0x0006A18B` [serialized-string] offpad
+- `0x0006A22D` [serialized-string] offpad
+- `0x0006A2CF` [serialized-string] offpad
+- `0x0006A371` [serialized-string] offpad
+- `0x0006A413` [serialized-string] offpad
+- `0x0006A517` [serialized-string] ofwall
+- `0x0006A55D` [serialized-string] ofwall
+- `0x0006A5A3` [serialized-string] impact
+- `0x0006A64D` [serialized-string] impact
+- `0x0006A6EB` [serialized-string] impact
+- `0x0006A789` [serialized-string] impact
+- `0x0006A827` [serialized-string] impact
+- `0x0006A8C5` [serialized-string] impact
+- `0x0006A963` [serialized-string] impact
+- `0x0006A9D3` [serialized-string] impact
+- `0x0006AA43` [serialized-string] impact
+- `0x0006AAE1` [serialized-string] impact
+- `0x0006AB7F` [serialized-string] impact
+- `0x0006ABEF` [serialized-string] impact
+- `0x0006ACBB` [serialized-string] impact
+- `0x0006AD59` [serialized-string] impact
+- `0x0006ADC9` [serialized-string] impact
+- `0x0006AE39` [serialized-string] impact
+- `0x0006AEA9` [serialized-string] impact
+- `0x0006AEFB` [serialized-string] impact
+- `0x0006AF6B` [serialized-string] impact
+- `0x0006AFBD` [serialized-string] impact
+- `0x0006B0AB` [serialized-string] secr
+- `0x0006D7E3` [object-label] Quick Backdrop 2
+- `0x0006DA88` [serialized-string] nter 1
+- `0x0006DCA7` [object-label] Active object 29
+- `0x0006DD4D` [object-label] Shadow
+- `0x0006DF1E` [object-label] Active object 39
+- `0x0006DFC4` [object-label] Dent 1
+- `0x0006E19B` [serialized-string] secp
+- `0x0006E3D7` [object-label] Score 2
+- `0x0006E588` [object-label] Active object 24
+- `0x0006E802` [object-label] Active object 43
+- `0x0006E8A8` [object-label] Shadow
+- `0x0006E974` [serialized-string] cdedc
+- `0x0006E984` [serialized-string] decce
+- `0x0006E993` [serialized-string] decede
+- `0x0006E99D` [serialized-string] dede
+- `0x0006E9A5` [serialized-string] cdde
+- `0x0006E9BB` [serialized-string] cdecef
+- `0x0006E9C5` [serialized-string] ceef
+- `0x0006E9D4` [serialized-string] ceede
+- `0x0006EA03` [serialized-string] ffef
+- `0x0006EA19` [serialized-string] ddeef
+- `0x0006EA47` [object-label] Active object 56
+- `0x0006EAED` [object-label] Shadow
+- `0x0006EC87` [object-label] Active object 32
+- `0x0006ED2D` [object-label] Dent 1
+- `0x0006EE94` [object-label] Active object 8
+- `0x0006EFC8` [object-label] Active object 45
+- `0x0006F260` [object-label] Active object 58
+- `0x0006F4CF` [object-label] Active object 28
+- `0x0006F742` [object-label] Machine Independant On
+- `0x0006F780` [game-text] Cyber Paddle Wins...
+- `0x0006F7E2` [game-text] Cyber Paddle Wins
+- `0x0006F8F3` [object-label] Active object 46
+- `0x0006FAE1` [serialized-string] ve object 47
+- `0x0006FDC0` [serialized-string] Ball
+- `0x0006FDC5` [serialized-string] e object 7
+- `0x0006FE1A` [serialized-string] UUUU0
+- `0x00070143` [object-label] Quick Backdrop 1
+- `0x00070210` [game-text] Bloodstone Wins...
+- `0x00070272` [game-text] Bloodstone Wins
+- `0x000704E7` [game-text] Green Paddle Wins...
+- `0x00070549` [game-text] Green Paddle Wins
+- `0x0007065A` [object-label] Active object 1
+- `0x00070759` [game-text] Magma Paddle Wins...
+- `0x000707BB` [game-text] Magma Paddle Wins
+- `0x000708CC` [game-text] Aqua Paddle Wins...
+- `0x0007092E` [game-text] Aqua Paddle Wins
+- `0x00070A3E` [game-text] Spike Paddle Wins...
+- `0x00070AA0` [game-text] Spike Paddle Wins
+- `0x00070BB1` [game-text] Rock Paddle Wins...
+- `0x00070C13` [game-text] Rock Paddle Wins
+- `0x00070D23` [game-text] Shifter Wins...
+- `0x00070D85` [game-text] Shifter Wins
+- `0x00070E91` [game-text] Monolith Wins...
+- `0x00070EF3` [game-text] Monolith Wins
+- `0x00071166` [object-label] Active object 25
+- `0x00071476` [object-label] Active object 27
+- `0x000716B4` [object-label] Active object 36
+- `0x000718BC` [serialized-string] SPIKONES
+- `0x00071B36` [object-label] Active object 33
+- `0x00071D43` [serialized-string] spikewea 2
+- `0x00071E80` [object-label] Active object 57
+- `0x00071FB1` [object-label] Active object 59
+- `0x0007212B` [object-label] Active object 60
+- `0x00072169` [object-label] Active object 61
+- `0x000722D9` [serialized-string] Frezzer
+- `0x000724E1` [serialized-string] Aqcommo
+- `0x0007273D` [serialized-string] Green fatal
+- `0x0007277B` [serialized-string] flam
+- `0x0007289E` [serialized-string] Blow 2
+- `0x000728DC` [serialized-string] showup
+- `0x000728E3` [serialized-string] object 6
+- `0x0007297C` [serialized-string] You can pick me!
+- `0x00072A8C` [object-label] Active object 62
+- `0x00072ACA` [object-label] Active object 2
+- `0x00072B08` [serialized-string] aquadis1
+- `0x00072B11` [serialized-string] ject 3
+- `0x00072B46` [object-label] Counter 1
+- `0x00072D4E` [object-label] Active object 4
+- `0x00072F70` [object-label] Active object 5
+- `0x00073157` [object-label] Active object 7
+- `0x000733A4` [object-label] Active object 9
+- `0x000735F7` [serialized-string] TIMES UP!
+- `0x00073700` [serialized-string] joystick error!
+- `0x0007373E` [serialized-string] uppfa
+- `0x0007377C` [serialized-string] lefa
+- `0x000737BA` [serialized-string] rigfat
+- `0x000737C1` [serialized-string] object 12
+- `0x000737F8` [serialized-string] donfat
+- `0x000737FF` [serialized-string] object 12
+- `0x00073836` [serialized-string] b1fat
+- `0x00073874` [serialized-string] b2fat
+- `0x000738B2` [serialized-string] joystick problem!
+- `0x000738F0` [object-label] Active object 13
+- `0x0007392E` [object-label] Active object 14
+- `0x0007396C` [object-label] Active object 3
+- `0x00073A6B` [object-label] Active object 10
+- `0x00073BBB` [object-label] Active object 11
+- `0x00073BF9` [object-label] Active object 12
+- `0x00073C37` [object-label] Active object 63
+- `0x00073E1B` [serialized-string] bloodcom
+- `0x000740E7` [serialized-string] rocky
+- `0x000740ED` [serialized-string] pon4
+- `0x00074357` [object-label] Active object 15
+- `0x00074538` [object-label] Active object 64
+- `0x000746A8` [object-label] Active object 65
+- `0x00074A8B` [object-label] Active object 66
+- `0x00074C5E` [object-label] Active object 18
+- `0x00074E9F` [object-label] Active object 19
+- `0x00075052` [object-label] Active object 67
+- `0x00075352` [serialized-string] upppp
+- `0x00075451` [serialized-string] doiwn
+- `0x00075550` [serialized-string] leftee
+- `0x00075557` [serialized-string] object 30
+- `0x0007564F` [serialized-string] rthig
+- `0x0007594C` [serialized-string] pupl
+- `0x00075C18` [object-label] Active object 68
+- `0x00075DA5` [object-label] Active object 16
+- `0x00075DE3` [object-label] Active object 17
+- `0x00075E21` [serialized-string] fatalone
+- `0x00075E5F` [object-label] Active object 69
+- `0x00076100` [object-label] Active object 70
+- `0x0007628C` [object-label] Active object 20
+- `0x0007652C` [object-label] Active object 21
+- `0x000767B7` [object-label] Active object 34
+- `0x00076A3A` [serialized-string] monofat
+- `0x00076A78` [serialized-string] shifstabb
+- `0x00076AB6` [serialized-string] magfatal
+- `0x00076AF4` [serialized-string] shottongfal
+- `0x00076B36` [serialized-string] ve object 26
+- `0x00076B70` [object-label] Active object 30
+- `0x00076BAE` [object-label] Active object 31
+- `0x00076BEC` [serialized-string] Spamality!...
+- `0x00076C2A` [object-label] Active object 38
+- `0x00076C68` [object-label] Active object 40
+- `0x00076CA6` [serialized-string] CPUweapon1
+- `0x00076EE6` [serialized-string] CPUweapon2
+- `0x00076F24` [serialized-string] CPUweapon3
+- `0x00076F62` [object-label] Active object 41
+- `0x00077153` [object-label] Active object 42
+- `0x0007746F` [object-label] Active object 44
+- `0x00077689` [object-label] Active object 47
+- `0x000778D2` [object-label] Active object 48
+- `0x00077AFD` [object-label] Active object 49
+- `0x00077C6C` [object-label] Active object 50
+- `0x00077D6B` [object-label] Active object 51
+- `0x00077DA9` [serialized-string] Blow
+- `0x00077DE7` [serialized-string] dinofatal
+- `0x00077E25` [object-label] Active object 52
+- `0x00077E63` [object-label] Active object 53
+- `0x0007806F` [object-label] Active object 54
+- `0x0007824F` [object-label] Active object 55
+- `0x0007841A` [serialized-string] Mono 2
+- `0x00078421` [serialized-string] object 30
+- `0x000784C0` [object-label] Shadow
+- `0x0007863D` [serialized-string]  object 6
+- `0x000786DD` [serialized-string] Suicide
+- `0x000786E5` [serialized-string] Blocking
+- `0x000786EE` [object-label] Shadow
+- `0x0007CAD4` [serialized-string] impact
+- `0x0007CB52` [serialized-string] flaw
+- `0x0007CCCA` [serialized-string] impact
+- `0x0007CE52` [serialized-string] impact
+- `0x0007D6D2` [serialized-string] impact
+- `0x0007D91A` [serialized-string] impact
+- `0x0007DBAC` [serialized-string] Stopped
+- `0x0007DD82` [serialized-string] impact
+- `0x0007DF2E` [serialized-string] User animation 4
+- `0x0007E070` [serialized-string] boucee
+- `0x0007F6CE` [serialized-string] impact
+- `0x0007F812` [serialized-string] offpad
+- `0x0007F8B4` [serialized-string] offpad
+- `0x0007F956` [serialized-string] offpad
+- `0x0007F9F8` [serialized-string] offpad
+- `0x0007FA9A` [serialized-string] offpad
+- `0x0007FB3C` [serialized-string] offpad
+- `0x0007FBDE` [serialized-string] offpad
+- `0x0007FC80` [serialized-string] offpad
+- `0x0007FD22` [serialized-string] offpad
+- `0x0007FDB8` [serialized-string] offpad
+- `0x0007FECA` [serialized-string] impact
+- `0x0008021E` [serialized-string] impact
+- `0x00080484` [serialized-string] impact
+- `0x000806BA` [serialized-string] bomsha
+- `0x00080774` [serialized-string] impact
+- `0x000809D8` [serialized-string] impact
+- `0x00080E92` [serialized-string] impact
+- `0x00080FFC` [serialized-string] impact
+- `0x00081262` [serialized-string] impact
+- `0x00081586` [serialized-string] impact
+- `0x000818B4` [serialized-string] impact
+- `0x00081B2E` [serialized-string] impact
+- `0x00081DC4` [serialized-string] impact
+- `0x00082056` [serialized-string] impact
+- `0x0008257A` [serialized-string] impact
+- `0x0008289A` [serialized-string] impact
+- `0x00082B36` [serialized-string] impact
+- `0x00082DA8` [serialized-string] impact
+- `0x0008329E` [serialized-string] impact
+- `0x0008374E` [serialized-string] impact
+- `0x00083A7C` [serialized-string] impact
+- `0x00083D4E` [serialized-string] impact
+- `0x0008407C` [serialized-string] impact
+- `0x0008431A` [serialized-string] impact
+- `0x000844F8` [serialized-string] impact
+- `0x00084610` [serialized-string] impact
+- `0x00084754` [serialized-string] offpad
+- `0x000847F6` [serialized-string] offpad
+- `0x00084898` [serialized-string] offpad
+- `0x0008493A` [serialized-string] offpad
+- `0x000849DC` [serialized-string] offpad
+- `0x00084A7E` [serialized-string] offpad
+- `0x00084B20` [serialized-string] offpad
+- `0x00084BC2` [serialized-string] offpad
+- `0x00084C64` [serialized-string] offpad
+- `0x00084D06` [serialized-string] offpad
+- `0x00084DA8` [serialized-string] offpad
+- `0x00084E4A` [serialized-string] offpad
+- `0x00084F4E` [serialized-string] ofwall
+- `0x00084F94` [serialized-string] ofwall
+- `0x00084FDA` [serialized-string] impact
+- `0x00085084` [serialized-string] impact
+- `0x00085122` [serialized-string] impact
+- `0x000851C0` [serialized-string] impact
+- `0x0008525E` [serialized-string] impact
+- `0x000852FC` [serialized-string] impact
+- `0x0008539A` [serialized-string] impact
+- `0x0008540A` [serialized-string] impact
+- `0x0008547A` [serialized-string] impact
+- `0x00085518` [serialized-string] impact
+- `0x000855B6` [serialized-string] impact
+- `0x00085626` [serialized-string] impact
+- `0x000856F2` [serialized-string] impact
+- `0x00085790` [serialized-string] impact
+- `0x00085800` [serialized-string] impact
+- `0x00085870` [serialized-string] impact
+- `0x000858E0` [serialized-string] impact
+- `0x00085932` [serialized-string] impact
+- `0x000859A2` [serialized-string] impact
+- `0x000859F4` [serialized-string] impact
+- `0x00085AE2` [serialized-string] secr
+- `0x0008821A` [object-label] Quick Backdrop 2
+- `0x000884BF` [serialized-string] nter 1
+- `0x000886DE` [object-label] Active object 29
+- `0x00088784` [object-label] Shadow
+- `0x00088955` [object-label] Active object 39
+- `0x000889FB` [object-label] Dent 1
+- `0x00088BD2` [serialized-string] secp
+- `0x00088E0E` [object-label] Score 2
+- `0x00088FBF` [object-label] Active object 24
+- `0x00089239` [object-label] Active object 43
+- `0x000892DF` [object-label] Shadow
+- `0x000893AB` [serialized-string] cdedc
+- `0x000893BB` [serialized-string] decce
+- `0x000893CA` [serialized-string] decede
+- `0x000893D4` [serialized-string] dede
+- `0x000893DC` [serialized-string] cdde
+- `0x000893F2` [serialized-string] cdecef
+- `0x000893FC` [serialized-string] ceef
+- `0x0008940B` [serialized-string] ceede
+- `0x0008943A` [serialized-string] ffef
+- `0x00089450` [serialized-string] ddeef
+- `0x0008947E` [object-label] Active object 56
+- `0x00089524` [object-label] Shadow
+- `0x000896BE` [object-label] Active object 32
+- `0x00089764` [object-label] Dent 1
+- `0x000898CB` [object-label] Active object 8
+- `0x000899FF` [object-label] Active object 45
+- `0x00089C97` [object-label] Active object 58
+- `0x00089F06` [object-label] Active object 28
+- `0x0008A179` [object-label] Machine Independant On
+- `0x0008A1B7` [game-text] Cyber Paddle Wins...
+- `0x0008A219` [game-text] Cyber Paddle Wins
+- `0x0008A32A` [object-label] Active object 46
+- `0x0008A518` [serialized-string] ve object 47
+- `0x0008A7B5` [serialized-string] Ball
+- `0x0008A7BA` [serialized-string] e object 7
+- `0x0008A80F` [serialized-string] UUUU0
+- `0x0008AB38` [object-label] Quick Backdrop 1
+- `0x0008AC05` [game-text] Bloodstone Wins...
+- `0x0008AC67` [game-text] Bloodstone Wins
+- `0x0008AEDC` [game-text] Green Paddle Wins...
+- `0x0008AF3E` [game-text] Green Paddle Wins
+- `0x0008B04F` [object-label] Active object 1
+- `0x0008B14E` [game-text] Magma Paddle Wins...
+- `0x0008B1B0` [game-text] Magma Paddle Wins
+- `0x0008B2C1` [game-text] Aqua Paddle Wins...
+- `0x0008B323` [game-text] Aqua Paddle Wins
+- `0x0008B433` [game-text] Spike Paddle Wins...
+- `0x0008B495` [game-text] Spike Paddle Wins
+- `0x0008B5A6` [game-text] Rock Paddle Wins...
+- `0x0008B608` [game-text] Rock Paddle Wins
+- `0x0008B718` [game-text] Shifter Wins...
+- `0x0008B77A` [game-text] Shifter Wins
+- `0x0008B886` [game-text] Monolith Wins...
+- `0x0008B8E8` [game-text] Monolith Wins
+- `0x0008BB5B` [object-label] Active object 25
+- `0x0008BE6B` [object-label] Active object 27
+- `0x0008C0A9` [object-label] Active object 36
+- `0x0008C2B1` [serialized-string] SPIKONES
+- `0x0008C52B` [object-label] Active object 33
+- `0x0008C738` [serialized-string] spikewea 2
+- `0x0008C875` [object-label] Active object 57
+- `0x0008C9A6` [object-label] Active object 59
+- `0x0008CB20` [object-label] Active object 60
+- `0x0008CB5E` [object-label] Active object 61
+- `0x0008CCCE` [serialized-string] Frezzer
+- `0x0008CED6` [serialized-string] Aqcommo
+- `0x0008D132` [serialized-string] Green fatal
+- `0x0008D170` [serialized-string] flam
+- `0x0008D293` [serialized-string] Blow 2
+- `0x0008D2D1` [serialized-string] showup
+- `0x0008D2D8` [serialized-string] object 6
+- `0x0008D371` [serialized-string] You can pick me!
+- `0x0008D481` [object-label] Active object 62
+- `0x0008D4BF` [object-label] Active object 2
+- `0x0008D4FD` [serialized-string] aquadis1
+- `0x0008D506` [serialized-string] ject 3
+- `0x0008D53B` [object-label] Counter 1
+- `0x0008D743` [object-label] Active object 4
+- `0x0008D965` [object-label] Active object 5
+- `0x0008DB4C` [object-label] Active object 7
+- `0x0008DD99` [object-label] Active object 9
+- `0x0008DFEC` [serialized-string] TIMES UP!
+- `0x0008E0F5` [serialized-string] joystick error!
+- `0x0008E133` [serialized-string] uppfa
+- `0x0008E171` [serialized-string] lefa
+- `0x0008E1AF` [serialized-string] rigfat
+- `0x0008E1B6` [serialized-string] object 12
+- `0x0008E1ED` [serialized-string] donfat
+- `0x0008E1F4` [serialized-string] object 12
+- `0x0008E22B` [serialized-string] b1fat
+- `0x0008E269` [serialized-string] b2fat
+- `0x0008E2A7` [serialized-string] joystick problem!
+- `0x0008E2E5` [object-label] Active object 13
+- `0x0008E323` [object-label] Active object 14
+- `0x0008E361` [object-label] Active object 3
+- `0x0008E460` [object-label] Active object 10
+- `0x0008E5B0` [object-label] Active object 11
+- `0x0008E5EE` [object-label] Active object 12
+- `0x0008E62C` [object-label] Active object 63
+- `0x0008E810` [serialized-string] bloodcom
+- `0x0008EADC` [serialized-string] rocky
+- `0x0008EAE2` [serialized-string] pon4
+- `0x0008ED4C` [object-label] Active object 15
+- `0x0008EF2D` [object-label] Active object 64
+- `0x0008F09D` [object-label] Active object 65
+- `0x0008F480` [object-label] Active object 66
+- `0x0008F653` [object-label] Active object 18
+- `0x0008F894` [object-label] Active object 19
+- `0x0008FA47` [object-label] Active object 67
+- `0x0008FD47` [serialized-string] upppp
+- `0x0008FE46` [serialized-string] doiwn
+- `0x0008FF45` [serialized-string] leftee
+- `0x0008FF4C` [serialized-string] object 30
+- `0x00090044` [serialized-string] rthig
+- `0x00090341` [serialized-string] pupl
+- `0x0009060D` [object-label] Active object 68
+- `0x0009079A` [object-label] Active object 16
+- `0x000907D8` [object-label] Active object 17
+- `0x00090816` [serialized-string] fatalone
+- `0x00090854` [object-label] Active object 69
+- `0x00090AF5` [object-label] Active object 70
+- `0x00090C81` [object-label] Active object 20
+- `0x00090F21` [object-label] Active object 21
+- `0x000911AC` [object-label] Active object 34
+- `0x0009142F` [serialized-string] monofat
+- `0x0009146D` [serialized-string] shifstabb
+- `0x000914AB` [serialized-string] magfatal
+- `0x000914E9` [serialized-string] shottongfal
+- `0x0009152B` [serialized-string] ve object 26
+- `0x00091565` [object-label] Active object 30
+- `0x000915A3` [object-label] Active object 31
+- `0x000915E1` [serialized-string] Spamality!...
+- `0x0009161F` [object-label] Active object 38
+- `0x0009165D` [object-label] Active object 40
+- `0x0009169B` [serialized-string] CPUweapon1
+- `0x0009199D` [serialized-string] CPUweapon2
+- `0x000919DB` [serialized-string] CPUweapon3
+- `0x00091A19` [object-label] Active object 41
+- `0x00091C0A` [object-label] Active object 42
+- `0x00091F26` [object-label] Active object 44
+- `0x00092140` [object-label] Active object 47
+- `0x00092389` [object-label] Active object 48
+- `0x000925B4` [object-label] Active object 49
+- `0x00092723` [object-label] Active object 50
+- `0x00092822` [object-label] Active object 51
+- `0x00092860` [serialized-string] Blow
+- `0x0009289E` [serialized-string] dinofatal
+- `0x000928DC` [object-label] Active object 52
+- `0x0009291A` [object-label] Active object 53
+- `0x00092B26` [object-label] Active object 54
+- `0x00092D06` [object-label] Active object 55
+- `0x00092ED1` [serialized-string] Mono 2
+- `0x00092ED8` [serialized-string] object 30
+- `0x00092F77` [object-label] Shadow
+- `0x000930F4` [serialized-string]  object 6
+- `0x00093194` [serialized-string] Suicide
+- `0x0009319C` [serialized-string] Blocking
+- `0x000931A5` [object-label] Shadow
+- `0x000975AB` [serialized-string] impact
+- `0x00097629` [serialized-string] flaw
+- `0x000977A1` [serialized-string] impact
+- `0x00097929` [serialized-string] impact
+- `0x000981A9` [serialized-string] impact
+- `0x000983C3` [serialized-string] impact
+- `0x00098655` [serialized-string] Stopped
+- `0x0009882B` [serialized-string] impact
+- `0x000989D7` [serialized-string] User animation 4
+- `0x00098B19` [serialized-string] boucee
+- `0x00099F99` [serialized-string] impact
+- `0x0009A0DD` [serialized-string] offpad
+- `0x0009A17F` [serialized-string] offpad
+- `0x0009A221` [serialized-string] offpad
+- `0x0009A2C3` [serialized-string] offpad
+- `0x0009A365` [serialized-string] offpad
+- `0x0009A407` [serialized-string] offpad
+- `0x0009A4A9` [serialized-string] offpad
+- `0x0009A54B` [serialized-string] offpad
+- `0x0009A5ED` [serialized-string] offpad
+- `0x0009A683` [serialized-string] offpad
+- `0x0009A795` [serialized-string] impact
+- `0x0009AAE9` [serialized-string] impact
+- `0x0009AD4F` [serialized-string] impact
+- `0x0009AF85` [serialized-string] bomsha
+- `0x0009B03F` [serialized-string] impact
+- `0x0009B2A3` [serialized-string] impact
+- `0x0009B75D` [serialized-string] impact
+- `0x0009B8C7` [serialized-string] impact
+- `0x0009BB2D` [serialized-string] impact
+- `0x0009BE51` [serialized-string] impact
+- `0x0009C17F` [serialized-string] impact
+- `0x0009C3F9` [serialized-string] impact
+- `0x0009C68F` [serialized-string] impact
+- `0x0009C921` [serialized-string] impact
+- `0x0009CE45` [serialized-string] impact
+- `0x0009D165` [serialized-string] impact
+- `0x0009D401` [serialized-string] impact
+- `0x0009D673` [serialized-string] impact
+- `0x0009DB69` [serialized-string] impact
+- `0x0009E019` [serialized-string] impact
+- `0x0009E347` [serialized-string] impact
+- `0x0009E619` [serialized-string] impact
+- `0x0009E947` [serialized-string] impact
+- `0x0009EBE5` [serialized-string] impact
+- `0x0009EDC3` [serialized-string] impact
+- `0x0009EEDB` [serialized-string] impact
+- `0x0009F01F` [serialized-string] offpad
+- `0x0009F0C1` [serialized-string] offpad
+- `0x0009F163` [serialized-string] offpad
+- `0x0009F205` [serialized-string] offpad
+- `0x0009F2A7` [serialized-string] offpad
+- `0x0009F349` [serialized-string] offpad
+- `0x0009F3EB` [serialized-string] offpad
+- `0x0009F48D` [serialized-string] offpad
+- `0x0009F52F` [serialized-string] offpad
+- `0x0009F5D1` [serialized-string] offpad
+- `0x0009F673` [serialized-string] offpad
+- `0x0009F715` [serialized-string] offpad
+- `0x0009F861` [serialized-string] ofwall
+- `0x0009F8A7` [serialized-string] ofwall
+- `0x0009F8ED` [serialized-string] impact
+- `0x0009F997` [serialized-string] impact
+- `0x0009FA35` [serialized-string] impact
+- `0x0009FAD3` [serialized-string] impact
+- `0x0009FB71` [serialized-string] impact
+- `0x0009FC0F` [serialized-string] impact
+- `0x0009FCAD` [serialized-string] impact
+- `0x0009FD1D` [serialized-string] impact
+- `0x0009FD8D` [serialized-string] impact
+- `0x0009FE2B` [serialized-string] impact
+- `0x0009FEC9` [serialized-string] impact
+- `0x0009FF39` [serialized-string] impact
+- `0x000A0005` [serialized-string] impact
+- `0x000A00A3` [serialized-string] impact
+- `0x000A0113` [serialized-string] impact
+- `0x000A0183` [serialized-string] impact
+- `0x000A01F3` [serialized-string] impact
+- `0x000A0245` [serialized-string] impact
+- `0x000A02B5` [serialized-string] impact
+- `0x000A0307` [serialized-string] impact
+- `0x000A03F5` [serialized-string] secr
+- `0x000A2B2D` [object-label] Quick Backdrop 4
+- `0x000A2D6D` [serialized-string] nter 1
+- `0x000A2F8C` [object-label] Active object 29
+- `0x000A3032` [object-label] Shadow
+- `0x000A3203` [object-label] Active object 39
+- `0x000A32A9` [object-label] Dent 1
+- `0x000A3480` [serialized-string] secp
+- `0x000A36BC` [object-label] Score 2
+- `0x000A386D` [object-label] Active object 24
+- `0x000A3AE7` [object-label] Active object 43
+- `0x000A3B8D` [object-label] Shadow
+- `0x000A3C59` [serialized-string] cdedc
+- `0x000A3C69` [serialized-string] decce
+- `0x000A3C78` [serialized-string] decede
+- `0x000A3C82` [serialized-string] dede
+- `0x000A3C8A` [serialized-string] cdde
+- `0x000A3CA0` [serialized-string] cdecef
+- `0x000A3CAA` [serialized-string] ceef
+- `0x000A3CB9` [serialized-string] ceede
+- `0x000A3CE8` [serialized-string] ffef
+- `0x000A3CFE` [serialized-string] ddeef
+- `0x000A3D2C` [object-label] Active object 56
+- `0x000A3DD2` [object-label] Shadow
+- `0x000A3F6C` [object-label] Active object 32
+- `0x000A4012` [object-label] Dent 1
+- `0x000A4179` [object-label] Active object 8
+- `0x000A42AD` [object-label] Active object 45
+- `0x000A4545` [object-label] Active object 58
+- `0x000A47B4` [object-label] Active object 28
+- `0x000A4A27` [object-label] Active object 6
+- `0x000A4B7E` [game-text] Cyber Paddle Wins...
+- `0x000A4BE0` [game-text] Cyber Paddle Wins
+- `0x000A4CF1` [object-label] Active object 46
+- `0x000A4EDF` [serialized-string] ve object 47
+- `0x000A5126` [serialized-string] Ball
+- `0x000A512B` [serialized-string] e object 7
+- `0x000A5180` [serialized-string] UUUU0
+- `0x000A54A9` [object-label] Quick Backdrop 1
+- `0x000A5576` [game-text] Bloodstone Wins...
+- `0x000A55D8` [game-text] Bloodstone Wins
+- `0x000A584D` [game-text] Green Paddle Wins...
+- `0x000A58AF` [game-text] Green Paddle Wins
+- `0x000A59C0` [object-label] Active object 1
+- `0x000A5ABF` [game-text] Magma Paddle Wins...
+- `0x000A5B21` [game-text] Magma Paddle Wins
+- `0x000A5C32` [game-text] Aqua Paddle Wins...
+- `0x000A5C94` [game-text] Aqua Paddle Wins
+- `0x000A5DA4` [game-text] Spike Paddle Wins...
+- `0x000A5E06` [game-text] Spike Paddle Wins
+- `0x000A5F17` [game-text] Rock Paddle Wins...
+- `0x000A5F79` [game-text] Rock Paddle Wins
+- `0x000A6089` [game-text] Shifter Wins...
+- `0x000A60EB` [game-text] Shifter Wins
+- `0x000A61F7` [game-text] Monolith Wins...
+- `0x000A6259` [game-text] Monolith Wins
+- `0x000A64CC` [object-label] Active object 25
+- `0x000A67DC` [object-label] Active object 27
+- `0x000A6A1A` [object-label] Active object 36
+- `0x000A6C22` [serialized-string] SPIKONES
+- `0x000A6E9C` [object-label] Active object 33
+- `0x000A70A9` [serialized-string] spikewea 2
+- `0x000A71E6` [object-label] Active object 57
+- `0x000A7317` [object-label] Active object 59
+- `0x000A7491` [object-label] Active object 60
+- `0x000A76A0` [object-label] Active object 61
+- `0x000A7810` [serialized-string] Frezzer
+- `0x000A7A18` [serialized-string] Aqcommo
+- `0x000A7C74` [serialized-string] Green fatal
+- `0x000A7DA5` [serialized-string] flam
+- `0x000A7EC8` [serialized-string] Blow 2
+- `0x000A80D2` [serialized-string] showup
+- `0x000A80D9` [serialized-string] object 6
+- `0x000A816C` [serialized-string] Suicide
+- `0x000A8174` [serialized-string] Blocking
+- `0x000A817D` [object-label] Shadow
+- `0x000A82F7` [serialized-string] You can pick me!
+- `0x000A8407` [object-label] Active object 62
+- `0x000A8445` [object-label] Active object 2
+- `0x000A8483` [serialized-string] aquadis1
+- `0x000A848C` [serialized-string] ject 3
+- `0x000A8652` [object-label] Counter 1
+- `0x000A885A` [object-label] Active object 4
+- `0x000A8A7C` [object-label] Active object 5
+- `0x000A8C63` [object-label] Active object 7
+- `0x000A8EB0` [object-label] Active object 9
+- `0x000A9103` [serialized-string] TIMES UP!
+- `0x000A920C` [serialized-string] joystick error!
+- `0x000A937F` [serialized-string] uppfa
+- `0x000A947E` [serialized-string] lefa
+- `0x000A957D` [serialized-string] rigfat
+- `0x000A9584` [serialized-string] object 12
+- `0x000A967C` [serialized-string] donfat
+- `0x000A9683` [serialized-string] object 12
+- `0x000A977B` [serialized-string] b1fat
+- `0x000A98B4` [serialized-string] b2fat
+- `0x000A99D7` [serialized-string] joystick problem!
+- `0x000A9AE6` [object-label] Active object 13
+- `0x000A9D4F` [object-label] Active object 14
+- `0x000A9ECA` [object-label] Active object 3
+- `0x000A9FC9` [object-label] Active object 10
+- `0x000AA119` [object-label] Active object 11
+- `0x000AA314` [object-label] Active object 12
+- `0x000AA642` [object-label] Active object 63
+- `0x000AA826` [serialized-string] bloodcom
+- `0x000AAAF2` [serialized-string] rocky
+- `0x000AAAF8` [serialized-string] pon4
+- `0x000AAD62` [object-label] Active object 15
+- `0x000AAF43` [object-label] Active object 64
+- `0x000AB0B3` [object-label] Active object 65
+- `0x000AB496` [object-label] Active object 66
+- `0x000AB669` [object-label] Active object 18
+- `0x000AB8AA` [object-label] Active object 19
+- `0x000ABA5D` [object-label] Active object 67
+- `0x000ABD5D` [serialized-string] upppp
+- `0x000ABE5C` [serialized-string] doiwn
+- `0x000ABF5B` [serialized-string] leftee
+- `0x000ABF62` [serialized-string] object 30
+- `0x000AC05A` [serialized-string] rthig
+- `0x000AC357` [serialized-string] pupl
+- `0x000AC623` [object-label] Active object 68
+- `0x000AC7B0` [object-label] Active object 16
+- `0x000ACA3F` [object-label] Active object 17
+- `0x000ACD6E` [object-label] Machine Independant On
+- `0x000ACDAC` [object-label] Active object 69
+- `0x000AD04D` [object-label] Active object 70
+- `0x000AD1D9` [object-label] Active object 20
+- `0x000AD479` [object-label] Active object 21
+- `0x000AD704` [object-label] Active object 34
+- `0x000AD995` [serialized-string] monofat
+- `0x000ADBCF` [serialized-string] shifstabb
+- `0x000ADDE7` [serialized-string] magfatal
+- `0x000ADFA8` [serialized-string] shottongfal
+- `0x000AE1EA` [serialized-string] ve object 26
+- `0x000AE4F6` [object-label] Active object 30
+- `0x000AE534` [object-label] Active object 31
+- `0x000AE83F` [serialized-string] Spamality!...
+- `0x000AE87D` [object-label] Active object 38
+- `0x000AE8BB` [object-label] Active object 40
+- `0x000AE8F9` [serialized-string] CPUweapon1
+- `0x000AEBC9` [serialized-string] CPUweapon2
+- `0x000AEE99` [serialized-string] CPUweapon3
+- `0x000AEED7` [object-label] Active object 41
+- `0x000AF0C8` [object-label] Active object 42
+- `0x000AF3E4` [object-label] Active object 44
+- `0x000AF5FE` [object-label] Active object 47
+- `0x000AF847` [object-label] Active object 48
+- `0x000AFA72` [object-label] Active object 49
+- `0x000AFBE1` [object-label] Active object 50
+- `0x000AFCE0` [object-label] Active object 51
+- `0x000AFD1E` [serialized-string] Blow
+- `0x000AFD5C` [serialized-string] dinofatal
+- `0x000AFD9A` [object-label] Active object 52
+- `0x000AFDD8` [object-label] Active object 53
+- `0x000AFFE4` [object-label] Active object 54
+- `0x000B01C4` [object-label] Active object 55
+- `0x000B038F` [serialized-string] Mono 2
+- `0x000B0396` [serialized-string] object 30
+- `0x000B0435` [object-label] Shadow
+- `0x000B05B2` [serialized-string]  object 6
+- `0x000B0652` [serialized-string] Suicide
+- `0x000B065A` [serialized-string] Blocking
+- `0x000B0663` [object-label] Shadow
+- `0x000B5269` [serialized-string] impact
+- `0x000B52E7` [serialized-string] flaw
+- `0x000B545F` [serialized-string] impact
+- `0x000B55E7` [serialized-string] impact
+- `0x000B60EF` [serialized-string] impact
+- `0x000B672D` [serialized-string] impact
+- `0x000B67F9` [serialized-string] impact
+- `0x000B6AA3` [serialized-string] Stopped
+- `0x000B6C79` [serialized-string] impact
+- `0x000B6ED9` [serialized-string] User animation 4
+- `0x000B701B` [serialized-string] boucee
+- `0x000B80B5` [serialized-string] begin
+- `0x000B8B8F` [serialized-string] impact
+- `0x000B8EBD` [serialized-string] disman
+- `0x000B8F7D` [serialized-string] offpad
+- `0x000B901F` [serialized-string] offpad
+- `0x000B90C1` [serialized-string] offpad
+- `0x000B9163` [serialized-string] offpad
+- `0x000B9205` [serialized-string] offpad
+- `0x000B92A7` [serialized-string] offpad
+- `0x000B9349` [serialized-string] offpad
+- `0x000B93EB` [serialized-string] offpad
+- `0x000B948D` [serialized-string] offpad
+- `0x000B9523` [serialized-string] offpad
+- `0x000B9635` [serialized-string] impact
+- `0x000B99A1` [serialized-string] impact
+- `0x000B9C07` [serialized-string] impact
+- `0x000B9F37` [serialized-string] bomsha
+- `0x000B9F65` [serialized-string] Stopped
+- `0x000BA0CF` [serialized-string] impact
+- `0x000BA333` [serialized-string] impact
+- `0x000BA5CD` [serialized-string] disman
+- `0x000BAA49` [serialized-string] impact
+- `0x000BABB3` [serialized-string] impact
+- `0x000BAE19` [serialized-string] impact
+- `0x000BB13D` [serialized-string] impact
+- `0x000BB46B` [serialized-string] impact
+- `0x000BB6F1` [serialized-string] impact
+- `0x000BB987` [serialized-string] impact
+- `0x000BBC19` [serialized-string] impact
+- `0x000BC13D` [serialized-string] impact
+- `0x000BC45D` [serialized-string] impact
+- `0x000BC6F9` [serialized-string] impact
+- `0x000BC96B` [serialized-string] impact
+- `0x000BCE61` [serialized-string] impact
+- `0x000BD311` [serialized-string] impact
+- `0x000BD63F` [serialized-string] impact
+- `0x000BD911` [serialized-string] impact
+- `0x000BDC3F` [serialized-string] impact
+- `0x000BDEDD` [serialized-string] impact
+- `0x000BE0BB` [serialized-string] impact
+- `0x000BE1D3` [serialized-string] impact
+- `0x000BE317` [serialized-string] offpad
+- `0x000BE3B9` [serialized-string] offpad
+- `0x000BE45B` [serialized-string] offpad
+- `0x000BE4FD` [serialized-string] offpad
+- `0x000BE59F` [serialized-string] offpad
+- `0x000BE641` [serialized-string] offpad
+- `0x000BE6E3` [serialized-string] offpad
+- `0x000BE785` [serialized-string] offpad
+- `0x000BE827` [serialized-string] offpad
+- `0x000BE8C9` [serialized-string] offpad
+- `0x000BE96B` [serialized-string] offpad
+- `0x000BEA0D` [serialized-string] offpad
+- `0x000BEC21` [serialized-string] disman
+- `0x000BF02D` [serialized-string] spam
+- `0x000BF271` [serialized-string] disman
+- `0x000BF4C1` [serialized-string] disman
+- `0x000BF76D` [serialized-string] disman
+- `0x000BF965` [serialized-string] disman
+- `0x000BFB31` [serialized-string] disman
+- `0x000BFD2D` [serialized-string] disman
+- `0x000C0647` [serialized-string] ofwall
+- `0x000C068D` [serialized-string] ofwall
+- `0x000C06D3` [serialized-string] impact
+- `0x000C077D` [serialized-string] impact
+- `0x000C081B` [serialized-string] impact
+- `0x000C08B9` [serialized-string] impact
+- `0x000C0957` [serialized-string] impact
+- `0x000C09F5` [serialized-string] impact
+- `0x000C0A93` [serialized-string] impact
+- `0x000C0B03` [serialized-string] impact
+- `0x000C0B73` [serialized-string] impact
+- `0x000C0C11` [serialized-string] impact
+- `0x000C0CAF` [serialized-string] impact
+- `0x000C0D1F` [serialized-string] impact
+- `0x000C0DEB` [serialized-string] impact
+- `0x000C0E89` [serialized-string] impact
+- `0x000C0EF9` [serialized-string] impact
+- `0x000C0F69` [serialized-string] impact
+- `0x000C0FD9` [serialized-string] impact
+- `0x000C102B` [serialized-string] impact
+- `0x000C109B` [serialized-string] impact
+- `0x000C10ED` [serialized-string] impact
+- `0x000C1151` [serialized-string] impact
+- `0x000C12A3` [serialized-string] impact
+- `0x000C136F` [serialized-string] impact
+- `0x000C143B` [serialized-string] impact
+- `0x000C1507` [serialized-string] impact
+- `0x000C15B5` [serialized-string] impact
+- `0x000C1681` [serialized-string] impact
+- `0x000C174D` [serialized-string] impact
+- `0x000C1847` [serialized-string] impact
+- `0x000C18C7` [serialized-string] impact
+- `0x000C1958` [serialized-string]  oNZ
+- `0x000C1997` [serialized-string] blood
+- `0x000C41D3` [object-label] Quick Backdrop 4
+- `0x000C446F` [serialized-string] nter 1
+- `0x000C468E` [object-label] Active object 29
+- `0x000C4734` [object-label] Shadow
+- `0x000C490F` [object-label] Active object 39
+- `0x000C49B5` [object-label] Dent 1
+- `0x000C4B8C` [serialized-string] secp
+- `0x000C4DC8` [object-label] Score 2
+- `0x000C4F79` [object-label] Active object 24
+- `0x000C51F3` [object-label] Active object 43
+- `0x000C5299` [object-label] Shadow
+- `0x000C5365` [serialized-string] cdedc
+- `0x000C5375` [serialized-string] decce
+- `0x000C5384` [serialized-string] decede
+- `0x000C538E` [serialized-string] dede
+- `0x000C5396` [serialized-string] cdde
+- `0x000C53AC` [serialized-string] cdecef
+- `0x000C53B6` [serialized-string] ceef
+- `0x000C53C5` [serialized-string] ceede
+- `0x000C53F4` [serialized-string] ffef
+- `0x000C540A` [serialized-string] ddeef
+- `0x000C5438` [object-label] Active object 56
+- `0x000C54DE` [object-label] Shadow
+- `0x000C5678` [object-label] Active object 32
+- `0x000C571E` [object-label] Dent 1
+- `0x000C5885` [object-label] Active object 8
+- `0x000C59B9` [object-label] Active object 45
+- `0x000C5C51` [object-label] Active object 58
+- `0x000C5EC0` [object-label] Active object 28
+- `0x000C6133` [object-label] Active object 6
+- `0x000C628A` [game-text] Cyber Paddle Wins...
+- `0x000C62EC` [game-text] Cyber Paddle Wins
+- `0x000C63FD` [object-label] Active object 46
+- `0x000C65EB` [serialized-string] ve object 47
+- `0x000C67C0` [serialized-string] Ball
+- `0x000C67C5` [serialized-string] e object 7
+- `0x000C681A` [serialized-string] UUUU0
+- `0x000C6B43` [object-label] Quick Backdrop 1
+- `0x000C6C10` [game-text] Bloodstone Wins...
+- `0x000C6C72` [game-text] Bloodstone Wins
+- `0x000C6EE7` [game-text] Green Paddle Wins...
+- `0x000C6F49` [game-text] Green Paddle Wins
+- `0x000C705A` [object-label] Active object 1
+- `0x000C7159` [game-text] Magma Paddle Wins...
+- `0x000C71BB` [game-text] Magma Paddle Wins
+- `0x000C72CC` [game-text] Aqua Paddle Wins...
+- `0x000C732E` [game-text] Aqua Paddle Wins
+- `0x000C743E` [game-text] Spike Paddle Wins...
+- `0x000C74A0` [game-text] Spike Paddle Wins
+- `0x000C75B1` [game-text] Rock Paddle Wins...
+- `0x000C7613` [game-text] Rock Paddle Wins
+- `0x000C7723` [game-text] Shifter Wins...
+- `0x000C7785` [game-text] Shifter Wins
+- `0x000C7891` [game-text] Monolith Wins...
+- `0x000C78F3` [game-text] Monolith Wins
+- `0x000C7B66` [object-label] Active object 25
+- `0x000C7E76` [object-label] Active object 27
+- `0x000C80B4` [object-label] Active object 36
+- `0x000C82BC` [serialized-string] SPIKONES
+- `0x000C8536` [object-label] Active object 33
+- `0x000C8743` [serialized-string] spikewea 2
+- `0x000C8880` [object-label] Active object 57
+- `0x000C89B1` [object-label] Active object 59
+- `0x000C8B2B` [object-label] Active object 60
+- `0x000C8C30` [serialized-string] edcce
+- `0x000C8D40` [object-label] Active object 61
+- `0x000C8EB0` [serialized-string] Frezzer
+- `0x000C90B8` [serialized-string] Aqcommo
+- `0x000C9314` [serialized-string] Green fatal
+- `0x000C9445` [serialized-string] flam
+- `0x000C9568` [serialized-string] Blow 2
+- `0x000C9772` [serialized-string] showup
+- `0x000C9779` [serialized-string] object 6
+- `0x000C980C` [serialized-string] Suicide
+- `0x000C9814` [serialized-string] Blocking
+- `0x000C981D` [object-label] Shadow
+- `0x000C9997` [serialized-string] You can pick me!
+- `0x000C9AA7` [object-label] Active object 62
+- `0x000CA026` [object-label] Active object 2
+- `0x000CA572` [serialized-string] aquadis1
+- `0x000CA57B` [serialized-string] ject 3
+- `0x000CA735` [object-label] Counter 1
+- `0x000CA93D` [object-label] Active object 4
+- `0x000CAB5F` [object-label] Active object 5
+- `0x000CAD46` [object-label] Active object 7
+- `0x000CAF93` [object-label] Active object 9
+- `0x000CB1E6` [serialized-string] TIMES UP!
+- `0x000CB2EF` [serialized-string] joystick error!
+- `0x000CB462` [serialized-string] uppfa
+- `0x000CB561` [serialized-string] lefa
+- `0x000CB660` [serialized-string] rigfat
+- `0x000CB667` [serialized-string] object 12
+- `0x000CB75F` [serialized-string] donfat
+- `0x000CB766` [serialized-string] object 12
+- `0x000CB85E` [serialized-string] b1fat
+- `0x000CB997` [serialized-string] b2fat
+- `0x000CBABA` [serialized-string] joystick problem!
+- `0x000CBBC9` [object-label] Active object 13
+- `0x000CBCEB` [serialized-string] decde
+- `0x000CBD16` [serialized-string] dceed
+- `0x000CBD27` [serialized-string] dedcd
+- `0x000CBD45` [serialized-string] dcecd
+- `0x000CBD93` [serialized-string] decd
+- `0x000CBDAE` [serialized-string] feedd
+- `0x000CBDDE` [serialized-string] fece
+- `0x000CBE1A` [object-label] Active object 14
+- `0x000CBF95` [object-label] Active object 3
+- `0x000CC094` [object-label] Active object 10
+- `0x000CC1E4` [object-label] Active object 11
+- `0x000CC3DF` [object-label] Active object 12
+- `0x000CC6ED` [object-label] Active object 63
+- `0x000CC8D1` [serialized-string] bloodcom
+- `0x000CCB9D` [serialized-string] rocky
+- `0x000CCBA3` [serialized-string] pon4
+- `0x000CCE0D` [object-label] Active object 15
+- `0x000CCFEE` [object-label] Active object 64
+- `0x000CD15E` [object-label] Active object 65
+- `0x000CD541` [object-label] Active object 66
+- `0x000CD714` [object-label] Active object 18
+- `0x000CD955` [object-label] Active object 19
+- `0x000CDB08` [object-label] Active object 67
+- `0x000CDE08` [serialized-string] upppp
+- `0x000CDF07` [serialized-string] doiwn
+- `0x000CE006` [serialized-string] leftee
+- `0x000CE00D` [serialized-string] object 30
+- `0x000CE105` [serialized-string] rthig
+- `0x000CE402` [serialized-string] pupl
+- `0x000CE6CE` [object-label] Active object 68
+- `0x000CE85B` [object-label] Active object 16
+- `0x000CE9B2` [serialized-string] dcedc
+- `0x000CE9C2` [serialized-string] dedce
+- `0x000CE9E2` [serialized-string] edecd
+- `0x000CEAD7` [object-label] Active object 17
+- `0x000CEC36` [serialized-string] edceed
+- `0x000CEC49` [serialized-string] decece
+- `0x000CEC82` [serialized-string] ededcd
+- `0x000CECBA` [serialized-string] edcedc
+- `0x000CECDE` [serialized-string] efdece
+- `0x000CEDC0` [serialized-string] eede
+- `0x000CEDEE` [serialized-string] Frezzer 2
+- `0x000CEFF6` [object-label] Active object 69
+- `0x000CF297` [object-label] Active object 70
+- `0x000CF423` [object-label] Active object 20
+- `0x000CF6C3` [object-label] Active object 21
+- `0x000CF94E` [object-label] Active object 34
+- `0x000CFBB1` [serialized-string] monofat
+- `0x000CFCF8` [serialized-string] dcedc
+- `0x000CFD05` [serialized-string] dedce
+- `0x000CFD1F` [serialized-string] edecd
+- `0x000CFD52` [serialized-string] efece
+- `0x000CFD6D` [serialized-string] eecd
+- `0x000CFDAC` [serialized-string] efece
+- `0x000CFDE2` [serialized-string] shifstabb
+- `0x000CFEF5` [serialized-string] eddce
+- `0x000CFF0F` [serialized-string] edcdc
+- `0x000CFF20` [serialized-string] edcce
+- `0x000CFF5D` [serialized-string] deece
+- `0x000CFFF8` [serialized-string] magfatal
+- `0x000D01C7` [serialized-string] shottongfal
+- `0x000D0409` [serialized-string] ve object 26
+- `0x000D0715` [object-label] Machine Independant On
+- `0x000D0753` [object-label] Active object 31
+- `0x000D086E` [serialized-string] edecdec
+- `0x000D08A7` [serialized-string] dcddcde
+- `0x000D08D2` [serialized-string] ecdc
+- `0x000D0911` [serialized-string] dcee
+- `0x000D0A74` [serialized-string] Spamality!...
+- `0x000D0AB2` [object-label] Active object 38
+- `0x000D0AF0` [object-label] Active object 40
+- `0x000D0B2E` [serialized-string] CPUweapon1
+- `0x000D0D37` [serialized-string] CPUweapon2
+- `0x000D0F97` [serialized-string] CPUweapon3
+- `0x000D0FD5` [object-label] Active object 41
+- `0x000D11C6` [object-label] Active object 42
+- `0x000D14E2` [object-label] Active object 44
+- `0x000D16FC` [object-label] Active object 47
+- `0x000D1945` [object-label] Active object 48
+- `0x000D1B70` [object-label] Active object 49
+- `0x000D1CDF` [object-label] Active object 50
+- `0x000D1DDE` [object-label] Active object 51
+- `0x000D1E1C` [serialized-string] Blow
+- `0x000D1E5A` [serialized-string] dinofatal
+- `0x000D1E98` [object-label] Active object 52
+- `0x000D1ED6` [object-label] Active object 53
+- `0x000D20E2` [object-label] Active object 54
+- `0x000D22C2` [object-label] Active object 55
+- `0x000D248D` [serialized-string] Mono 2
+- `0x000D2494` [serialized-string] object 30
+- `0x000D2533` [object-label] Shadow
+- `0x000D26B0` [serialized-string]  object 6
+- `0x000D2750` [serialized-string] Suicide
+- `0x000D2758` [serialized-string] Blocking
+- `0x000D2761` [object-label] Shadow
+- `0x000D7377` [serialized-string] impact
+- `0x000D73F5` [serialized-string] flaw
+- `0x000D756D` [serialized-string] impact
+- `0x000D76F5` [serialized-string] impact
+- `0x000D81FD` [serialized-string] impact
+- `0x000D8869` [serialized-string] impact
+- `0x000D8B13` [serialized-string] Stopped
+- `0x000D8CE9` [serialized-string] impact
+- `0x000D8F49` [serialized-string] User animation 4
+- `0x000D908B` [serialized-string] boucee
+- `0x000DAB97` [serialized-string] impact
+- `0x000DAEC5` [serialized-string] disman
+- `0x000DAF85` [serialized-string] offpad
+- `0x000DB027` [serialized-string] offpad
+- `0x000DB0C9` [serialized-string] offpad
+- `0x000DB16B` [serialized-string] offpad
+- `0x000DB20D` [serialized-string] offpad
+- `0x000DB2AF` [serialized-string] offpad
+- `0x000DB351` [serialized-string] offpad
+- `0x000DB3F3` [serialized-string] offpad
+- `0x000DB495` [serialized-string] offpad
+- `0x000DB52B` [serialized-string] offpad
+- `0x000DB63D` [serialized-string] impact
+- `0x000DB9A9` [serialized-string] impact
+- `0x000DBC0F` [serialized-string] impact
+- `0x000DBF3F` [serialized-string] bomsha
+- `0x000DBF6D` [serialized-string] Stopped
+- `0x000DC0D7` [serialized-string] impact
+- `0x000DC33B` [serialized-string] impact
+- `0x000DC691` [serialized-string] noguy!
+- `0x000DC735` [serialized-string] wackee
+- `0x000DC9F5` [serialized-string] disman
+- `0x000DCE71` [serialized-string] impact
+- `0x000DCFDB` [serialized-string] impact
+- `0x000DD241` [serialized-string] impact
+- `0x000DD565` [serialized-string] impact
+- `0x000DD893` [serialized-string] impact
+- `0x000DDB19` [serialized-string] impact
+- `0x000DDDAF` [serialized-string] impact
+- `0x000DE041` [serialized-string] impact
+- `0x000DE565` [serialized-string] impact
+- `0x000DE885` [serialized-string] impact
+- `0x000DEB21` [serialized-string] impact
+- `0x000DED93` [serialized-string] impact
+- `0x000DF289` [serialized-string] impact
+- `0x000DF739` [serialized-string] impact
+- `0x000DFA67` [serialized-string] impact
+- `0x000DFD39` [serialized-string] impact
+- `0x000E0067` [serialized-string] impact
+- `0x000E0305` [serialized-string] impact
+- `0x000E04E3` [serialized-string] impact
+- `0x000E05FB` [serialized-string] impact
+- `0x000E073F` [serialized-string] offpad
+- `0x000E07E1` [serialized-string] offpad
+- `0x000E0883` [serialized-string] offpad
+- `0x000E0925` [serialized-string] offpad
+- `0x000E09C7` [serialized-string] offpad
+- `0x000E0A69` [serialized-string] offpad
+- `0x000E0B0B` [serialized-string] offpad
+- `0x000E0BAD` [serialized-string] offpad
+- `0x000E0C4F` [serialized-string] offpad
+- `0x000E0CF1` [serialized-string] offpad
+- `0x000E0D93` [serialized-string] offpad
+- `0x000E0E35` [serialized-string] offpad
+- `0x000E1049` [serialized-string] disman
+- `0x000E1455` [serialized-string] spam
+- `0x000E1699` [serialized-string] disman
+- `0x000E18E9` [serialized-string] disman
+- `0x000E1B95` [serialized-string] disman
+- `0x000E1D8D` [serialized-string] disman
+- `0x000E1F59` [serialized-string] disman
+- `0x000E2155` [serialized-string] disman
+- `0x000E2A6F` [serialized-string] ofwall
+- `0x000E2AB5` [serialized-string] ofwall
+- `0x000E2AFB` [serialized-string] impact
+- `0x000E2B81` [object-label] Shadow
+- `0x000E2BE1` [serialized-string] impact
+- `0x000E2C5B` [object-label] Dent 1
+- `0x000E2CBB` [serialized-string] impact
+- `0x000E2D35` [serialized-string] User animation 1
+- `0x000E2D95` [serialized-string] impact
+- `0x000E2E0F` [serialized-string] User animation 1
+- `0x000E2E6F` [serialized-string] impact
+- `0x000E2EE9` [object-label] Shadow
+- `0x000E2F49` [serialized-string] impact
+- `0x000E2FC3` [object-label] Shadow
+- `0x000E3023` [serialized-string] impact
+- `0x000E309F` [serialized-string] impact
+- `0x000E311B` [serialized-string] impact
+- `0x000E3195` [serialized-string] User animation 1
+- `0x000E31F5` [serialized-string] impact
+- `0x000E326F` [serialized-string] User animation 1
+- `0x000E32CF` [serialized-string] impact
+- `0x000E334B` [serialized-string] impact
+- `0x000E33F3` [serialized-string] User animation 1
+- `0x000E3453` [serialized-string] impact
+- `0x000E34CD` [serialized-string] User animation 1
+- `0x000E352D` [serialized-string] impact
+- `0x000E35A9` [serialized-string] impact
+- `0x000E3625` [serialized-string] impact
+- `0x000E36A1` [serialized-string] impact
+- `0x000E36FF` [serialized-string] impact
+- `0x000E377B` [serialized-string] impact
+- `0x000E37D9` [serialized-string] impact
+- `0x000E3849` [serialized-string] impact
+- `0x000E3E6F` [serialized-string] impact
+- `0x000E3EBB` [object-label] Dent 1
+- `0x000E3F1B` [serialized-string] Walking
+- `0x000E3FA9` [serialized-string] aqua
+- `0x000E6759` [object-label] Quick Backdrop 4
+- `0x000E6983` [serialized-string] nter 1
+- `0x000E6BA2` [object-label] Active object 29
+- `0x000E6C48` [object-label] Shadow
+- `0x000E6E19` [object-label] Active object 39
+- `0x000E6EBF` [object-label] Dent 1
+- `0x000E7096` [serialized-string] secp
+- `0x000E72D2` [object-label] Score 2
+- `0x000E7483` [object-label] Active object 24
+- `0x000E76FD` [object-label] Active object 43
+- `0x000E77A3` [object-label] Shadow
+- `0x000E786F` [serialized-string] cdedc
+- `0x000E787F` [serialized-string] decce
+- `0x000E788E` [serialized-string] decede
+- `0x000E7898` [serialized-string] dede
+- `0x000E78A0` [serialized-string] cdde
+- `0x000E78B6` [serialized-string] cdecef
+- `0x000E78C0` [serialized-string] ceef
+- `0x000E78CF` [serialized-string] ceede
+- `0x000E78FE` [serialized-string] ffef
+- `0x000E7914` [serialized-string] ddeef
+- `0x000E7942` [object-label] Active object 56
+- `0x000E79E8` [object-label] Shadow
+- `0x000E7B82` [object-label] Active object 32
+- `0x000E7C28` [object-label] Dent 1
+- `0x000E7D8F` [object-label] Active object 8
+- `0x000E7EC3` [object-label] Active object 45
+- `0x000E815B` [object-label] Active object 58
+- `0x000E83CA` [object-label] Active object 28
+- `0x000E863D` [object-label] Active object 6
+- `0x000E8794` [game-text] Cyber Paddle Wins...
+- `0x000E87F6` [game-text] Cyber Paddle Wins
+- `0x000E8907` [object-label] Active object 46
+- `0x000E8AF5` [serialized-string] ve object 47
+- `0x000E8D34` [serialized-string] Ball
+- `0x000E8D39` [serialized-string] e object 7
+- `0x000E8D8E` [serialized-string] UUUU0
+- `0x000E90B7` [object-label] Quick Backdrop 1
+- `0x000E9184` [game-text] Bloodstone Wins...
+- `0x000E91E6` [game-text] Bloodstone Wins
+- `0x000E945B` [game-text] Green Paddle Wins...
+- `0x000E94BD` [game-text] Green Paddle Wins
+- `0x000E95CE` [object-label] Active object 1
+- `0x000E96CD` [game-text] Magma Paddle Wins...
+- `0x000E972F` [game-text] Magma Paddle Wins
+- `0x000E9840` [game-text] Aqua Paddle Wins...
+- `0x000E98A2` [game-text] Aqua Paddle Wins
+- `0x000E99B2` [game-text] Spike Paddle Wins...
+- `0x000E9A14` [game-text] Spike Paddle Wins
+- `0x000E9B25` [game-text] Rock Paddle Wins...
+- `0x000E9B87` [game-text] Rock Paddle Wins
+- `0x000E9C97` [game-text] Shifter Wins...
+- `0x000E9CF9` [game-text] Shifter Wins
+- `0x000E9E05` [game-text] Monolith Wins...
+- `0x000E9E67` [game-text] Monolith Wins
+- `0x000EA0DA` [object-label] Active object 25
+- `0x000EA3EA` [object-label] Active object 27
+- `0x000EA628` [object-label] Active object 36
+- `0x000EA830` [serialized-string] SPIKONES
+- `0x000EAAAA` [object-label] Active object 33
+- `0x000EACB7` [serialized-string] spikewea 2
+- `0x000EADF4` [object-label] Active object 57
+- `0x000EAF25` [object-label] Active object 59
+- `0x000EB09F` [object-label] Active object 60
+- `0x000EB2E0` [object-label] Active object 61
+- `0x000EB450` [serialized-string] Frezzer
+- `0x000EB658` [serialized-string] Aqcommo
+- `0x000EB8B4` [serialized-string] Green fatal
+- `0x000EB9E5` [serialized-string] flam
+- `0x000EBB08` [serialized-string] Blow 2
+- `0x000EBD12` [serialized-string] showup
+- `0x000EBD19` [serialized-string] object 6
+- `0x000EBDAC` [serialized-string] Suicide
+- `0x000EBDB4` [serialized-string] Blocking
+- `0x000EBDBD` [object-label] Shadow
+- `0x000EBF37` [serialized-string] You can pick me!
+- `0x000EC047` [object-label] Machine Independant On
+- `0x000EC085` [object-label] Active object 2
+- `0x000EC0C3` [serialized-string] aquadis1
+- `0x000EC0CC` [serialized-string] ject 3
+- `0x000EC2A4` [object-label] Counter 1
+- `0x000EC4AC` [object-label] Active object 4
+- `0x000EC6CE` [object-label] Active object 5
+- `0x000EC8B5` [object-label] Active object 7
+- `0x000ECB02` [object-label] Active object 9
+- `0x000ECD55` [serialized-string] TIMES UP!
+- `0x000ECE5E` [serialized-string] joystick error!
+- `0x000ECFD1` [serialized-string] uppfa
+- `0x000ED0D0` [serialized-string] lefa
+- `0x000ED1CF` [serialized-string] rigfat
+- `0x000ED1D6` [serialized-string] object 12
+- `0x000ED2CE` [serialized-string] donfat
+- `0x000ED2D5` [serialized-string] object 12
+- `0x000ED3CD` [serialized-string] b1fat
+- `0x000ED506` [serialized-string] b2fat
+- `0x000ED629` [serialized-string] joystick problem!
+- `0x000ED738` [object-label] Active object 13
+- `0x000ED9E4` [object-label] Active object 14
+- `0x000EDB5F` [object-label] Active object 3
+- `0x000EDC5E` [object-label] Active object 10
+- `0x000EDDAE` [object-label] Active object 11
+- `0x000EDFA9` [object-label] Active object 12
+- `0x000EE2D7` [object-label] Active object 63
+- `0x000EE4BB` [serialized-string] bloodcom
+- `0x000EE787` [serialized-string] rocky
+- `0x000EE78D` [serialized-string] pon4
+- `0x000EE9F7` [object-label] Active object 15
+- `0x000EEBD8` [object-label] Active object 64
+- `0x000EED48` [object-label] Active object 65
+- `0x000EF12B` [object-label] Active object 66
+- `0x000EF2FE` [object-label] Active object 18
+- `0x000EF53F` [object-label] Active object 19
+- `0x000EF6F2` [object-label] Active object 67
+- `0x000EF9F2` [serialized-string] upppp
+- `0x000EFAF1` [serialized-string] doiwn
+- `0x000EFBF0` [serialized-string] leftee
+- `0x000EFBF7` [serialized-string] object 30
+- `0x000EFCEF` [serialized-string] rthig
+- `0x000EFFEC` [serialized-string] pupl
+- `0x000F02B8` [object-label] Active object 68
+- `0x000F0445` [object-label] Active object 16
+- `0x000F0700` [object-label] Active object 17
+- `0x000F0A00` [serialized-string] spikewea
+- `0x000F0A3E` [object-label] Active object 69
+- `0x000F0CDF` [object-label] Active object 70
+- `0x000F0E6B` [object-label] Active object 20
+- `0x000F110B` [object-label] Active object 21
+- `0x000F1396` [object-label] Active object 34
+- `0x000F161E` [serialized-string] monofat
+- `0x000F1885` [serialized-string] shifstabb
+- `0x000F1AC8` [serialized-string] magfatal
+- `0x000F1CAF` [serialized-string] shottongfal
+- `0x000F1EF1` [serialized-string] ve object 26
+- `0x000F21FD` [object-label] Active object 30
+- `0x000F223B` [object-label] Active object 31
+- `0x000F252A` [serialized-string] Spamality!...
+- `0x000F2568` [object-label] Active object 38
+- `0x000F25A6` [object-label] Active object 40
+- `0x000F25E4` [serialized-string] CPUweapon1
+- `0x000F26E3` [serialized-string] CPUweapon2
+- `0x000F285D` [serialized-string] CPUweapon3
+- `0x000F289B` [object-label] Active object 41
+- `0x000F2A8C` [object-label] Active object 42
+- `0x000F2DA8` [object-label] Active object 44
+- `0x000F2FC2` [object-label] Active object 47
+- `0x000F320B` [object-label] Active object 48
+- `0x000F3436` [object-label] Active object 49
+- `0x000F35A5` [object-label] Active object 50
+- `0x000F36A4` [object-label] Active object 51
+- `0x000F36E2` [serialized-string] Blow
+- `0x000F3720` [serialized-string] dinofatal
+- `0x000F375E` [object-label] Active object 52
+- `0x000F379C` [object-label] Active object 53
+- `0x000F39A8` [object-label] Active object 54
+- `0x000F3B88` [object-label] Active object 55
+- `0x000F3D53` [serialized-string] Mono 2
+- `0x000F3D5A` [serialized-string] object 30
+- `0x000F3DF9` [object-label] Shadow
+- `0x000F3F76` [serialized-string]  object 6
+- `0x000F4016` [serialized-string] Suicide
+- `0x000F401E` [serialized-string] Blocking
+- `0x000F4027` [object-label] Shadow
+- `0x000F8C25` [serialized-string] impact
+- `0x000F8CA3` [serialized-string] flaw
+- `0x000F8E1B` [serialized-string] impact
+- `0x000F8FA3` [serialized-string] impact
+- `0x000F9AAB` [serialized-string] impact
+- `0x000FA003` [serialized-string] impact
+- `0x000FA0CF` [serialized-string] impact
+- `0x000FA379` [serialized-string] Stopped
+- `0x000FA54F` [serialized-string] impact
+- `0x000FA7AF` [serialized-string] User animation 4
+- `0x000FA8F1` [serialized-string] boucee
+- `0x000FC3FD` [serialized-string] impact
+- `0x000FC72B` [serialized-string] disman
+- `0x000FC7EB` [serialized-string] offpad
+- `0x000FC88D` [serialized-string] offpad
+- `0x000FC92F` [serialized-string] offpad
+- `0x000FC9D1` [serialized-string] offpad
+- `0x000FCA73` [serialized-string] offpad
+- `0x000FCB15` [serialized-string] offpad
+- `0x000FCBB7` [serialized-string] offpad
+- `0x000FCC59` [serialized-string] offpad
+- `0x000FCCFB` [serialized-string] offpad
+- `0x000FCD91` [serialized-string] offpad
+- `0x000FCEA3` [serialized-string] impact
+- `0x000FD20F` [serialized-string] impact
+- `0x000FD475` [serialized-string] impact
+- `0x000FD7A5` [serialized-string] bomsha
+- `0x000FD7D3` [serialized-string] Stopped
+- `0x000FD93D` [serialized-string] impact
+- `0x000FDBA1` [serialized-string] impact
+- `0x000FDE3B` [serialized-string] disman
+- `0x000FE2B7` [serialized-string] impact
+- `0x000FE421` [serialized-string] impact
+- `0x000FE687` [serialized-string] impact
+- `0x000FE9AB` [serialized-string] impact
+- `0x000FECD9` [serialized-string] impact
+- `0x000FEF5F` [serialized-string] impact
+- `0x000FF1F5` [serialized-string] impact
+- `0x000FF487` [serialized-string] impact
+- `0x000FF9AB` [serialized-string] impact
+- `0x000FFCCB` [serialized-string] impact
+- `0x000FFF67` [serialized-string] impact
+- `0x001001D9` [serialized-string] impact
+- `0x001006CF` [serialized-string] impact
+- `0x00100B7F` [serialized-string] impact
+- `0x00100EAD` [serialized-string] impact
+- `0x0010117F` [serialized-string] impact
+- `0x001014AD` [serialized-string] impact
+- `0x0010174B` [serialized-string] impact
+- `0x00101929` [serialized-string] impact
+- `0x00101A41` [serialized-string] impact
+- `0x00101B85` [serialized-string] offpad
+- `0x00101C27` [serialized-string] offpad
+- `0x00101CC9` [serialized-string] offpad
+- `0x00101D6B` [serialized-string] offpad
+- `0x00101E0D` [serialized-string] offpad
+- `0x00101EAF` [serialized-string] offpad
+- `0x00101F51` [serialized-string] offpad
+- `0x00101FF3` [serialized-string] offpad
+- `0x00102095` [serialized-string] offpad
+- `0x00102137` [serialized-string] offpad
+- `0x001021D9` [serialized-string] offpad
+- `0x0010227B` [serialized-string] offpad
+- `0x0010248F` [serialized-string] disman
+- `0x001028B9` [serialized-string] spam
+- `0x00102ADF` [serialized-string] disman
+- `0x00102D2F` [serialized-string] disman
+- `0x00102FDB` [serialized-string] disman
+- `0x001031D3` [serialized-string] disman
+- `0x0010339F` [serialized-string] disman
+- `0x0010359B` [serialized-string] disman
+- `0x00103EB5` [serialized-string] ofwall
+- `0x00103EFB` [serialized-string] ofwall
+- `0x00103F41` [serialized-string] impact
+- `0x00103FEB` [serialized-string] impact
+- `0x00104089` [serialized-string] impact
+- `0x00104127` [serialized-string] impact
+- `0x001041C5` [serialized-string] impact
+- `0x00104263` [serialized-string] impact
+- `0x00104301` [serialized-string] impact
+- `0x00104371` [serialized-string] impact
+- `0x001043E1` [serialized-string] impact
+- `0x0010447F` [serialized-string] impact
+- `0x0010451D` [serialized-string] impact
+- `0x0010458D` [serialized-string] impact
+- `0x00104659` [serialized-string] impact
+- `0x001046F7` [serialized-string] impact
+- `0x00104767` [serialized-string] impact
+- `0x001047D7` [serialized-string] impact
+- `0x00104847` [serialized-string] impact
+- `0x00104899` [serialized-string] impact
+- `0x00104909` [serialized-string] impact
+- `0x0010495B` [serialized-string] impact
+- `0x001049BF` [serialized-string] impact
+- `0x00104B11` [serialized-string] impact
+- `0x00104BDD` [serialized-string] impact
+- `0x00104CA9` [serialized-string] impact
+- `0x00104D75` [serialized-string] impact
+- `0x00104E23` [serialized-string] impact
+- `0x00104ED1` [serialized-string] impact
+- `0x00104F7F` [serialized-string] impact
+- `0x0010505B` [serialized-string] impact
+- `0x001050DB` [serialized-string] impact
+- `0x001052C9` [serialized-string] cyber
+- `0x00107AA3` [object-label] Quick Backdrop 2
+- `0x00107D48` [serialized-string] nter 1
+- `0x00107F67` [object-label] Active object 29
+- `0x0010800D` [object-label] Shadow
+- `0x001081DE` [object-label] Active object 39
+- `0x00108284` [object-label] Dent 1
+- `0x0010845B` [serialized-string] secp
+- `0x00108697` [object-label] Score 2
+- `0x00108848` [object-label] Active object 24
+- `0x00108AC2` [object-label] Active object 43
+- `0x00108B68` [object-label] Shadow
+- `0x00108C34` [serialized-string] cdedc
+- `0x00108C44` [serialized-string] decce
+- `0x00108C53` [serialized-string] decede
+- `0x00108C5D` [serialized-string] dede
+- `0x00108C65` [serialized-string] cdde
+- `0x00108C7B` [serialized-string] cdecef
+- `0x00108C85` [serialized-string] ceef
+- `0x00108C94` [serialized-string] ceede
+- `0x00108CC3` [serialized-string] ffef
+- `0x00108CD9` [serialized-string] ddeef
+- `0x00108D07` [object-label] Active object 56
+- `0x00108DAD` [object-label] Shadow
+- `0x00108F47` [object-label] Active object 32
+- `0x00108FED` [object-label] Dent 1
+- `0x00109154` [object-label] Active object 8
+- `0x00109288` [object-label] Active object 45
+- `0x00109520` [object-label] Active object 58
+- `0x0010978F` [object-label] Active object 28
+- `0x00109A02` [object-label] Machine Independant On
+- `0x00109A40` [game-text] Cyber Paddle Wins...
+- `0x00109AA2` [game-text] Cyber Paddle Wins
+- `0x00109BB3` [object-label] Active object 46
+- `0x00109DA1` [serialized-string] ve object 47
+- `0x00109F8D` [serialized-string] Ball
+- `0x00109F92` [serialized-string] e object 7
+- `0x00109FE7` [serialized-string] UUUU0
+- `0x0010A310` [object-label] Quick Backdrop 1
+- `0x0010A3DD` [game-text] Bloodstone Wins...
+- `0x0010A43F` [game-text] Bloodstone Wins
+- `0x0010A6B4` [game-text] Green Paddle Wins...
+- `0x0010A716` [game-text] Green Paddle Wins
+- `0x0010A827` [object-label] Active object 1
+- `0x0010A926` [game-text] Magma Paddle Wins...
+- `0x0010A988` [game-text] Magma Paddle Wins
+- `0x0010AA99` [game-text] Aqua Paddle Wins...
+- `0x0010AAFB` [game-text] Aqua Paddle Wins
+- `0x0010AC0B` [game-text] Spike Paddle Wins...
+- `0x0010AC6D` [game-text] Spike Paddle Wins
+- `0x0010AD7E` [game-text] Rock Paddle Wins...
+- `0x0010ADE0` [game-text] Rock Paddle Wins
+- `0x0010AEF0` [game-text] Shifter Wins...
+- `0x0010AF52` [game-text] Shifter Wins
+- `0x0010B05E` [game-text] Monolith Wins...
+- `0x0010B0C0` [game-text] Monolith Wins
+- `0x0010B333` [object-label] Active object 25
+- `0x0010B643` [object-label] Active object 27
+- `0x0010B881` [object-label] Active object 36
+- `0x0010BA89` [serialized-string] SPIKONES
+- `0x0010BD03` [object-label] Active object 33
+- `0x0010BF10` [serialized-string] spikewea 2
+- `0x0010C04D` [object-label] Active object 57
+- `0x0010C17E` [object-label] Active object 59
+- `0x0010C2F8` [object-label] Active object 60
+- `0x0010C336` [object-label] Active object 61
+- `0x0010C4A6` [serialized-string] Frezzer
+- `0x0010C6AE` [serialized-string] Aqcommo
+- `0x0010C90A` [serialized-string] Green fatal
+- `0x0010C948` [serialized-string] flam
+- `0x0010CA6B` [serialized-string] Blow 2
+- `0x0010CAA9` [serialized-string] showup
+- `0x0010CAB0` [serialized-string] object 6
+- `0x0010CB49` [serialized-string] You can pick me!
+- `0x0010CC59` [object-label] Active object 62
+- `0x0010CC97` [object-label] Active object 2
+- `0x0010CCD5` [serialized-string] aquadis1
+- `0x0010CCDE` [serialized-string] ject 3
+- `0x0010CD13` [object-label] Counter 1
+- `0x0010CF1B` [object-label] Active object 4
+- `0x0010D13D` [object-label] Active object 5
+- `0x0010D324` [object-label] Active object 7
+- `0x0010D571` [object-label] Active object 9
+- `0x0010D7C4` [serialized-string] TIMES UP!
+- `0x0010D8CD` [serialized-string] joystick error!
+- `0x0010D90B` [serialized-string] uppfa
+- `0x0010D949` [serialized-string] lefa
+- `0x0010D987` [serialized-string] rigfat
+- `0x0010D98E` [serialized-string] object 12
+- `0x0010D9C5` [serialized-string] donfat
+- `0x0010D9CC` [serialized-string] object 12
+- `0x0010DA03` [serialized-string] b1fat
+- `0x0010DA41` [serialized-string] b2fat
+- `0x0010DA7F` [serialized-string] joystick problem!
+- `0x0010DABD` [object-label] Active object 13
+- `0x0010DAFB` [object-label] Active object 14
+- `0x0010DB39` [object-label] Active object 3
+- `0x0010DC38` [object-label] Active object 10
+- `0x0010DD88` [object-label] Active object 11
+- `0x0010DDC6` [object-label] Active object 12
+- `0x0010DE04` [object-label] Active object 63
+- `0x0010DFE8` [serialized-string] bloodcom
+- `0x0010E2B4` [serialized-string] rocky
+- `0x0010E2BA` [serialized-string] pon4
+- `0x0010E524` [object-label] Active object 15
+- `0x0010E705` [object-label] Active object 64
+- `0x0010E875` [object-label] Active object 65
+- `0x0010EC58` [object-label] Active object 66
+- `0x0010EE2B` [object-label] Active object 18
+- `0x0010F06C` [object-label] Active object 19
+- `0x0010F21F` [object-label] Active object 67
+- `0x0010F51F` [serialized-string] upppp
+- `0x0010F61E` [serialized-string] doiwn
+- `0x0010F71D` [serialized-string] leftee
+- `0x0010F724` [serialized-string] object 30
+- `0x0010F81C` [serialized-string] rthig
+- `0x0010FB19` [serialized-string] pupl
+- `0x0010FDE5` [object-label] Active object 68
+- `0x0010FF72` [object-label] Active object 16
+- `0x0010FFB0` [object-label] Active object 17
+- `0x0010FFEE` [serialized-string] fatalone
+- `0x0011002C` [object-label] Active object 69
+- `0x001102CD` [object-label] Active object 70
+- `0x00110459` [object-label] Active object 20
+- `0x001106F9` [object-label] Active object 21
+- `0x00110984` [object-label] Active object 34
+- `0x00110BC7` [serialized-string] monofat
+- `0x00110C05` [serialized-string] shifstabb
+- `0x00110C43` [serialized-string] magfatal
+- `0x00110C81` [serialized-string] shottongfal
+- `0x00110CC3` [serialized-string] ve object 26
+- `0x00110CFD` [object-label] Active object 30
+- `0x00110D3B` [object-label] Active object 31
+- `0x00110D79` [serialized-string] Spamality!...
+- `0x00110DB7` [object-label] Active object 38
+- `0x00110DF5` [object-label] Active object 40
+- `0x00110E33` [serialized-string] CPUweapon1
+- `0x00111016` [serialized-string] CPUweapon2
+- `0x00111054` [serialized-string] CPUweapon3
+- `0x00111092` [object-label] Active object 41
+- `0x00111283` [object-label] Active object 42
+- `0x0011159F` [object-label] Active object 44
+- `0x001117B9` [object-label] Active object 47
+- `0x00111A02` [object-label] Active object 48
+- `0x00111C2D` [object-label] Active object 49
+- `0x00111D9C` [object-label] Active object 50
+- `0x00111E9B` [object-label] Active object 51
+- `0x00111ED9` [serialized-string] Blow
+- `0x00111F17` [serialized-string] dinofatal
+- `0x00111F55` [object-label] Active object 52
+- `0x00111F93` [object-label] Active object 53
+- `0x0011219F` [object-label] Active object 54
+- `0x0011237F` [object-label] Active object 55
+- `0x0011254A` [serialized-string] Mono 2
+- `0x00112551` [serialized-string] object 30
+- `0x001125F0` [object-label] Shadow
+- `0x0011276D` [serialized-string]  object 6
+- `0x0011280D` [serialized-string] Suicide
+- `0x00112815` [serialized-string] Blocking
+- `0x0011281E` [object-label] Shadow
+- `0x00116C44` [serialized-string] impact
+- `0x00116CC2` [serialized-string] flaw
+- `0x00116E3A` [serialized-string] impact
+- `0x00116FC2` [serialized-string] impact
+- `0x00117842` [serialized-string] impact
+- `0x00117A8A` [serialized-string] impact
+- `0x00117D1C` [serialized-string] Stopped
+- `0x00117EF2` [serialized-string] impact
+- `0x0011809E` [serialized-string] User animation 4
+- `0x001181E0` [serialized-string] boucee
+- `0x0011983E` [serialized-string] impact
+- `0x00119982` [serialized-string] offpad
+- `0x00119A24` [serialized-string] offpad
+- `0x00119AC6` [serialized-string] offpad
+- `0x00119B68` [serialized-string] offpad
+- `0x00119C0A` [serialized-string] offpad
+- `0x00119CAC` [serialized-string] offpad
+- `0x00119D4E` [serialized-string] offpad
+- `0x00119DF0` [serialized-string] offpad
+- `0x00119E92` [serialized-string] offpad
+- `0x00119F28` [serialized-string] offpad
+- `0x0011A03A` [serialized-string] impact
+- `0x0011A38E` [serialized-string] impact
+- `0x0011A5F4` [serialized-string] impact
+- `0x0011A82A` [serialized-string] bomsha
+- `0x0011A8E4` [serialized-string] impact
+- `0x0011AB48` [serialized-string] impact
+- `0x0011B002` [serialized-string] impact
+- `0x0011B16C` [serialized-string] impact
+- `0x0011B3D2` [serialized-string] impact
+- `0x0011B6F6` [serialized-string] impact
+- `0x0011BA24` [serialized-string] impact
+- `0x0011BC9E` [serialized-string] impact
+- `0x0011BF34` [serialized-string] impact
+- `0x0011C1C6` [serialized-string] impact
+- `0x0011C6EA` [serialized-string] impact
+- `0x0011CA0A` [serialized-string] impact
+- `0x0011CCA6` [serialized-string] impact
+- `0x0011CF18` [serialized-string] impact
+- `0x0011D40E` [serialized-string] impact
+- `0x0011D8BE` [serialized-string] impact
+- `0x0011DBEC` [serialized-string] impact
+- `0x0011DEBE` [serialized-string] impact
+- `0x0011E1EC` [serialized-string] impact
+- `0x0011E48A` [serialized-string] impact
+- `0x0011E668` [serialized-string] impact
+- `0x0011E780` [serialized-string] impact
+- `0x0011E8C4` [serialized-string] offpad
+- `0x0011E966` [serialized-string] offpad
+- `0x0011EA08` [serialized-string] offpad
+- `0x0011EAAA` [serialized-string] offpad
+- `0x0011EB4C` [serialized-string] offpad
+- `0x0011EBEE` [serialized-string] offpad
+- `0x0011EC90` [serialized-string] offpad
+- `0x0011ED32` [serialized-string] offpad
+- `0x0011EDD4` [serialized-string] offpad
+- `0x0011EE76` [serialized-string] offpad
+- `0x0011EF18` [serialized-string] offpad
+- `0x0011EFBA` [serialized-string] offpad
+- `0x0011F0BE` [serialized-string] ofwall
+- `0x0011F104` [serialized-string] ofwall
+- `0x0011F14A` [serialized-string] impact
+- `0x0011F1F4` [serialized-string] impact
+- `0x0011F292` [serialized-string] impact
+- `0x0011F330` [serialized-string] impact
+- `0x0011F3CE` [serialized-string] impact
+- `0x0011F46C` [serialized-string] impact
+- `0x0011F50A` [serialized-string] impact
+- `0x0011F57A` [serialized-string] impact
+- `0x0011F5EA` [serialized-string] impact
+- `0x0011F688` [serialized-string] impact
+- `0x0011F726` [serialized-string] impact
+- `0x0011F796` [serialized-string] impact
+- `0x0011F862` [serialized-string] impact
+- `0x0011F900` [serialized-string] impact
+- `0x0011F970` [serialized-string] impact
+- `0x0011F9E0` [serialized-string] impact
+- `0x0011FA50` [serialized-string] impact
+- `0x0011FAA2` [serialized-string] impact
+- `0x0011FB12` [serialized-string] impact
+- `0x0011FB64` [serialized-string] impact
+- `0x0011FC52` [serialized-string] secr
+- `0x0012238A` [object-label] Quick Backdrop 4
+- `0x00122637` [serialized-string] nter 1
+- `0x00122856` [object-label] Active object 29
+- `0x001228FC` [object-label] Shadow
+- `0x00122ACD` [object-label] Active object 39
+- `0x00122B73` [object-label] Dent 1
+- `0x00122D4A` [serialized-string] secp
+- `0x00122F86` [object-label] Score 2
+- `0x00123137` [object-label] Active object 24
+- `0x001233B1` [object-label] Active object 43
+- `0x00123457` [object-label] Shadow
+- `0x00123523` [serialized-string] cdedc
+- `0x00123533` [serialized-string] decce
+- `0x00123542` [serialized-string] decede
+- `0x0012354C` [serialized-string] dede
+- `0x00123554` [serialized-string] cdde
+- `0x0012356A` [serialized-string] cdecef
+- `0x00123574` [serialized-string] ceef
+- `0x00123583` [serialized-string] ceede
+- `0x001235B2` [serialized-string] ffef
+- `0x001235C8` [serialized-string] ddeef
+- `0x001235F6` [object-label] Active object 56
+- `0x0012369C` [object-label] Shadow
+- `0x00123836` [object-label] Active object 32
+- `0x001238DC` [object-label] Dent 1
+- `0x00123A43` [object-label] Active object 8
+- `0x00123B77` [object-label] Active object 45
+- `0x00123E0F` [object-label] Active object 58
+- `0x0012407E` [object-label] Active object 28
+- `0x001242F1` [object-label] Active object 6
+- `0x00124448` [game-text] Cyber Paddle Wins...
+- `0x001244AA` [game-text] Cyber Paddle Wins
+- `0x001245BB` [object-label] Active object 46
+- `0x001247A9` [serialized-string] ve object 47
+- `0x00124A11` [serialized-string] Ball
+- `0x00124A16` [serialized-string] e object 7
+- `0x00124A6B` [serialized-string] UUUU0
+- `0x00124D94` [object-label] Quick Backdrop 1
+- `0x00124E61` [game-text] Bloodstone Wins...
+- `0x00124EC3` [game-text] Bloodstone Wins
+- `0x00125138` [game-text] Green Paddle Wins...
+- `0x0012519A` [game-text] Green Paddle Wins
+- `0x001252AB` [object-label] Active object 1
+- `0x001253AA` [game-text] Magma Paddle Wins...
+- `0x0012540C` [game-text] Magma Paddle Wins
+- `0x0012551D` [game-text] Aqua Paddle Wins...
+- `0x0012557F` [game-text] Aqua Paddle Wins
+- `0x0012568F` [game-text] Spike Paddle Wins...
+- `0x001256F1` [game-text] Spike Paddle Wins
+- `0x00125802` [game-text] Rock Paddle Wins...
+- `0x00125864` [game-text] Rock Paddle Wins
+- `0x00125974` [game-text] Shifter Wins...
+- `0x001259D6` [game-text] Shifter Wins
+- `0x00125AE2` [game-text] Monolith Wins...
+- `0x00125B44` [game-text] Monolith Wins
+- `0x00125DB7` [object-label] Active object 25
+- `0x001260C7` [object-label] Active object 27
+- `0x00126305` [object-label] Active object 36
+- `0x0012650D` [serialized-string] SPIKONES
+- `0x00126787` [object-label] Active object 33
+- `0x00126994` [serialized-string] spikewea 2
+- `0x00126AD1` [object-label] Active object 57
+- `0x00126C02` [object-label] Active object 59
+- `0x00126D7C` [object-label] Active object 60
+- `0x00126F99` [object-label] Active object 61
+- `0x00127109` [serialized-string] Frezzer
+- `0x00127311` [serialized-string] Aqcommo
+- `0x0012756D` [serialized-string] Green fatal
+- `0x0012769E` [serialized-string] flam
+- `0x001277C1` [serialized-string] Blow 2
+- `0x001279CB` [serialized-string] showup
+- `0x001279D2` [serialized-string] object 6
+- `0x00127A65` [serialized-string] Suicide
+- `0x00127A6D` [serialized-string] Blocking
+- `0x00127A76` [object-label] Shadow
+- `0x00127BF0` [serialized-string] You can pick me!
+- `0x00127D00` [object-label] Machine Independant On
+- `0x00127D3E` [object-label] Active object 2
+- `0x00127D7C` [serialized-string] aquadis1
+- `0x00127D85` [serialized-string] ject 3
+- `0x00127F4A` [object-label] Counter 1
+- `0x00128152` [object-label] Active object 4
+- `0x00128374` [object-label] Active object 5
+- `0x0012855B` [object-label] Active object 7
+- `0x001287A8` [object-label] Active object 9
+- `0x001289FB` [serialized-string] TIMES UP!
+- `0x00128B04` [serialized-string] joystick error!
+- `0x00128C77` [serialized-string] uppfa
+- `0x00128D76` [serialized-string] lefa
+- `0x00128E75` [serialized-string] rigfat
+- `0x00128E7C` [serialized-string] object 12
+- `0x00128F74` [serialized-string] donfat
+- `0x00128F7B` [serialized-string] object 12
+- `0x00129073` [serialized-string] b1fat
+- `0x001291AC` [serialized-string] b2fat
+- `0x001292CF` [serialized-string] joystick problem!
+- `0x001293DE` [object-label] Active object 13
+- `0x00129645` [object-label] Active object 14
+- `0x001297C0` [object-label] Active object 3
+- `0x001298BF` [object-label] Active object 10
+- `0x00129A0F` [object-label] Active object 11
+- `0x00129C0A` [object-label] Active object 12
+- `0x00129F38` [object-label] Active object 63
+- `0x0012A11C` [serialized-string] bloodcom
+- `0x0012A3E8` [serialized-string] rocky
+- `0x0012A3EE` [serialized-string] pon4
+- `0x0012A658` [object-label] Active object 15
+- `0x0012A839` [object-label] Active object 64
+- `0x0012A9A9` [object-label] Active object 65
+- `0x0012AD8C` [object-label] Active object 66
+- `0x0012AF5F` [object-label] Active object 18
+- `0x0012B1A0` [object-label] Active object 19
+- `0x0012B353` [object-label] Active object 67
+- `0x0012B653` [serialized-string] upppp
+- `0x0012B752` [serialized-string] doiwn
+- `0x0012B851` [serialized-string] leftee
+- `0x0012B858` [serialized-string] object 30
+- `0x0012B950` [serialized-string] rthig
+- `0x0012BC4D` [serialized-string] pupl
+- `0x0012BF19` [object-label] Active object 68
+- `0x0012C0A6` [object-label] Active object 16
+- `0x0012C342` [object-label] Active object 17
+- `0x0012C648` [object-label] Active object 22
+- `0x0012C686` [object-label] Active object 69
+- `0x0012C927` [object-label] Active object 70
+- `0x0012CAB3` [object-label] Active object 20
+- `0x0012CD53` [object-label] Active object 21
+- `0x0012CFDE` [object-label] Active object 34
+- `0x0012D254` [serialized-string] monofat
+- `0x0012D390` [serialized-string] D<D:ED
+- `0x0012D446` [serialized-string] EF:E;F
+- `0x0012D492` [serialized-string] shifstabb
+- `0x0012D5C1` [serialized-string] E8D9EE
+- `0x0012D6BF` [serialized-string] magfatal
+- `0x0012D892` [serialized-string] shottongfal
+- `0x0012DAD4` [serialized-string] ve object 26
+- `0x0012DDE0` [object-label] Active object 30
+- `0x0012DE1E` [object-label] Active object 31
+- `0x0012E143` [serialized-string] Spamality!...
+- `0x0012E181` [object-label] Active object 38
+- `0x0012E1BF` [object-label] Active object 40
+- `0x0012E1FD` [serialized-string] CPUweapon1
+- `0x0012E321` [serialized-string] CPUweapon2
+- `0x0012E453` [serialized-string] CPUweapon3
+- `0x0012E491` [object-label] Active object 41
+- `0x0012E682` [object-label] Active object 42
+- `0x0012E99E` [object-label] Active object 44
+- `0x0012EBB8` [object-label] Active object 47
+- `0x0012EE01` [object-label] Active object 48
+- `0x0012F02C` [object-label] Active object 49
+- `0x0012F19B` [object-label] Active object 50
+- `0x0012F29A` [object-label] Active object 51
+- `0x0012F2D8` [serialized-string] Blow
+- `0x0012F316` [serialized-string] dinofatal
+- `0x0012F354` [object-label] Active object 52
+- `0x0012F392` [object-label] Active object 53
+- `0x0012F59E` [object-label] Active object 54
+- `0x0012F77E` [object-label] Active object 55
+- `0x0012F949` [serialized-string] Mono 2
+- `0x0012F950` [serialized-string] object 30
+- `0x0012F9EF` [object-label] Shadow
+- `0x0012FB6C` [serialized-string]  object 6
+- `0x0012FC0C` [serialized-string] Suicide
+- `0x0012FC14` [serialized-string] Blocking
+- `0x0012FC1D` [object-label] Shadow
+- `0x0013483F` [serialized-string] impact
+- `0x001348BD` [serialized-string] flaw
+- `0x00134A35` [serialized-string] impact
+- `0x00134BBD` [serialized-string] impact
+- `0x001356C5` [serialized-string] impact
+- `0x00135C1D` [serialized-string] impact
+- `0x00135CE9` [serialized-string] impact
+- `0x00135F93` [serialized-string] Stopped
+- `0x00136169` [serialized-string] impact
+- `0x001363C9` [serialized-string] User animation 4
+- `0x0013650B` [serialized-string] boucee
+- `0x001375A5` [serialized-string] begin
+- `0x0013807F` [serialized-string] impact
+- `0x001383AD` [serialized-string] disman
+- `0x0013846D` [serialized-string] offpad
+- `0x0013850F` [serialized-string] offpad
+- `0x001385B1` [serialized-string] offpad
+- `0x00138653` [serialized-string] offpad
+- `0x001386F5` [serialized-string] offpad
+- `0x00138797` [serialized-string] offpad
+- `0x00138839` [serialized-string] offpad
+- `0x001388DB` [serialized-string] offpad
+- `0x0013897D` [serialized-string] offpad
+- `0x00138A13` [serialized-string] offpad
+- `0x00138B25` [serialized-string] impact
+- `0x00138E91` [serialized-string] impact
+- `0x001390F7` [serialized-string] impact
+- `0x00139427` [serialized-string] bomsha
+- `0x00139455` [serialized-string] Stopped
+- `0x001395BF` [serialized-string] impact
+- `0x00139823` [serialized-string] impact
+- `0x00139ABD` [serialized-string] disman
+- `0x00139F39` [serialized-string] impact
+- `0x0013A0A3` [serialized-string] impact
+- `0x0013A309` [serialized-string] impact
+- `0x0013A62D` [serialized-string] impact
+- `0x0013A95B` [serialized-string] impact
+- `0x0013ABE1` [serialized-string] impact
+- `0x0013AE77` [serialized-string] impact
+- `0x0013B109` [serialized-string] impact
+- `0x0013B62D` [serialized-string] impact
+- `0x0013B94D` [serialized-string] impact
+- `0x0013BBE9` [serialized-string] impact
+- `0x0013BE5B` [serialized-string] impact
+- `0x0013C351` [serialized-string] impact
+- `0x0013C801` [serialized-string] impact
+- `0x0013CB2F` [serialized-string] impact
+- `0x0013CE01` [serialized-string] impact
+- `0x0013D12F` [serialized-string] impact
+- `0x0013D3CD` [serialized-string] impact
+- `0x0013D5AB` [serialized-string] impact
+- `0x0013D6C3` [serialized-string] impact
+- `0x0013D807` [serialized-string] offpad
+- `0x0013D8A9` [serialized-string] offpad
+- `0x0013D94B` [serialized-string] offpad
+- `0x0013D9ED` [serialized-string] offpad
+- `0x0013DA8F` [serialized-string] offpad
+- `0x0013DB31` [serialized-string] offpad
+- `0x0013DBD3` [serialized-string] offpad
+- `0x0013DC75` [serialized-string] offpad
+- `0x0013DD17` [serialized-string] offpad
+- `0x0013DDB9` [serialized-string] offpad
+- `0x0013DE5B` [serialized-string] offpad
+- `0x0013DEFD` [serialized-string] offpad
+- `0x0013E111` [serialized-string] disman
+- `0x0013E51D` [serialized-string] spam
+- `0x0013E6E7` [serialized-string] disman
+- `0x0013E9B1` [serialized-string] disman
+- `0x0013EC5D` [serialized-string] disman
+- `0x0013EE55` [serialized-string] disman
+- `0x0013F021` [serialized-string] disman
+- `0x0013F21D` [serialized-string] disman
+- `0x0013FB37` [serialized-string] ofwall
+- `0x0013FB7D` [serialized-string] ofwall
+- `0x0013FBC3` [serialized-string] impact
+- `0x0013FC6D` [serialized-string] impact
+- `0x0013FD0B` [serialized-string] impact
+- `0x0013FDA9` [serialized-string] impact
+- `0x0013FE47` [serialized-string] impact
+- `0x0013FEE5` [serialized-string] impact
+- `0x0013FF83` [serialized-string] impact
+- `0x0013FFF3` [serialized-string] impact
+- `0x00140063` [serialized-string] impact
+- `0x00140101` [serialized-string] impact
+- `0x0014019F` [serialized-string] impact
+- `0x0014020F` [serialized-string] impact
+- `0x001402DB` [serialized-string] impact
+- `0x00140379` [serialized-string] impact
+- `0x001403E9` [serialized-string] impact
+- `0x00140459` [serialized-string] impact
+- `0x001404C9` [serialized-string] impact
+- `0x0014051B` [serialized-string] impact
+- `0x0014058B` [serialized-string] impact
+- `0x001405DD` [serialized-string] impact
+- `0x00140641` [serialized-string] impact
+- `0x00140793` [serialized-string] impact
+- `0x0014085F` [serialized-string] impact
+- `0x0014092B` [serialized-string] impact
+- `0x001409F7` [serialized-string] impact
+- `0x00140AA5` [serialized-string] impact
+- `0x00140B53` [serialized-string] impact
+- `0x00140C01` [serialized-string] impact
+- `0x00140CDD` [serialized-string] impact
+- `0x00140D5D` [serialized-string] impact
+- `0x00140FB1` [serialized-string] green
+- `0x0014387B` [object-label] Quick Backdrop 2
+- `0x00143AFF` [serialized-string] nter 1
+- `0x00143D1E` [object-label] Active object 29
+- `0x00143DC4` [object-label] Shadow
+- `0x00143F95` [object-label] Active object 39
+- `0x0014403B` [object-label] Dent 1
+- `0x00144212` [serialized-string] secp
+- `0x0014444E` [object-label] Score 2
+- `0x001445FF` [object-label] Active object 24
+- `0x00144879` [object-label] Active object 43
+- `0x0014491F` [object-label] Shadow
+- `0x001449EB` [serialized-string] cdedc
+- `0x001449FB` [serialized-string] decce
+- `0x00144A0A` [serialized-string] decede
+- `0x00144A14` [serialized-string] dede
+- `0x00144A1C` [serialized-string] cdde
+- `0x00144A32` [serialized-string] cdecef
+- `0x00144A3C` [serialized-string] ceef
+- `0x00144A4B` [serialized-string] ceede
+- `0x00144A7A` [serialized-string] ffef
+- `0x00144A90` [serialized-string] ddeef
+- `0x00144ABE` [object-label] Active object 56
+- `0x00144B64` [object-label] Shadow
+- `0x00144CFE` [object-label] Active object 32
+- `0x00144DA4` [object-label] Dent 1
+- `0x00144F0B` [object-label] Active object 8
+- `0x0014503F` [object-label] Active object 45
+- `0x001452D7` [object-label] Active object 58
+- `0x00145546` [object-label] Active object 28
+- `0x001457B9` [object-label] Active object 6
+- `0x00145910` [game-text] Cyber Paddle Wins...
+- `0x00145972` [game-text] Cyber Paddle Wins
+- `0x00145A83` [object-label] Active object 46
+- `0x00145C71` [serialized-string] ve object 47
+- `0x00145EF0` [serialized-string] Ball
+- `0x00145EF5` [serialized-string] e object 7
+- `0x00145F4A` [serialized-string] UUUU0
+- `0x00146273` [object-label] Quick Backdrop 1
+- `0x00146340` [game-text] Bloodstone Wins...
+- `0x001463A2` [game-text] Bloodstone Wins
+- `0x00146617` [game-text] Green Paddle Wins...
+- `0x00146679` [game-text] Green Paddle Wins
+- `0x0014678A` [object-label] Active object 1
+- `0x00146889` [game-text] Magma Paddle Wins...
+- `0x001468EB` [game-text] Magma Paddle Wins
+- `0x001469FC` [game-text] Aqua Paddle Wins...
+- `0x00146A5E` [game-text] Aqua Paddle Wins
+- `0x00146B6E` [game-text] Spike Paddle Wins...
+- `0x00146BD0` [game-text] Spike Paddle Wins
+- `0x00146CE1` [game-text] Rock Paddle Wins...
+- `0x00146D43` [game-text] Rock Paddle Wins
+- `0x00146E53` [game-text] Shifter Wins...
+- `0x00146EB5` [game-text] Shifter Wins
+- `0x00146FC1` [game-text] Monolith Wins...
+- `0x00147023` [game-text] Monolith Wins
+- `0x00147296` [object-label] Active object 25
+- `0x001475A6` [object-label] Active object 27
+- `0x001477E4` [object-label] Active object 36
+- `0x001479EC` [serialized-string] SPIKONES
+- `0x00147C66` [object-label] Active object 33
+- `0x00147E73` [serialized-string] spikewea 2
+- `0x00147FB0` [object-label] Active object 57
+- `0x001480E1` [object-label] Active object 59
+- `0x0014825B` [object-label] Active object 60
+- `0x00148461` [object-label] Active object 61
+- `0x001485D1` [serialized-string] Frezzer
+- `0x001487D9` [serialized-string] Aqcommo
+- `0x00148A35` [serialized-string] Green fatal
+- `0x00148B66` [serialized-string] flam
+- `0x00148C89` [serialized-string] Blow 2
+- `0x00148E93` [serialized-string] showup
+- `0x00148E9A` [serialized-string] object 6
+- `0x00148F2D` [serialized-string] Suicide
+- `0x00148F35` [serialized-string] Blocking
+- `0x00148F3E` [object-label] Shadow
+- `0x001490B8` [serialized-string] You can pick me!
+- `0x001491C8` [object-label] Active object 62
+- `0x00149206` [object-label] Active object 2
+- `0x00149244` [serialized-string] aquadis1
+- `0x0014924D` [serialized-string] ject 3
+- `0x00149415` [object-label] Counter 1
+- `0x0014961D` [object-label] Active object 4
+- `0x0014983F` [object-label] Active object 5
+- `0x00149A26` [object-label] Active object 7
+- `0x00149C73` [object-label] Active object 9
+- `0x00149EC6` [serialized-string] TIMES UP!
+- `0x00149FCF` [serialized-string] joystick error!
+- `0x0014A142` [serialized-string] uppfa
+- `0x0014A241` [serialized-string] lefa
+- `0x0014A340` [serialized-string] rigfat
+- `0x0014A347` [serialized-string] object 12
+- `0x0014A43F` [serialized-string] donfat
+- `0x0014A446` [serialized-string] object 12
+- `0x0014A53E` [serialized-string] b1fat
+- `0x0014A677` [serialized-string] b2fat
+- `0x0014A79A` [serialized-string] joystick problem!
+- `0x0014A8A9` [object-label] Active object 13
+- `0x0014AB2A` [object-label] Active object 14
+- `0x0014ACA5` [object-label] Active object 3
+- `0x0014ADA4` [object-label] Active object 10
+- `0x0014AEF4` [object-label] Active object 11
+- `0x0014B0EF` [object-label] Active object 12
+- `0x0014B41D` [object-label] Active object 63
+- `0x0014B601` [serialized-string] bloodcom
+- `0x0014B8CD` [serialized-string] rocky
+- `0x0014B8D3` [serialized-string] pon4
+- `0x0014BB3D` [object-label] Active object 15
+- `0x0014BD1E` [object-label] Active object 64
+- `0x0014BE8E` [object-label] Active object 65
+- `0x0014C271` [object-label] Active object 66
+- `0x0014C444` [object-label] Active object 18
+- `0x0014C685` [object-label] Active object 19
+- `0x0014C838` [object-label] Active object 67
+- `0x0014CB38` [serialized-string] upppp
+- `0x0014CC37` [serialized-string] doiwn
+- `0x0014CD36` [serialized-string] leftee
+- `0x0014CD3D` [serialized-string] object 30
+- `0x0014CE35` [serialized-string] rthig
+- `0x0014D132` [serialized-string] pupl
+- `0x0014D3FE` [object-label] Active object 68
+- `0x0014D58B` [object-label] Active object 16
+- `0x0014D81A` [object-label] Active object 17
+- `0x0014DB5A` [object-label] Machine Independant On
+- `0x0014DB98` [object-label] Active object 69
+- `0x0014DE39` [object-label] Active object 70
+- `0x0014DFC5` [object-label] Active object 20
+- `0x0014E265` [object-label] Active object 21
+- `0x0014E4F0` [object-label] Active object 34
+- `0x0014E77A` [serialized-string] monofat
+- `0x0014E9B4` [serialized-string] shifstabb
+- `0x0014EBDE` [serialized-string] magfatal
+- `0x0014EDAA` [serialized-string] shottongfal
+- `0x0014EFEC` [serialized-string] ve object 26
+- `0x0014F2F8` [object-label] Active object 30
+- `0x0014F336` [object-label] Active object 31
+- `0x0014F64F` [serialized-string] Spamality!...
+- `0x0014F68D` [object-label] Active object 38
+- `0x0014F6CB` [object-label] Active object 40
+- `0x0014F709` [serialized-string] CPUweapon1
+- `0x0014F944` [serialized-string] CPUweapon2
+- `0x0014F982` [serialized-string] CPUweapon3
+- `0x0014F9C0` [object-label] Active object 41
+- `0x0014FBB1` [object-label] Active object 42
+- `0x0014FECD` [object-label] Active object 44
+- `0x001500E7` [object-label] Active object 47
+- `0x00150330` [object-label] Active object 48
+- `0x0015055B` [object-label] Active object 49
+- `0x001506CA` [object-label] Active object 50
+- `0x001507C9` [object-label] Active object 51
+- `0x00150807` [serialized-string] Blow
+- `0x00150845` [serialized-string] dinofatal
+- `0x00150883` [object-label] Active object 52
+- `0x001508C1` [object-label] Active object 53
+- `0x00150ACD` [object-label] Active object 54
+- `0x00150CAD` [object-label] Active object 55
+- `0x00150E78` [serialized-string] Mono 2
+- `0x00150E7F` [serialized-string] object 30
+- `0x00150F1E` [object-label] Shadow
+- `0x0015109B` [serialized-string]  object 6
+- `0x0015113B` [serialized-string] Suicide
+- `0x00151143` [serialized-string] Blocking
+- `0x0015114C` [object-label] Shadow
+- `0x001556D4` [serialized-string] boinglo
+- `0x0015577E` [serialized-string] boinglo
+- `0x0015586C` [serialized-string] boinglo
+- `0x00155B68` [serialized-string] impact
+- `0x00155BE6` [serialized-string] flaw
+- `0x00155D5E` [serialized-string] impact
+- `0x00155EE6` [serialized-string] impact
+- `0x001569EE` [serialized-string] impact
+- `0x00156F46` [serialized-string] impact
+- `0x001571D8` [serialized-string] Stopped
+- `0x001573AE` [serialized-string] impact
+- `0x0015760E` [serialized-string] User animation 4
+- `0x00157750` [serialized-string] boucee
+- `0x001586C8` [serialized-string] boinglo
+- `0x00158712` [serialized-string] begin
+- `0x001591E0` [serialized-string] impact
+- `0x0015950E` [serialized-string] disman
+- `0x001595CE` [serialized-string] offpad
+- `0x00159670` [serialized-string] offpad
+- `0x00159712` [serialized-string] offpad
+- `0x001597B4` [serialized-string] offpad
+- `0x00159856` [serialized-string] offpad
+- `0x001598F8` [serialized-string] offpad
+- `0x0015999A` [serialized-string] offpad
+- `0x00159A3C` [serialized-string] offpad
+- `0x00159ADE` [serialized-string] offpad
+- `0x00159B74` [serialized-string] offpad
+- `0x00159C86` [serialized-string] impact
+- `0x00159FDA` [serialized-string] impact
+- `0x0015A240` [serialized-string] impact
+- `0x0015A570` [serialized-string] bomsha
+- `0x0015A59E` [serialized-string] Stopped
+- `0x0015A708` [serialized-string] impact
+- `0x0015A96C` [serialized-string] impact
+- `0x0015AC06` [serialized-string] disman
+- `0x0015B076` [serialized-string] impact
+- `0x0015B1E0` [serialized-string] impact
+- `0x0015B446` [serialized-string] impact
+- `0x0015B76A` [serialized-string] impact
+- `0x0015BA98` [serialized-string] impact
+- `0x0015BD12` [serialized-string] impact
+- `0x0015BFA8` [serialized-string] impact
+- `0x0015C23A` [serialized-string] impact
+- `0x0015C75E` [serialized-string] impact
+- `0x0015CA7E` [serialized-string] impact
+- `0x0015CD1A` [serialized-string] impact
+- `0x0015CF8C` [serialized-string] impact
+- `0x0015D482` [serialized-string] impact
+- `0x0015D932` [serialized-string] impact
+- `0x0015DC60` [serialized-string] impact
+- `0x0015DF32` [serialized-string] impact
+- `0x0015E260` [serialized-string] impact
+- `0x0015E4FE` [serialized-string] impact
+- `0x0015E6DC` [serialized-string] impact
+- `0x0015E7F4` [serialized-string] impact
+- `0x0015E994` [serialized-string] offpad
+- `0x0015EA36` [serialized-string] offpad
+- `0x0015EAD8` [serialized-string] offpad
+- `0x0015EB7A` [serialized-string] offpad
+- `0x0015EC1C` [serialized-string] offpad
+- `0x0015ECBE` [serialized-string] offpad
+- `0x0015ED60` [serialized-string] offpad
+- `0x0015EE02` [serialized-string] offpad
+- `0x0015EEA4` [serialized-string] offpad
+- `0x0015EF46` [serialized-string] offpad
+- `0x0015EFE8` [serialized-string] offpad
+- `0x0015F08A` [serialized-string] offpad
+- `0x0015F242` [serialized-string] disman
+- `0x0015F64E` [serialized-string] spam
+- `0x0015F818` [serialized-string] disman
+- `0x0015FAE2` [serialized-string] disman
+- `0x0015FD8E` [serialized-string] disman
+- `0x0015FF86` [serialized-string] disman
+- `0x00160152` [serialized-string] disman
+- `0x0016034E` [serialized-string] disman
+- `0x00160C68` [serialized-string] ofwall
+- `0x00160CAE` [serialized-string] ofwall
+- `0x00160CF4` [serialized-string] impact
+- `0x00160D9E` [serialized-string] impact
+- `0x00160E3C` [serialized-string] impact
+- `0x00160EDA` [serialized-string] impact
+- `0x00160F78` [serialized-string] impact
+- `0x00161016` [serialized-string] impact
+- `0x001610B4` [serialized-string] impact
+- `0x00161124` [serialized-string] impact
+- `0x00161194` [serialized-string] impact
+- `0x00161232` [serialized-string] impact
+- `0x001612D0` [serialized-string] impact
+- `0x00161340` [serialized-string] impact
+- `0x0016140C` [serialized-string] impact
+- `0x001614AA` [serialized-string] impact
+- `0x0016151A` [serialized-string] impact
+- `0x0016158A` [serialized-string] impact
+- `0x001615FA` [serialized-string] impact
+- `0x0016164C` [serialized-string] impact
+- `0x001616BC` [serialized-string] impact
+- `0x0016170E` [serialized-string] impact
+- `0x001617FC` [serialized-string] magma
+- `0x001641CE` [object-label] Quick Backdrop 4
+- `0x00164444` [serialized-string] nter 1
+- `0x00164663` [object-label] Active object 29
+- `0x00164709` [object-label] Shadow
+- `0x001648DA` [object-label] Active object 39
+- `0x00164980` [object-label] Dent 1
+- `0x00164B57` [serialized-string] secp
+- `0x00164D93` [object-label] Score 2
+- `0x00164F44` [object-label] Active object 24
+- `0x001651BE` [object-label] Active object 43
+- `0x00165264` [object-label] Shadow
+- `0x00165330` [serialized-string] cdedc
+- `0x00165340` [serialized-string] decce
+- `0x0016534F` [serialized-string] decede
+- `0x00165359` [serialized-string] dede
+- `0x00165361` [serialized-string] cdde
+- `0x00165377` [serialized-string] cdecef
+- `0x00165381` [serialized-string] ceef
+- `0x00165390` [serialized-string] ceede
+- `0x001653BF` [serialized-string] ffef
+- `0x001653D5` [serialized-string] ddeef
+- `0x00165403` [object-label] Active object 56
+- `0x001654A9` [object-label] Shadow
+- `0x00165643` [object-label] Active object 32
+- `0x001656E9` [object-label] Dent 1
+- `0x00165850` [object-label] Active object 8
+- `0x00165984` [object-label] Active object 45
+- `0x00165C1C` [object-label] Active object 58
+- `0x00165E8B` [object-label] Active object 28
+- `0x001660FE` [object-label] Active object 6
+- `0x00166255` [game-text] Cyber Paddle Wins...
+- `0x001662B7` [game-text] Cyber Paddle Wins
+- `0x001663C8` [object-label] Active object 46
+- `0x001665B6` [serialized-string] ve object 47
+- `0x00166818` [serialized-string] Ball
+- `0x0016681D` [serialized-string] e object 7
+- `0x00166872` [serialized-string] UUUU0
+- `0x00166B9B` [object-label] Quick Backdrop 1
+- `0x00166C68` [game-text] Bloodstone Wins...
+- `0x00166CCA` [game-text] Bloodstone Wins
+- `0x00166F3F` [game-text] Green Paddle Wins...
+- `0x00166FA1` [game-text] Green Paddle Wins
+- `0x001670B2` [object-label] Active object 1
+- `0x001671B1` [game-text] Magma Paddle Wins...
+- `0x00167213` [game-text] Magma Paddle Wins
+- `0x00167324` [game-text] Aqua Paddle Wins...
+- `0x00167386` [game-text] Aqua Paddle Wins
+- `0x00167496` [game-text] Spike Paddle Wins...
+- `0x001674F8` [game-text] Spike Paddle Wins
+- `0x00167609` [game-text] Rock Paddle Wins...
+- `0x0016766B` [game-text] Rock Paddle Wins
+- `0x0016777B` [game-text] Shifter Wins...
+- `0x001677DD` [game-text] Shifter Wins
+- `0x001678E9` [game-text] Monolith Wins...
+- `0x0016794B` [game-text] Monolith Wins
+- `0x00167BBE` [object-label] Active object 25
+- `0x00167ECE` [object-label] Active object 27
+- `0x0016810C` [object-label] Active object 36
+- `0x00168314` [serialized-string] SPIKONES
+- `0x0016858E` [object-label] Active object 33
+- `0x0016879B` [serialized-string] spikewea 2
+- `0x001688D8` [object-label] Active object 57
+- `0x00168A09` [object-label] Active object 59
+- `0x00168B83` [object-label] Active object 60
+- `0x00168D79` [object-label] Active object 61
+- `0x00168EE9` [serialized-string] Frezzer
+- `0x001690F1` [serialized-string] Aqcommo
+- `0x0016934D` [serialized-string] Green fatal
+- `0x0016947E` [serialized-string] flam
+- `0x001695A1` [serialized-string] Blow 2
+- `0x001697AB` [serialized-string] showup
+- `0x001697B2` [serialized-string] object 6
+- `0x00169845` [serialized-string] Suicide
+- `0x0016984D` [serialized-string] Blocking
+- `0x00169856` [object-label] Shadow
+- `0x001699D0` [serialized-string] You can pick me!
+- `0x00169AE0` [object-label] Active object 62
+- `0x00169B1E` [object-label] Active object 2
+- `0x00169B5C` [serialized-string] aquadis1
+- `0x00169B65` [serialized-string] ject 3
+- `0x00169D21` [object-label] Counter 1
+- `0x00169F29` [object-label] Active object 4
+- `0x0016A14B` [object-label] Active object 5
+- `0x0016A332` [object-label] Active object 7
+- `0x0016A57F` [object-label] Active object 9
+- `0x0016A7D2` [serialized-string] TIMES UP!
+- `0x0016A8DB` [serialized-string] joystick error!
+- `0x0016AA4E` [serialized-string] uppfa
+- `0x0016AB4D` [serialized-string] lefa
+- `0x0016AC4C` [serialized-string] rigfat
+- `0x0016AC53` [serialized-string] object 12
+- `0x0016AD4B` [serialized-string] donfat
+- `0x0016AD52` [serialized-string] object 12
+- `0x0016AE4A` [serialized-string] b1fat
+- `0x0016AF83` [serialized-string] b2fat
+- `0x0016B0A6` [serialized-string] joystick problem!
+- `0x0016B1B5` [object-label] Active object 13
+- `0x0016B41B` [object-label] Active object 14
+- `0x0016B596` [object-label] Active object 3
+- `0x0016B695` [object-label] Active object 10
+- `0x0016B7E5` [object-label] Active object 11
+- `0x0016B9E0` [object-label] Active object 12
+- `0x0016BD0E` [object-label] Active object 63
+- `0x0016BEF2` [serialized-string] bloodcom
+- `0x0016C1BE` [serialized-string] rocky
+- `0x0016C1C4` [serialized-string] pon4
+- `0x0016C42E` [object-label] Active object 15
+- `0x0016C60F` [object-label] Active object 64
+- `0x0016C77F` [object-label] Active object 65
+- `0x0016CB62` [object-label] Active object 66
+- `0x0016CD35` [object-label] Active object 18
+- `0x0016CF76` [object-label] Active object 19
+- `0x0016D129` [object-label] Active object 67
+- `0x0016D429` [serialized-string] upppp
+- `0x0016D528` [serialized-string] doiwn
+- `0x0016D627` [serialized-string] leftee
+- `0x0016D62E` [serialized-string] object 30
+- `0x0016D726` [serialized-string] rthig
+- `0x0016DA23` [serialized-string] pupl
+- `0x0016DCEF` [object-label] Active object 68
+- `0x0016DE7C` [object-label] Active object 16
+- `0x0016E0F6` [object-label] Active object 17
+- `0x0016E412` [object-label] Machine Independant On
+- `0x0016E450` [object-label] Active object 69
+- `0x0016E6F1` [object-label] Active object 70
+- `0x0016E87D` [object-label] Active object 20
+- `0x0016EB1D` [object-label] Active object 21
+- `0x0016EDA8` [object-label] Active object 34
+- `0x0016EFDD` [serialized-string] monofat
+- `0x0016F204` [serialized-string] shifstabb
+- `0x0016F40A` [serialized-string] magfatal
+- `0x0016F5DE` [serialized-string] shottongfal
+- `0x0016F820` [serialized-string] ve object 26
+- `0x0016FB2C` [object-label] Active object 30
+- `0x0016FB6A` [object-label] Active object 31
+- `0x0016FE68` [serialized-string] Spamality!...
+- `0x0016FEA6` [object-label] Active object 38
+- `0x0016FEE4` [object-label] Active object 40
+- `0x0016FF22` [serialized-string] CPUweapon1
+- `0x0017019E` [serialized-string] CPUweapon2
+- `0x001702DC` [serialized-string] CPUweapon3
+- `0x0017031A` [object-label] Active object 41
+- `0x0017050B` [object-label] Active object 42
+- `0x00170827` [object-label] Active object 44
+- `0x00170A41` [object-label] Active object 47
+- `0x00170C8A` [object-label] Active object 48
+- `0x00170EB5` [object-label] Active object 49
+- `0x00171024` [object-label] Active object 50
+- `0x00171123` [object-label] Active object 51
+- `0x00171161` [serialized-string] Blow
+- `0x0017119F` [serialized-string] dinofatal
+- `0x001711DD` [object-label] Active object 52
+- `0x0017121B` [object-label] Active object 53
+- `0x00171427` [object-label] Active object 54
+- `0x00171607` [object-label] Active object 55
+- `0x001717D2` [serialized-string] Mono 2
+- `0x001717D9` [serialized-string] object 30
+- `0x00171878` [object-label] Shadow
+- `0x001719F5` [serialized-string]  object 6
+- `0x00171A95` [serialized-string] Suicide
+- `0x00171A9D` [serialized-string] Blocking
+- `0x00171AA6` [object-label] Shadow
+- `0x001766B0` [serialized-string] impact
+- `0x0017672E` [serialized-string] flaw
+- `0x001768A6` [serialized-string] impact
+- `0x00176A2E` [serialized-string] impact
+- `0x00177536` [serialized-string] impact
+- `0x00177B14` [serialized-string] impact
+- `0x00177BE0` [serialized-string] impact
+- `0x00177E8A` [serialized-string] Stopped
+- `0x00178060` [serialized-string] impact
+- `0x001782C0` [serialized-string] User animation 4
+- `0x00178402` [serialized-string] boucee
+- `0x00179424` [serialized-string] boinglo
+- `0x00179F34` [serialized-string] impact
+- `0x0017A262` [serialized-string] disman
+- `0x0017A322` [serialized-string] offpad
+- `0x0017A3C4` [serialized-string] offpad
+- `0x0017A466` [serialized-string] offpad
+- `0x0017A508` [serialized-string] offpad
+- `0x0017A5AA` [serialized-string] offpad
+- `0x0017A64C` [serialized-string] offpad
+- `0x0017A6EE` [serialized-string] offpad
+- `0x0017A790` [serialized-string] offpad
+- `0x0017A832` [serialized-string] offpad
+- `0x0017A8C8` [serialized-string] offpad
+- `0x0017A9DA` [serialized-string] impact
+- `0x0017AD46` [serialized-string] impact
+- `0x0017AFAC` [serialized-string] impact
+- `0x0017B2DC` [serialized-string] bomsha
+- `0x0017B30A` [serialized-string] Stopped
+- `0x0017B474` [serialized-string] impact
+- `0x0017B6D8` [serialized-string] impact
+- `0x0017B972` [serialized-string] disman
+- `0x0017BDEE` [serialized-string] impact
+- `0x0017BF58` [serialized-string] impact
+- `0x0017C1BE` [serialized-string] impact
+- `0x0017C4E2` [serialized-string] impact
+- `0x0017C810` [serialized-string] impact
+- `0x0017CA96` [serialized-string] impact
+- `0x0017CD2C` [serialized-string] impact
+- `0x0017CFBE` [serialized-string] impact
+- `0x0017D4E2` [serialized-string] impact
+- `0x0017D802` [serialized-string] impact
+- `0x0017DA9E` [serialized-string] impact
+- `0x0017DD10` [serialized-string] impact
+- `0x0017E206` [serialized-string] impact
+- `0x0017E6B6` [serialized-string] impact
+- `0x0017E9E4` [serialized-string] impact
+- `0x0017ECB6` [serialized-string] impact
+- `0x0017EFE4` [serialized-string] impact
+- `0x0017F282` [serialized-string] impact
+- `0x0017F460` [serialized-string] impact
+- `0x0017F578` [serialized-string] impact
+- `0x0017F718` [serialized-string] offpad
+- `0x0017F7BA` [serialized-string] offpad
+- `0x0017F85C` [serialized-string] offpad
+- `0x0017F8FE` [serialized-string] offpad
+- `0x0017F9A0` [serialized-string] offpad
+- `0x0017FA42` [serialized-string] offpad
+- `0x0017FAE4` [serialized-string] offpad
+- `0x0017FB86` [serialized-string] offpad
+- `0x0017FC28` [serialized-string] offpad
+- `0x0017FCCA` [serialized-string] offpad
+- `0x0017FD6C` [serialized-string] offpad
+- `0x0017FE0E` [serialized-string] offpad
+- `0x0017FFC6` [serialized-string] disman
+- `0x001803D2` [serialized-string] spam
+- `0x00180616` [serialized-string] disman
+- `0x00180866` [serialized-string] disman
+- `0x00180B12` [serialized-string] disman
+- `0x00180D0A` [serialized-string] disman
+- `0x00180ED6` [serialized-string] disman
+- `0x001810D2` [serialized-string] disman
+- `0x001819E2` [serialized-string] boinglo
+- `0x00181A28` [serialized-string] impact
+- `0x00181AD2` [serialized-string] impact
+- `0x00181B70` [serialized-string] impact
+- `0x00181C0E` [serialized-string] impact
+- `0x00181CAC` [serialized-string] impact
+- `0x00181D4A` [serialized-string] impact
+- `0x00181DE8` [serialized-string] impact
+- `0x00181E58` [serialized-string] impact
+- `0x00181EC8` [serialized-string] impact
+- `0x00181F66` [serialized-string] impact
+- `0x00182004` [serialized-string] impact
+- `0x00182074` [serialized-string] impact
+- `0x00182140` [serialized-string] impact
+- `0x001821DE` [serialized-string] impact
+- `0x0018224E` [serialized-string] impact
+- `0x001822BE` [serialized-string] impact
+- `0x0018232E` [serialized-string] impact
+- `0x00182380` [serialized-string] impact
+- `0x001823F0` [serialized-string] impact
+- `0x00182442` [serialized-string] impact
+- `0x001824A6` [serialized-string] impact
+- `0x001825DA` [serialized-string] impact
+- `0x001826A6` [serialized-string] impact
+- `0x00182772` [serialized-string] impact
+- `0x0018283E` [serialized-string] impact
+- `0x0018290A` [serialized-string] impact
+- `0x001829D6` [serialized-string] impact
+- `0x00182AA2` [serialized-string] impact
+- `0x00182B9C` [serialized-string] impact
+- `0x00182C1C` [serialized-string] impact
+- `0x00182CEC` [serialized-string] spike
+- `0x00182DE0` [serialized-string] boinglo
+- `0x00182E24` [serialized-string] boinglo
+- `0x001855B0` [object-label] Quick Backdrop 4
+- `0x0018580C` [serialized-string] nter 1
+- `0x00185A2B` [object-label] Active object 29
+- `0x00185AD1` [object-label] Shadow
+- `0x00185CA2` [object-label] Active object 39
+- `0x00185D48` [object-label] Dent 1
+- `0x00185F1F` [serialized-string] secp
+- `0x0018615B` [object-label] Score 2
+- `0x0018630C` [object-label] Active object 24
+- `0x00186586` [object-label] Active object 43
+- `0x0018662C` [object-label] Shadow
+- `0x001866F8` [serialized-string] cdedc
+- `0x00186708` [serialized-string] decce
+- `0x00186717` [serialized-string] decede
+- `0x00186721` [serialized-string] dede
+- `0x00186729` [serialized-string] cdde
+- `0x0018673F` [serialized-string] cdecef
+- `0x00186749` [serialized-string] ceef
+- `0x00186758` [serialized-string] ceede
+- `0x00186787` [serialized-string] ffef
+- `0x0018679D` [serialized-string] ddeef
+- `0x001867CB` [object-label] Active object 56
+- `0x00186871` [object-label] Shadow
+- `0x00186A0B` [object-label] Active object 32
+- `0x00186AB1` [object-label] Dent 1
+- `0x00186C18` [object-label] Active object 8
+- `0x00186D4C` [object-label] Active object 45
+- `0x00186FE4` [object-label] Active object 58
+- `0x00187253` [object-label] Active object 28
+- `0x001874C6` [object-label] Active object 6
+- `0x0018761D` [game-text] Cyber Paddle Wins...
+- `0x0018767F` [game-text] Cyber Paddle Wins
+- `0x00187790` [object-label] Active object 46
+- `0x0018797E` [serialized-string] ve object 47
+- `0x00187B8E` [serialized-string] Ball
+- `0x00187B93` [serialized-string] e object 7
+- `0x00187BE8` [serialized-string] UUUU0
+- `0x00187F11` [object-label] Quick Backdrop 1
+- `0x00187FDE` [game-text] Bloodstone Wins...
+- `0x00188040` [game-text] Bloodstone Wins
+- `0x001882B5` [game-text] Green Paddle Wins...
+- `0x00188317` [game-text] Green Paddle Wins
+- `0x00188428` [object-label] Active object 1
+- `0x00188527` [game-text] Magma Paddle Wins...
+- `0x00188589` [game-text] Magma Paddle Wins
+- `0x0018869A` [game-text] Aqua Paddle Wins...
+- `0x001886FC` [game-text] Aqua Paddle Wins
+- `0x0018880C` [game-text] Spike Paddle Wins...
+- `0x0018886E` [game-text] Spike Paddle Wins
+- `0x0018897F` [game-text] Rock Paddle Wins...
+- `0x001889E1` [game-text] Rock Paddle Wins
+- `0x00188AF1` [game-text] Shifter Wins...
+- `0x00188B53` [game-text] Shifter Wins
+- `0x00188C5F` [game-text] Monolith Wins...
+- `0x00188CC1` [game-text] Monolith Wins
+- `0x00188F34` [object-label] Active object 25
+- `0x00189244` [object-label] Active object 27
+- `0x00189482` [object-label] Active object 36
+- `0x0018968A` [serialized-string] SPIKONES
+- `0x00189904` [object-label] Active object 33
+- `0x00189B11` [serialized-string] spikewea 2
+- `0x00189C4E` [object-label] Active object 57
+- `0x00189D7F` [object-label] Active object 59
+- `0x00189EF9` [object-label] Active object 60
+- `0x0018A100` [object-label] Active object 61
+- `0x0018A270` [serialized-string] Frezzer
+- `0x0018A478` [serialized-string] Aqcommo
+- `0x0018A6D4` [serialized-string] Green fatal
+- `0x0018A805` [serialized-string] flam
+- `0x0018A928` [serialized-string] Blow 2
+- `0x0018AB32` [serialized-string] showup
+- `0x0018AB39` [serialized-string] object 6
+- `0x0018ABCC` [serialized-string] Suicide
+- `0x0018ABD4` [serialized-string] Blocking
+- `0x0018ABDD` [object-label] Shadow
+- `0x0018AD57` [serialized-string] You can pick me!
+- `0x0018AE67` [object-label] Active object 62
+- `0x0018AEA5` [object-label] Active object 2
+- `0x0018AEE3` [serialized-string] aquadis1
+- `0x0018AEEC` [serialized-string] ject 3
+- `0x0018B0A4` [object-label] Counter 1
+- `0x0018B2AC` [object-label] Active object 4
+- `0x0018B4CE` [object-label] Active object 5
+- `0x0018B6B5` [object-label] Active object 7
+- `0x0018B902` [object-label] Active object 9
+- `0x0018BB55` [serialized-string] TIMES UP!
+- `0x0018BC5E` [serialized-string] joystick error!
+- `0x0018BDD1` [serialized-string] uppfa
+- `0x0018BED0` [serialized-string] lefa
+- `0x0018BFCF` [serialized-string] rigfat
+- `0x0018BFD6` [serialized-string] object 12
+- `0x0018C0CE` [serialized-string] donfat
+- `0x0018C0D5` [serialized-string] object 12
+- `0x0018C1CD` [serialized-string] b1fat
+- `0x0018C306` [serialized-string] b2fat
+- `0x0018C429` [serialized-string] joystick problem!
+- `0x0018C538` [object-label] Active object 13
+- `0x0018C77A` [object-label] Active object 14
+- `0x0018C8F5` [object-label] Active object 3
+- `0x0018C9F4` [object-label] Active object 10
+- `0x0018CB44` [object-label] Active object 11
+- `0x0018CD3F` [object-label] Active object 12
+- `0x0018D06D` [object-label] Active object 63
+- `0x0018D251` [serialized-string] bloodcom
+- `0x0018D51D` [serialized-string] rocky
+- `0x0018D523` [serialized-string] pon4
+- `0x0018D78D` [object-label] Active object 15
+- `0x0018D96E` [object-label] Active object 64
+- `0x0018DADE` [object-label] Active object 65
+- `0x0018DEC1` [object-label] Active object 66
+- `0x0018E094` [object-label] Active object 18
+- `0x0018E2D5` [object-label] Active object 19
+- `0x0018E488` [object-label] Active object 67
+- `0x0018E788` [serialized-string] upppp
+- `0x0018E887` [serialized-string] doiwn
+- `0x0018E986` [serialized-string] leftee
+- `0x0018E98D` [serialized-string] object 30
+- `0x0018EA85` [serialized-string] rthig
+- `0x0018ED82` [serialized-string] pupl
+- `0x0018F04E` [object-label] Active object 68
+- `0x0018F1DB` [object-label] Active object 16
+- `0x0018F44B` [object-label] Active object 17
+- `0x0018F747` [object-label] Machine Independant On
+- `0x0018F785` [object-label] Active object 69
+- `0x0018FA26` [object-label] Active object 70
+- `0x0018FBB2` [object-label] Active object 20
+- `0x0018FE52` [object-label] Active object 21
+- `0x001900DD` [object-label] Active object 34
+- `0x0019031D` [serialized-string] monofat
+- `0x0019052F` [serialized-string] shifstabb
+- `0x00190735` [serialized-string] magfatal
+- `0x001908FB` [serialized-string] shottongfal
+- `0x00190B3D` [serialized-string] ve object 26
+- `0x00190E49` [object-label] Active object 30
+- `0x00190E87` [object-label] Active object 31
+- `0x00191173` [serialized-string] Spamality!...
+- `0x001911B1` [object-label] Active object 38
+- `0x001911EF` [object-label] Active object 40
+- `0x0019122D` [serialized-string] CPUweapon1
+- `0x0019143C` [serialized-string] CPUweapon2
+- `0x0019161D` [serialized-string] CPUweapon3
+- `0x0019165B` [object-label] Active object 41
+- `0x0019184C` [object-label] Active object 42
+- `0x00191B68` [object-label] Active object 44
+- `0x00191D82` [object-label] Active object 47
+- `0x00191FCB` [object-label] Active object 48
+- `0x001921F6` [object-label] Active object 49
+- `0x00192365` [object-label] Active object 50
+- `0x00192464` [object-label] Active object 51
+- `0x001924A2` [serialized-string] Blow
+- `0x001924E0` [serialized-string] dinofatal
+- `0x0019251E` [object-label] Active object 52
+- `0x0019255C` [object-label] Active object 53
+- `0x00192768` [object-label] Active object 54
+- `0x00192948` [object-label] Active object 55
+- `0x00192B13` [serialized-string] Mono 2
+- `0x00192B1A` [serialized-string] object 30
+- `0x00192BB9` [object-label] Shadow
+- `0x00192D36` [serialized-string]  object 6
+- `0x00192DD6` [serialized-string] Suicide
+- `0x00192DDE` [serialized-string] Blocking
+- `0x00192DE7` [object-label] Shadow
+- `0x00197A1D` [serialized-string] impact
+- `0x00197A9B` [serialized-string] flaw
+- `0x00197C13` [serialized-string] impact
+- `0x00197D9B` [serialized-string] impact
+- `0x001988A3` [serialized-string] impact
+- `0x00198EB1` [serialized-string] impact
+- `0x00198F7D` [serialized-string] impact
+- `0x00199227` [serialized-string] Stopped
+- `0x001993FD` [serialized-string] impact
+- `0x0019965D` [serialized-string] User animation 4
+- `0x0019979F` [serialized-string] boucee
+- `0x0019B2AB` [serialized-string] impact
+- `0x0019B5D9` [serialized-string] disman
+- `0x0019B699` [serialized-string] offpad
+- `0x0019B73B` [serialized-string] offpad
+- `0x0019B7DD` [serialized-string] offpad
+- `0x0019B87F` [serialized-string] offpad
+- `0x0019B921` [serialized-string] offpad
+- `0x0019B9C3` [serialized-string] offpad
+- `0x0019BA65` [serialized-string] offpad
+- `0x0019BB07` [serialized-string] offpad
+- `0x0019BBA9` [serialized-string] offpad
+- `0x0019BC3F` [serialized-string] offpad
+- `0x0019BD51` [serialized-string] impact
+- `0x0019C0BD` [serialized-string] impact
+- `0x0019C323` [serialized-string] impact
+- `0x0019C653` [serialized-string] bomsha
+- `0x0019C681` [serialized-string] Stopped
+- `0x0019C7EB` [serialized-string] impact
+- `0x0019CA4F` [serialized-string] impact
+- `0x0019CCE9` [serialized-string] disman
+- `0x0019D165` [serialized-string] impact
+- `0x0019D2CF` [serialized-string] impact
+- `0x0019D535` [serialized-string] impact
+- `0x0019D859` [serialized-string] impact
+- `0x0019DB87` [serialized-string] impact
+- `0x0019DE0D` [serialized-string] impact
+- `0x0019E0A3` [serialized-string] impact
+- `0x0019E335` [serialized-string] impact
+- `0x0019E859` [serialized-string] impact
+- `0x0019EB79` [serialized-string] impact
+- `0x0019EE15` [serialized-string] impact
+- `0x0019F087` [serialized-string] impact
+- `0x0019F57D` [serialized-string] impact
+- `0x0019FA2D` [serialized-string] impact
+- `0x0019FD5B` [serialized-string] impact
+- `0x001A002D` [serialized-string] impact
+- `0x001A035B` [serialized-string] impact
+- `0x001A05F9` [serialized-string] impact
+- `0x001A07D7` [serialized-string] impact
+- `0x001A08EF` [serialized-string] impact
+- `0x001A0A33` [serialized-string] offpad
+- `0x001A0AD5` [serialized-string] offpad
+- `0x001A0B77` [serialized-string] offpad
+- `0x001A0C19` [serialized-string] offpad
+- `0x001A0CBB` [serialized-string] offpad
+- `0x001A0D5D` [serialized-string] offpad
+- `0x001A0DFF` [serialized-string] offpad
+- `0x001A0EA1` [serialized-string] offpad
+- `0x001A0F43` [serialized-string] offpad
+- `0x001A0FE5` [serialized-string] offpad
+- `0x001A1087` [serialized-string] offpad
+- `0x001A1129` [serialized-string] offpad
+- `0x001A133D` [serialized-string] disman
+- `0x001A1749` [serialized-string] spam
+- `0x001A1913` [serialized-string] disman
+- `0x001A1BDD` [serialized-string] disman
+- `0x001A1E89` [serialized-string] disman
+- `0x001A2081` [serialized-string] disman
+- `0x001A224D` [serialized-string] disman
+- `0x001A2449` [serialized-string] disman
+- `0x001A2D63` [serialized-string] ofwall
+- `0x001A2DA9` [serialized-string] ofwall
+- `0x001A2DEF` [serialized-string] impact
+- `0x001A2E99` [serialized-string] impact
+- `0x001A2F37` [serialized-string] impact
+- `0x001A2FD5` [serialized-string] impact
+- `0x001A3073` [serialized-string] impact
+- `0x001A3111` [serialized-string] impact
+- `0x001A31AF` [serialized-string] impact
+- `0x001A321F` [serialized-string] impact
+- `0x001A328F` [serialized-string] impact
+- `0x001A332D` [serialized-string] impact
+- `0x001A33CB` [serialized-string] impact
+- `0x001A343B` [serialized-string] impact
+- `0x001A3507` [serialized-string] impact
+- `0x001A35A5` [serialized-string] impact
+- `0x001A3615` [serialized-string] impact
+- `0x001A3685` [serialized-string] impact
+- `0x001A36F5` [serialized-string] impact
+- `0x001A3747` [serialized-string] impact
+- `0x001A37B7` [serialized-string] impact
+- `0x001A3809` [serialized-string] impact
+- `0x001A386D` [serialized-string] impact
+- `0x001A39BF` [serialized-string] impact
+- `0x001A3A8B` [serialized-string] impact
+- `0x001A3B57` [serialized-string] impact
+- `0x001A3C23` [serialized-string] impact
+- `0x001A3CD1` [serialized-string] impact
+- `0x001A3D9D` [serialized-string] impact
+- `0x001A3E69` [serialized-string] impact
+- `0x001A3F63` [serialized-string] impact
+- `0x001A3FE3` [serialized-string] impact
+- `0x001A40B3` [serialized-string] mono
+- `0x001A68EF` [object-label] Quick Backdrop 4
+- `0x001A6B39` [serialized-string] nter 1
+- `0x001A6D58` [object-label] Active object 29
+- `0x001A6DFE` [object-label] Shadow
+- `0x001A6FCF` [object-label] Active object 39
+- `0x001A7075` [object-label] Dent 1
+- `0x001A724C` [serialized-string] secp
+- `0x001A7488` [object-label] Score 2
+- `0x001A7639` [object-label] Active object 24
+- `0x001A78B3` [object-label] Active object 43
+- `0x001A7959` [object-label] Shadow
+- `0x001A7A25` [serialized-string] cdedc
+- `0x001A7A35` [serialized-string] decce
+- `0x001A7A44` [serialized-string] decede
+- `0x001A7A4E` [serialized-string] dede
+- `0x001A7A56` [serialized-string] cdde
+- `0x001A7A6C` [serialized-string] cdecef
+- `0x001A7A76` [serialized-string] ceef
+- `0x001A7A85` [serialized-string] ceede
+- `0x001A7AB4` [serialized-string] ffef
+- `0x001A7ACA` [serialized-string] ddeef
+- `0x001A7AF8` [object-label] Active object 56
+- `0x001A7B9E` [object-label] Shadow
+- `0x001A7D38` [object-label] Active object 32
+- `0x001A7DDE` [object-label] Dent 1
+- `0x001A7F45` [object-label] Active object 8
+- `0x001A8079` [object-label] Active object 45
+- `0x001A8311` [object-label] Active object 58
+- `0x001A8580` [object-label] Active object 28
+- `0x001A87F3` [object-label] Active object 6
+- `0x001A894A` [game-text] Cyber Paddle Wins...
+- `0x001A89AC` [game-text] Cyber Paddle Wins
+- `0x001A8ABD` [object-label] Active object 46
+- `0x001A8CAB` [serialized-string] ve object 47
+- `0x001A8ECC` [serialized-string] Ball
+- `0x001A8ED1` [serialized-string] e object 7
+- `0x001A8F26` [serialized-string] UUUU0
+- `0x001A924F` [object-label] Quick Backdrop 1
+- `0x001A931C` [game-text] Bloodstone Wins...
+- `0x001A937E` [game-text] Bloodstone Wins
+- `0x001A95F3` [game-text] Green Paddle Wins...
+- `0x001A9655` [game-text] Green Paddle Wins
+- `0x001A9766` [object-label] Active object 1
+- `0x001A9865` [game-text] Magma Paddle Wins...
+- `0x001A98C7` [game-text] Magma Paddle Wins
+- `0x001A99D8` [game-text] Aqua Paddle Wins...
+- `0x001A9A3A` [game-text] Aqua Paddle Wins
+- `0x001A9B4A` [game-text] Spike Paddle Wins...
+- `0x001A9BAC` [game-text] Spike Paddle Wins
+- `0x001A9CBD` [game-text] Rock Paddle Wins...
+- `0x001A9D1F` [game-text] Rock Paddle Wins
+- `0x001A9E2F` [game-text] Shifter Wins...
+- `0x001A9E91` [game-text] Shifter Wins
+- `0x001A9F9D` [game-text] Monolith Wins...
+- `0x001A9FFF` [game-text] Monolith Wins
+- `0x001AA272` [object-label] Active object 25
+- `0x001AA582` [object-label] Active object 27
+- `0x001AA7C0` [object-label] Active object 36
+- `0x001AA9C8` [serialized-string] SPIKONES
+- `0x001AAC42` [object-label] Active object 33
+- `0x001AAE4F` [serialized-string] spikewea 2
+- `0x001AAF8C` [object-label] Active object 57
+- `0x001AB0BD` [object-label] Active object 59
+- `0x001AB237` [object-label] Active object 60
+- `0x001AB430` [object-label] Active object 61
+- `0x001AB5A0` [serialized-string] Frezzer
+- `0x001AB7A8` [serialized-string] Aqcommo
+- `0x001ABA04` [serialized-string] Green fatal
+- `0x001ABB35` [serialized-string] flam
+- `0x001ABC58` [serialized-string] Blow 2
+- `0x001ABE62` [serialized-string] showup
+- `0x001ABE69` [serialized-string] object 6
+- `0x001ABEFC` [serialized-string] Suicide
+- `0x001ABF04` [serialized-string] Blocking
+- `0x001ABF0D` [object-label] Shadow
+- `0x001AC087` [serialized-string] You can pick me!
+- `0x001AC197` [object-label] Active object 62
+- `0x001AC1D5` [object-label] Active object 2
+- `0x001AC213` [serialized-string] aquadis1
+- `0x001AC21C` [serialized-string] ject 3
+- `0x001AC3D7` [object-label] Counter 1
+- `0x001AC5DF` [object-label] Active object 4
+- `0x001AC801` [object-label] Active object 5
+- `0x001AC9E8` [object-label] Active object 7
+- `0x001ACC35` [object-label] Active object 9
+- `0x001ACE88` [serialized-string] TIMES UP!
+- `0x001ACF91` [serialized-string] joystick error!
+- `0x001AD104` [serialized-string] uppfa
+- `0x001AD203` [serialized-string] lefa
+- `0x001AD302` [serialized-string] rigfat
+- `0x001AD309` [serialized-string] object 12
+- `0x001AD401` [serialized-string] donfat
+- `0x001AD408` [serialized-string] object 12
+- `0x001AD500` [serialized-string] b1fat
+- `0x001AD639` [serialized-string] b2fat
+- `0x001AD75C` [serialized-string] joystick problem!
+- `0x001AD86B` [object-label] Active object 13
+- `0x001ADAA8` [object-label] Active object 14
+- `0x001ADC23` [object-label] Active object 3
+- `0x001ADD22` [object-label] Active object 10
+- `0x001ADE72` [object-label] Active object 11
+- `0x001AE06D` [object-label] Active object 12
+- `0x001AE39B` [object-label] Active object 63
+- `0x001AE57F` [serialized-string] bloodcom
+- `0x001AE84B` [serialized-string] rocky
+- `0x001AE851` [serialized-string] pon4
+- `0x001AEABB` [object-label] Active object 15
+- `0x001AEC9C` [object-label] Active object 64
+- `0x001AEE0C` [object-label] Active object 65
+- `0x001AF1EF` [object-label] Active object 66
+- `0x001AF3C2` [object-label] Active object 18
+- `0x001AF603` [object-label] Active object 19
+- `0x001AF7B6` [object-label] Active object 67
+- `0x001AFAB6` [serialized-string] upppp
+- `0x001AFBB5` [serialized-string] doiwn
+- `0x001AFCB4` [serialized-string] leftee
+- `0x001AFCBB` [serialized-string] object 30
+- `0x001AFDB3` [serialized-string] rthig
+- `0x001B00B0` [serialized-string] pupl
+- `0x001B037C` [object-label] Active object 68
+- `0x001B0509` [object-label] Active object 16
+- `0x001B076E` [object-label] Active object 17
+- `0x001B0A57` [object-label] Machine Independant On
+- `0x001B0A95` [object-label] Active object 69
+- `0x001B0D36` [object-label] Active object 70
+- `0x001B0EC2` [object-label] Active object 20
+- `0x001B1162` [object-label] Active object 21
+- `0x001B13ED` [object-label] Active object 34
+- `0x001B15DF` [serialized-string] monofat
+- `0x001B17EF` [serialized-string] shifstabb
+- `0x001B19F4` [serialized-string] magfatal
+- `0x001B1BC9` [serialized-string] shottongfal
+- `0x001B1E0B` [serialized-string] ve object 26
+- `0x001B2117` [object-label] Active object 30
+- `0x001B2155` [object-label] Active object 31
+- `0x001B2458` [serialized-string] Spamality!...
+- `0x001B2496` [object-label] Active object 38
+- `0x001B24D4` [object-label] Active object 40
+- `0x001B2512` [serialized-string] CPUweapon1
+- `0x001B2681` [serialized-string] CPUweapon2
+- `0x001B27D1` [serialized-string] CPUweapon3
+- `0x001B280F` [object-label] Active object 41
+- `0x001B2A00` [object-label] Active object 42
+- `0x001B2D1C` [object-label] Active object 44
+- `0x001B2F36` [object-label] Active object 47
+- `0x001B317F` [object-label] Active object 48
+- `0x001B33AA` [object-label] Active object 49
+- `0x001B3519` [object-label] Active object 50
+- `0x001B3618` [object-label] Active object 51
+- `0x001B3656` [serialized-string] Blow
+- `0x001B3694` [serialized-string] dinofatal
+- `0x001B36D2` [object-label] Active object 52
+- `0x001B3710` [object-label] Active object 53
+- `0x001B391C` [object-label] Active object 54
+- `0x001B3AFC` [object-label] Active object 55
+- `0x001B3CC7` [serialized-string] Mono 2
+- `0x001B3CCE` [serialized-string] object 30
+- `0x001B3D6D` [object-label] Shadow
+- `0x001B3EEA` [serialized-string]  object 6
+- `0x001B3F8A` [serialized-string] Suicide
+- `0x001B3F92` [serialized-string] Blocking
+- `0x001B3F9B` [object-label] Shadow
+- `0x001B8BD5` [serialized-string] impact
+- `0x001B8C53` [serialized-string] flaw
+- `0x001B8DCB` [serialized-string] impact
+- `0x001B8F53` [serialized-string] impact
+- `0x001B9A5B` [serialized-string] impact
+- `0x001BA069` [serialized-string] impact
+- `0x001BA135` [serialized-string] impact
+- `0x001BA3DF` [serialized-string] Stopped
+- `0x001BA5B5` [serialized-string] impact
+- `0x001BA815` [serialized-string] User animation 4
+- `0x001BA957` [serialized-string] boucee
+- `0x001BB9F1` [serialized-string] shifter
+- `0x001BC4CB` [serialized-string] impact
+- `0x001BC7F9` [serialized-string] disman
+- `0x001BC8B9` [serialized-string] offpad
+- `0x001BC95B` [serialized-string] offpad
+- `0x001BC9FD` [serialized-string] offpad
+- `0x001BCA9F` [serialized-string] offpad
+- `0x001BCB41` [serialized-string] offpad
+- `0x001BCBE3` [serialized-string] offpad
+- `0x001BCC85` [serialized-string] offpad
+- `0x001BCD27` [serialized-string] offpad
+- `0x001BCDC9` [serialized-string] offpad
+- `0x001BCE5F` [serialized-string] offpad
+- `0x001BCF71` [serialized-string] impact
+- `0x001BD2DD` [serialized-string] impact
+- `0x001BD543` [serialized-string] impact
+- `0x001BD873` [serialized-string] bomsha
+- `0x001BD8A1` [serialized-string] Stopped
+- `0x001BDA0B` [serialized-string] impact
+- `0x001BDC6F` [serialized-string] impact
+- `0x001BDF09` [serialized-string] disman
+- `0x001BE385` [serialized-string] impact
+- `0x001BE4EF` [serialized-string] impact
+- `0x001BE755` [serialized-string] impact
+- `0x001BEA79` [serialized-string] impact
+- `0x001BEDA7` [serialized-string] impact
+- `0x001BF02D` [serialized-string] impact
+- `0x001BF2C3` [serialized-string] impact
+- `0x001BF555` [serialized-string] impact
+- `0x001BFA79` [serialized-string] impact
+- `0x001BFD99` [serialized-string] impact
+- `0x001C0035` [serialized-string] impact
+- `0x001C02A7` [serialized-string] impact
+- `0x001C079D` [serialized-string] impact
+- `0x001C0C4D` [serialized-string] impact
+- `0x001C0F7B` [serialized-string] impact
+- `0x001C124D` [serialized-string] impact
+- `0x001C157B` [serialized-string] impact
+- `0x001C1819` [serialized-string] impact
+- `0x001C19F7` [serialized-string] impact
+- `0x001C1B0F` [serialized-string] impact
+- `0x001C1C53` [serialized-string] offpad
+- `0x001C1CF5` [serialized-string] offpad
+- `0x001C1D97` [serialized-string] offpad
+- `0x001C1E39` [serialized-string] offpad
+- `0x001C1EDB` [serialized-string] offpad
+- `0x001C1F7D` [serialized-string] offpad
+- `0x001C201F` [serialized-string] offpad
+- `0x001C20C1` [serialized-string] offpad
+- `0x001C2163` [serialized-string] offpad
+- `0x001C2205` [serialized-string] offpad
+- `0x001C22A7` [serialized-string] offpad
+- `0x001C2349` [serialized-string] offpad
+- `0x001C255D` [serialized-string] disman
+- `0x001C2969` [serialized-string] spam
+- `0x001C2BAD` [serialized-string] disman
+- `0x001C2DFD` [serialized-string] disman
+- `0x001C30A9` [serialized-string] disman
+- `0x001C32A1` [serialized-string] disman
+- `0x001C346D` [serialized-string] disman
+- `0x001C3669` [serialized-string] disman
+- `0x001C3F83` [serialized-string] ofwall
+- `0x001C3FC9` [serialized-string] ofwall
+- `0x001C400F` [serialized-string] impact
+- `0x001C40B9` [serialized-string] impact
+- `0x001C4157` [serialized-string] impact
+- `0x001C41F5` [serialized-string] impact
+- `0x001C4293` [serialized-string] impact
+- `0x001C4331` [serialized-string] impact
+- `0x001C43CF` [serialized-string] impact
+- `0x001C443F` [serialized-string] impact
+- `0x001C44AF` [serialized-string] impact
+- `0x001C454D` [serialized-string] impact
+- `0x001C45EB` [serialized-string] impact
+- `0x001C465B` [serialized-string] impact
+- `0x001C4727` [serialized-string] impact
+- `0x001C47C5` [serialized-string] impact
+- `0x001C4835` [serialized-string] impact
+- `0x001C48A5` [serialized-string] impact
+- `0x001C4915` [serialized-string] impact
+- `0x001C4967` [serialized-string] impact
+- `0x001C49D7` [serialized-string] impact
+- `0x001C4A29` [serialized-string] impact
+- `0x001C4A8D` [serialized-string] impact
+- `0x001C4BDF` [serialized-string] impact
+- `0x001C4CAB` [serialized-string] impact
+- `0x001C4D77` [serialized-string] impact
+- `0x001C4E43` [serialized-string] impact
+- `0x001C4EF1` [serialized-string] impact
+- `0x001C4FBD` [serialized-string] impact
+- `0x001C5089` [serialized-string] impact
+- `0x001C5183` [serialized-string] impact
+- `0x001C5203` [serialized-string] impact
+- `0x001C5371` [serialized-string] shifter
+- `0x001C785D` [object-label] Quick Backdrop 4
+- `0x001C7AF1` [serialized-string] nter 1
+- `0x001C7D10` [object-label] Active object 29
+- `0x001C7DB6` [object-label] Shadow
+- `0x001C7F87` [object-label] Active object 39
+- `0x001C802D` [object-label] Dent 1
+- `0x001C8204` [serialized-string] secp
+- `0x001C8440` [object-label] Score 2
+- `0x001C85F1` [object-label] Active object 24
+- `0x001C886B` [object-label] Active object 43
+- `0x001C8911` [object-label] Shadow
+- `0x001C89DD` [serialized-string] cdedc
+- `0x001C89ED` [serialized-string] decce
+- `0x001C89FC` [serialized-string] decede
+- `0x001C8A06` [serialized-string] dede
+- `0x001C8A0E` [serialized-string] cdde
+- `0x001C8A24` [serialized-string] cdecef
+- `0x001C8A2E` [serialized-string] ceef
+- `0x001C8A3D` [serialized-string] ceede
+- `0x001C8A6C` [serialized-string] ffef
+- `0x001C8A82` [serialized-string] ddeef
+- `0x001C8AB0` [object-label] Active object 56
+- `0x001C8B56` [object-label] Shadow
+- `0x001C8CF0` [object-label] Active object 32
+- `0x001C8D96` [object-label] Dent 1
+- `0x001C8EFD` [object-label] Active object 8
+- `0x001C9031` [object-label] Active object 45
+- `0x001C92C9` [object-label] Active object 58
+- `0x001C9538` [object-label] Active object 28
+- `0x001C97AB` [object-label] Machine Independant On
+- `0x001C97E9` [game-text] Cyber Paddle Wins...
+- `0x001C984B` [game-text] Cyber Paddle Wins
+- `0x001C995C` [object-label] Active object 46
+- `0x001C9B4A` [serialized-string] ve object 47
+- `0x001C9E51` [serialized-string] Ball
+- `0x001C9E56` [serialized-string] e object 7
+- `0x001C9EAB` [serialized-string] UUUU0
+- `0x001CA1D4` [object-label] Quick Backdrop 1
+- `0x001CA2A1` [game-text] Bloodstone Wins...
+- `0x001CA303` [game-text] Bloodstone Wins
+- `0x001CA578` [game-text] Green Paddle Wins...
+- `0x001CA5DA` [game-text] Green Paddle Wins
+- `0x001CA6EB` [object-label] Active object 1
+- `0x001CA7EA` [game-text] Magma Paddle Wins...
+- `0x001CA84C` [game-text] Magma Paddle Wins
+- `0x001CA95D` [game-text] Aqua Paddle Wins...
+- `0x001CA9BF` [game-text] Aqua Paddle Wins
+- `0x001CAACF` [game-text] Spike Paddle Wins...
+- `0x001CAB31` [game-text] Spike Paddle Wins
+- `0x001CAC42` [game-text] Rock Paddle Wins...
+- `0x001CACA4` [game-text] Rock Paddle Wins
+- `0x001CADB4` [game-text] Shifter Wins...
+- `0x001CAE16` [game-text] Shifter Wins
+- `0x001CAF22` [game-text] Monolith Wins...
+- `0x001CAF84` [game-text] Monolith Wins
+- `0x001CB1F7` [object-label] Active object 25
+- `0x001CB507` [object-label] Active object 27
+- `0x001CB745` [object-label] Active object 36
+- `0x001CB94D` [serialized-string] SPIKONES
+- `0x001CBBC7` [object-label] Active object 33
+- `0x001CBDD4` [serialized-string] spikewea 2
+- `0x001CBF11` [object-label] Active object 57
+- `0x001CC042` [object-label] Active object 59
+- `0x001CC1BC` [object-label] Active object 60
+- `0x001CC1FA` [object-label] Active object 61
+- `0x001CC36A` [serialized-string] Frezzer
+- `0x001CC572` [serialized-string] Aqcommo
+- `0x001CC7CE` [serialized-string] Green fatal
+- `0x001CC80C` [serialized-string] flam
+- `0x001CC92F` [serialized-string] Blow 2
+- `0x001CC96D` [serialized-string] showup
+- `0x001CC974` [serialized-string] object 6
+- `0x001CCA0D` [serialized-string] You can pick me!
+- `0x001CCB1D` [object-label] Active object 62
+- `0x001CCB5B` [object-label] Active object 2
+- `0x001CCB99` [serialized-string] aquadis1
+- `0x001CCBA2` [serialized-string] ject 3
+- `0x001CCBD7` [object-label] Counter 1
+- `0x001CCDDF` [object-label] Active object 4
+- `0x001CD001` [object-label] Active object 5
+- `0x001CD1E8` [object-label] Active object 7
+- `0x001CD435` [object-label] Active object 9
+- `0x001CD688` [serialized-string] TIMES UP!
+- `0x001CD791` [serialized-string] joystick error!
+- `0x001CD7CF` [serialized-string] uppfa
+- `0x001CD80D` [serialized-string] lefa
+- `0x001CD84B` [serialized-string] rigfat
+- `0x001CD852` [serialized-string] object 12
+- `0x001CD889` [serialized-string] donfat
+- `0x001CD890` [serialized-string] object 12
+- `0x001CD8C7` [serialized-string] b1fat
+- `0x001CD905` [serialized-string] b2fat
+- `0x001CD943` [serialized-string] joystick problem!
+- `0x001CD981` [object-label] Active object 13
+- `0x001CD9BF` [object-label] Active object 14
+- `0x001CD9FD` [object-label] Active object 3
+- `0x001CDAFC` [object-label] Active object 10
+- `0x001CDC4C` [object-label] Active object 11
+- `0x001CDC8A` [object-label] Active object 12
+- `0x001CDCC8` [object-label] Active object 63
+- `0x001CDEAC` [serialized-string] bloodcom
+- `0x001CE178` [serialized-string] rocky
+- `0x001CE17E` [serialized-string] pon4
+- `0x001CE3E8` [object-label] Active object 15
+- `0x001CE5C9` [object-label] Active object 64
+- `0x001CE739` [object-label] Active object 65
+- `0x001CEB1C` [object-label] Active object 66
+- `0x001CECEF` [object-label] Active object 18
+- `0x001CEF30` [object-label] Active object 19
+- `0x001CF0E3` [object-label] Active object 67
+- `0x001CF3E3` [serialized-string] upppp
+- `0x001CF4E2` [serialized-string] doiwn
+- `0x001CF5E1` [serialized-string] leftee
+- `0x001CF5E8` [serialized-string] object 30
+- `0x001CF6E0` [serialized-string] rthig
+- `0x001CF9DD` [serialized-string] pupl
+- `0x001CFCA9` [object-label] Active object 68
+- `0x001CFE36` [object-label] Active object 16
+- `0x001CFE74` [object-label] Active object 17
+- `0x001CFEB2` [serialized-string] fatalone
+- `0x001CFEF0` [object-label] Active object 69
+- `0x001D0191` [object-label] Active object 70
+- `0x001D031D` [object-label] Active object 20
+- `0x001D05BD` [object-label] Active object 21
+- `0x001D0848` [object-label] Active object 34
+- `0x001D0886` [serialized-string] monofat
+- `0x001D08C4` [serialized-string] shifstabb
+- `0x001D0902` [serialized-string] magfatal
+- `0x001D0940` [serialized-string] shottongfal
+- `0x001D0982` [serialized-string] ve object 26
+- `0x001D09BC` [object-label] Active object 30
+- `0x001D09FA` [object-label] Active object 31
+- `0x001D0A38` [serialized-string] Spamality!...
+- `0x001D0A76` [object-label] Active object 38
+- `0x001D0AB4` [object-label] Active object 40
+- `0x001D0AF2` [serialized-string] CPUweapon1
+- `0x001D0C7F` [serialized-string] CPUweapon2
+- `0x001D0CBD` [serialized-string] CPUweapon3
+- `0x001D0CFB` [object-label] Active object 41
+- `0x001D0EEC` [object-label] Active object 42
+- `0x001D1208` [object-label] Active object 44
+- `0x001D1422` [object-label] Active object 47
+- `0x001D166B` [object-label] Active object 48
+- `0x001D1896` [object-label] Active object 49
+- `0x001D1A05` [object-label] Active object 50
+- `0x001D1B04` [object-label] Active object 51
+- `0x001D1B42` [serialized-string] Blow
+- `0x001D1B80` [serialized-string] dinofatal
+- `0x001D1BBE` [object-label] Active object 52
+- `0x001D1BFC` [object-label] Active object 53
+- `0x001D1E08` [object-label] Active object 54
+- `0x001D1FE8` [object-label] Active object 55
+- `0x001D21B3` [serialized-string] Mono 2
+- `0x001D21BA` [serialized-string] object 30
+- `0x001D2259` [object-label] Shadow
+- `0x001D23D6` [serialized-string]  object 6
+- `0x001D2476` [serialized-string] Suicide
+- `0x001D247E` [serialized-string] Blocking
+- `0x001D2487` [object-label] Shadow
+- `0x001D69AD` [serialized-string] impact
+- `0x001D6A2B` [serialized-string] flaw
+- `0x001D6BA3` [serialized-string] impact
+- `0x001D6D2B` [serialized-string] impact
+- `0x001D75AB` [serialized-string] impact
+- `0x001D770D` [serialized-string] impact
+- `0x001D799F` [serialized-string] Stopped
+- `0x001D7B75` [serialized-string] impact
+- `0x001D7D21` [serialized-string] User animation 4
+- `0x001D7E43` [serialized-string] boucee
+- `0x001D8DDF` [serialized-string] begin
+- `0x001D9487` [serialized-string] impact
+- `0x001D95CB` [serialized-string] offpad
+- `0x001D966D` [serialized-string] offpad
+- `0x001D970F` [serialized-string] offpad
+- `0x001D97B1` [serialized-string] offpad
+- `0x001D9853` [serialized-string] offpad
+- `0x001D98F5` [serialized-string] offpad
+- `0x001D9997` [serialized-string] offpad
+- `0x001D9A39` [serialized-string] offpad
+- `0x001D9ADB` [serialized-string] offpad
+- `0x001D9B71` [serialized-string] offpad
+- `0x001D9C83` [serialized-string] impact
+- `0x001D9FD7` [serialized-string] impact
+- `0x001DA23D` [serialized-string] impact
+- `0x001DA473` [serialized-string] bomsha
+- `0x001DA52D` [serialized-string] impact
+- `0x001DA791` [serialized-string] impact
+- `0x001DAC4B` [serialized-string] impact
+- `0x001DADB5` [serialized-string] impact
+- `0x001DB01B` [serialized-string] impact
+- `0x001DB33F` [serialized-string] impact
+- `0x001DB66D` [serialized-string] impact
+- `0x001DB8E7` [serialized-string] impact
+- `0x001DBB7D` [serialized-string] impact
+- `0x001DBE0F` [serialized-string] impact
+- `0x001DC333` [serialized-string] impact
+- `0x001DC653` [serialized-string] impact
+- `0x001DC8EF` [serialized-string] impact
+- `0x001DCB61` [serialized-string] impact
+- `0x001DD057` [serialized-string] impact
+- `0x001DD507` [serialized-string] impact
+- `0x001DD835` [serialized-string] impact
+- `0x001DDB07` [serialized-string] impact
+- `0x001DDE35` [serialized-string] impact
+- `0x001DE0D3` [serialized-string] impact
+- `0x001DE2B1` [serialized-string] impact
+- `0x001DE3C9` [serialized-string] impact
+- `0x001DE50D` [serialized-string] offpad
+- `0x001DE5AF` [serialized-string] offpad
+- `0x001DE651` [serialized-string] offpad
+- `0x001DE6F3` [serialized-string] offpad
+- `0x001DE795` [serialized-string] offpad
+- `0x001DE837` [serialized-string] offpad
+- `0x001DE8D9` [serialized-string] offpad
+- `0x001DE97B` [serialized-string] offpad
+- `0x001DEA1D` [serialized-string] offpad
+- `0x001DEABF` [serialized-string] offpad
+- `0x001DEB61` [serialized-string] offpad
+- `0x001DEC03` [serialized-string] offpad
+- `0x001DED07` [serialized-string] ofwall
+- `0x001DED4D` [serialized-string] ofwall
+- `0x001DED93` [serialized-string] impact
+- `0x001DEE3D` [serialized-string] impact
+- `0x001DEEDB` [serialized-string] impact
+- `0x001DEF79` [serialized-string] impact
+- `0x001DF017` [serialized-string] impact
+- `0x001DF0B5` [serialized-string] impact
+- `0x001DF153` [serialized-string] impact
+- `0x001DF1C3` [serialized-string] impact
+- `0x001DF233` [serialized-string] impact
+- `0x001DF2D1` [serialized-string] impact
+- `0x001DF36F` [serialized-string] impact
+- `0x001DF3DF` [serialized-string] impact
+- `0x001DF4AB` [serialized-string] impact
+- `0x001DF549` [serialized-string] impact
+- `0x001DF5B9` [serialized-string] impact
+- `0x001DF629` [serialized-string] impact
+- `0x001DF699` [serialized-string] impact
+- `0x001DF6EB` [serialized-string] impact
+- `0x001DF75B` [serialized-string] impact
+- `0x001DF7AD` [serialized-string] impact
+- `0x001DF8FB` [serialized-string] chef
+- `0x001E219D` [object-label] Quick Backdrop 2
+- `0x001E2402` [serialized-string] nter 1
+- `0x001E2621` [object-label] Active object 29
+- `0x001E26C7` [object-label] Shadow
+- `0x001E2898` [object-label] Active object 39
+- `0x001E293E` [object-label] Dent 1
+- `0x001E2B15` [serialized-string] secp
+- `0x001E2D51` [object-label] Score 2
+- `0x001E2F02` [object-label] Active object 24
+- `0x001E317C` [object-label] Active object 43
+- `0x001E3222` [object-label] Shadow
+- `0x001E32EE` [serialized-string] cdedc
+- `0x001E32FE` [serialized-string] decce
+- `0x001E330D` [serialized-string] decede
+- `0x001E3317` [serialized-string] dede
+- `0x001E331F` [serialized-string] cdde
+- `0x001E3335` [serialized-string] cdecef
+- `0x001E333F` [serialized-string] ceef
+- `0x001E334E` [serialized-string] ceede
+- `0x001E337D` [serialized-string] ffef
+- `0x001E3393` [serialized-string] ddeef
+- `0x001E33C1` [object-label] Active object 56
+- `0x001E3467` [object-label] Shadow
+- `0x001E3601` [object-label] Active object 32
+- `0x001E36A7` [object-label] Dent 1
+- `0x001E380E` [object-label] Active object 8
+- `0x001E3942` [object-label] Active object 45
+- `0x001E3BDA` [object-label] Active object 58
+- `0x001E3E49` [object-label] Active object 28
+- `0x001E40BC` [serialized-string] COMP 4
+- `0x001E40C3` [serialized-string] object 25
+- `0x001E42CF` [game-text] Cyber Paddle Wins...
+- `0x001E4331` [game-text] Cyber Paddle Wins
+- `0x001E4442` [object-label] Active object 46
+- `0x001E4630` [serialized-string] ve object 47
+- `0x001E483D` [serialized-string] Ball
+- `0x001E4842` [serialized-string] e object 7
+- `0x001E4897` [serialized-string] UUUU0
+- `0x001E4BC0` [object-label] Quick Backdrop 1
+- `0x001E4C8D` [game-text] Bloodstone Wins...
+- `0x001E4CEF` [game-text] Bloodstone Wins
+- `0x001E4F64` [game-text] Green Paddle Wins...
+- `0x001E4FC6` [game-text] Green Paddle Wins
+- `0x001E50D7` [object-label] Active object 1
+- `0x001E51D6` [game-text] Magma Paddle Wins...
+- `0x001E5238` [game-text] Magma Paddle Wins
+- `0x001E5349` [game-text] Aqua Paddle Wins...
+- `0x001E53AB` [game-text] Aqua Paddle Wins
+- `0x001E54BB` [game-text] Spike Paddle Wins...
+- `0x001E551D` [game-text] Spike Paddle Wins
+- `0x001E562E` [game-text] Rock Paddle Wins...
+- `0x001E5690` [game-text] Rock Paddle Wins
+- `0x001E57A0` [game-text] Shifter Wins...
+- `0x001E5802` [game-text] Shifter Wins
+- `0x001E590E` [game-text] Monolith Wins...
+- `0x001E5970` [game-text] Monolith Wins
+- `0x001E5BE3` [object-label] Active object 25
+- `0x001E5EF3` [object-label] Active object 27
+- `0x001E6131` [object-label] Active object 36
+- `0x001E6339` [serialized-string] SPIKONES
+- `0x001E65B3` [object-label] Active object 33
+- `0x001E67C0` [serialized-string] spikewea 2
+- `0x001E68FD` [object-label] Active object 57
+- `0x001E6A2E` [object-label] Active object 59
+- `0x001E6BA8` [serialized-string] COMP 2
+- `0x001E6BAF` [serialized-string] object 25
+- `0x001E6D86` [object-label] Active object 61
+- `0x001E6EF6` [serialized-string] Frezzer
+- `0x001E70FE` [serialized-string] Aqcommo
+- `0x001E735A` [object-label] Active object 6
+- `0x001E75AB` [serialized-string] flam
+- `0x001E78D6` [serialized-string] kekeke
+- `0x001E78DD` [serialized-string] object 22
+- `0x001E7A37` [serialized-string] You can pick me!
+- `0x001E7B47` [serialized-string] cool3
+- `0x001E7C46` [object-label] Active object 60
+- `0x001E7EDF` [serialized-string] aquadis1
+- `0x001E7EE8` [serialized-string] ject 3
+- `0x001E7F1D` [object-label] Counter 1
+- `0x001E8125` [object-label] Active object 4
+- `0x001E8347` [object-label] Active object 5
+- `0x001E852E` [object-label] Active object 7
+- `0x001E877B` [object-label] Active object 9
+- `0x001E89CE` [serialized-string] TIMES UP!
+- `0x001E8AD7` [serialized-string] joystick error!
+- `0x001E8B15` [serialized-string] uppfa
+- `0x001E8B53` [serialized-string] lefa
+- `0x001E8B91` [serialized-string] rigfat
+- `0x001E8B98` [serialized-string] object 12
+- `0x001E8BCF` [serialized-string] donfat
+- `0x001E8BD6` [serialized-string] object 12
+- `0x001E8C0D` [serialized-string] b1fat
+- `0x001E8C4B` [serialized-string] b2fat
+- `0x001E8C89` [serialized-string] joystick problem!
+- `0x001E8CC7` [object-label] Active object 13
+- `0x001E8D05` [object-label] Active object 14
+- `0x001E8D43` [object-label] Active object 3
+- `0x001E8E42` [object-label] Active object 10
+- `0x001E8F92` [object-label] Active object 11
+- `0x001E8FD0` [object-label] Active object 12
+- `0x001E900E` [object-label] Active object 63
+- `0x001E91F2` [serialized-string] bloodcom
+- `0x001E94BE` [serialized-string] rocky
+- `0x001E94C4` [serialized-string] pon4
+- `0x001E972E` [object-label] Active object 15
+- `0x001E990F` [object-label] Active object 64
+- `0x001E9A7F` [object-label] Active object 65
+- `0x001E9E62` [object-label] Active object 66
+- `0x001EA035` [object-label] Active object 18
+- `0x001EA276` [object-label] Active object 19
+- `0x001EA429` [object-label] Active object 67
+- `0x001EA729` [serialized-string] upppp
+- `0x001EA828` [serialized-string] doiwn
+- `0x001EA927` [serialized-string] leftee
+- `0x001EA92E` [serialized-string] object 30
+- `0x001EAA26` [serialized-string] rthig
+- `0x001EAD23` [serialized-string] pupl
+- `0x001EAFEF` [object-label] Active object 68
+- `0x001EB17C` [object-label] Active object 16
+- `0x001EB1BA` [object-label] Active object 17
+- `0x001EB1F8` [serialized-string] fatalone
+- `0x001EB236` [object-label] Active object 69
+- `0x001EB4D7` [object-label] Active object 70
+- `0x001EB663` [object-label] Active object 20
+- `0x001EB903` [object-label] Active object 21
+- `0x001EBB8E` [object-label] Active object 34
+- `0x001EBBCC` [serialized-string] monofat
+- `0x001EBC0A` [serialized-string] shifstabb
+- `0x001EBC48` [serialized-string] magfatal
+- `0x001EBC86` [serialized-string] shottongfal
+- `0x001EBCC8` [serialized-string] ve object 26
+- `0x001EBD02` [object-label] Active object 30
+- `0x001EBD40` [object-label] Active object 31
+- `0x001EBD7E` [serialized-string] Spamality!...
+- `0x001EBDBC` [object-label] Active object 38
+- `0x001EBDFA` [object-label] Active object 40
+- `0x001EBE38` [serialized-string] CPUweapon1
+- `0x001EC0D8` [serialized-string] CPUweapon2
+- `0x001EC116` [serialized-string] CPUweapon3
+- `0x001EC154` [object-label] Active object 41
+- `0x001EC345` [object-label] Active object 42
+- `0x001EC661` [object-label] Active object 44
+- `0x001EC87B` [object-label] Active object 47
+- `0x001ECAC4` [object-label] Active object 48
+- `0x001ECCEF` [object-label] Active object 49
+- `0x001ECE5E` [object-label] Active object 50
+- `0x001ECF5D` [object-label] Active object 51
+- `0x001ECF9B` [serialized-string] Blow
+- `0x001ECFD9` [serialized-string] dinofatal
+- `0x001ED017` [object-label] Active object 52
+- `0x001ED055` [object-label] Active object 53
+- `0x001ED261` [object-label] Active object 54
+- `0x001ED441` [object-label] Active object 55
+- `0x001ED60C` [serialized-string] Mono 2
+- `0x001ED613` [serialized-string] object 30
+- `0x001ED6B2` [object-label] Shadow
+- `0x001ED82F` [serialized-string]  object 6
+- `0x001ED8CF` [serialized-string] Suicide
+- `0x001ED8D7` [serialized-string] Blocking
+- `0x001ED8E0` [object-label] Shadow
+- `0x001F229E` [serialized-string] impact
+- `0x001F231C` [serialized-string] flaw
+- `0x001F24A6` [serialized-string] impact
+- `0x001F262E` [serialized-string] impact
+- `0x001F2EAE` [serialized-string] impact
+- `0x001F306A` [serialized-string] impact
+- `0x001F32FC` [serialized-string] Stopped
+- `0x001F34B4` [serialized-string] impact
+- `0x001F367E` [serialized-string] User animation 4
+- `0x001F37A0` [serialized-string] boucee
+- `0x001F4D88` [serialized-string] impact
+- `0x001F4ECC` [serialized-string] offpad
+- `0x001F4F6E` [serialized-string] offpad
+- `0x001F5010` [serialized-string] offpad
+- `0x001F50B2` [serialized-string] offpad
+- `0x001F5154` [serialized-string] offpad
+- `0x001F51F6` [serialized-string] offpad
+- `0x001F5298` [serialized-string] offpad
+- `0x001F533A` [serialized-string] offpad
+- `0x001F53DC` [serialized-string] offpad
+- `0x001F5472` [serialized-string] offpad
+- `0x001F5584` [serialized-string] impact
+- `0x001F58D8` [serialized-string] impact
+- `0x001F5B3E` [serialized-string] impact
+- `0x001F5D74` [serialized-string] bomsha
+- `0x001F5E2E` [serialized-string] impact
+- `0x001F6092` [serialized-string] impact
+- `0x001F652E` [serialized-string] impact
+- `0x001F66B6` [serialized-string] impact
+- `0x001F691C` [serialized-string] impact
+- `0x001F6C40` [serialized-string] impact
+- `0x001F6F6E` [serialized-string] impact
+- `0x001F71E8` [serialized-string] impact
+- `0x001F747E` [serialized-string] impact
+- `0x001F7710` [serialized-string] impact
+- `0x001F7C16` [serialized-string] impact
+- `0x001F7F36` [serialized-string] impact
+- `0x001F81F0` [serialized-string] impact
+- `0x001F8462` [serialized-string] impact
+- `0x001F8958` [serialized-string] impact
+- `0x001F8E08` [serialized-string] impact
+- `0x001F9136` [serialized-string] impact
+- `0x001F9408` [serialized-string] impact
+- `0x001F9736` [serialized-string] impact
+- `0x001F99D4` [serialized-string] impact
+- `0x001F9BB2` [serialized-string] impact
+- `0x001F9CCA` [serialized-string] impact
+- `0x001F9E0E` [serialized-string] offpad
+- `0x001F9EB0` [serialized-string] offpad
+- `0x001F9F52` [serialized-string] offpad
+- `0x001F9FF4` [serialized-string] offpad
+- `0x001FA096` [serialized-string] offpad
+- `0x001FA138` [serialized-string] offpad
+- `0x001FA1DA` [serialized-string] offpad
+- `0x001FA27C` [serialized-string] offpad
+- `0x001FA31E` [serialized-string] offpad
+- `0x001FA3C0` [serialized-string] offpad
+- `0x001FA462` [serialized-string] offpad
+- `0x001FA504` [serialized-string] offpad
+- `0x001FA608` [serialized-string] ofwall
+- `0x001FA64E` [serialized-string] ofwall
+- `0x001FA694` [serialized-string] impact
+- `0x001FA73E` [serialized-string] impact
+- `0x001FA7DC` [serialized-string] impact
+- `0x001FA87A` [serialized-string] impact
+- `0x001FA918` [serialized-string] impact
+- `0x001FA9B6` [serialized-string] impact
+- `0x001FAA54` [serialized-string] impact
+- `0x001FAAC4` [serialized-string] impact
+- `0x001FAB34` [serialized-string] impact
+- `0x001FABD2` [serialized-string] impact
+- `0x001FAC70` [serialized-string] impact
+- `0x001FACE0` [serialized-string] impact
+- `0x001FADAC` [serialized-string] impact
+- `0x001FAE4A` [serialized-string] impact
+- `0x001FAEBA` [serialized-string] impact
+- `0x001FAF2A` [serialized-string] impact
+- `0x001FAF9A` [serialized-string] impact
+- `0x001FAFEC` [serialized-string] impact
+- `0x001FB05C` [serialized-string] impact
+- `0x001FB0AE` [serialized-string] impact
+- `0x001FB1FC` [serialized-string] white
+- `0x001FE4CA` [object-label] Quick Backdrop 4
+- `0x001FE76C` [object-label] Active object 1
+- `0x001FE8BD` [object-label] Active object 2
+- `0x001FE9D6` [object-label] Score 1
+- `0x001FEB87` [object-label] Active object 3
+- `0x001FECA0` [object-label] Our Top Score...
+- `0x001FED02` [object-label] Our Top Score
+- `0x001FEE0F` [object-label] Your Top Score...
+- `0x001FEE71` [object-label] Your Top Score
+- `0x001FEF7F` [object-label] Active object 4
+- `0x001FF0CA` [object-label] Active object 5
+- `0x001FF1E3` [object-label] Active object 6
+- `0x001FF31C` [object-label] Active object 7
+- `0x001FF436` [object-label] Active object 8
+- `0x001FF535` [object-label] Active object 9
+- `0x001FF652` [object-label] Active object 10
+- `0x001FF8BD` [object-label] Machine Independant On
+- `0x002033B6` [object-label] Quick Backdrop 1
+- `0x00205D24` [object-label] Quick Backdrop 1
+- `0x00205DF1` [object-label] Quick Backdrop 3
+- `0x00205EBE` [object-label] Quick Backdrop 4
+- `0x00205F8B` [object-label] Quick Backdrop 5
+- `0x00206058` [serialized-string] Enable Tag Team...
+- `0x00206096` [serialized-string] Beat Game...
+- `0x002060D4` [game-text] View Credits...
+- `0x00206112` [serialized-string] Oldies but Goodies:...
+- `0x00206158` [game-text] White Paddle...
+- `0x00206196` [game-text] White Paddle...
+- `0x002061CC` [game-text] Purple Paddle...
+- `0x0020620A` [serialized-string] Disable Timer...
+- `0x00206248` [object-label] Enable Shadow Transf...
+- `0x00206286` [object-label] Score 2
+- `0x002062C4` [serialized-string] arrow 2
+- `0x002062CC` [serialized-string] bject 1
+- `0x0020630C` [serialized-string] ammers and...
+- `0x00206340` [game-text] Red Paddle...
+- `0x0020637E` [serialized-string] arrow 4
+- `0x00206386` [serialized-string] bject 1
+- `0x002063BC` [game-text] Blue Paddle...
+- `0x002064B4` [game-text] Super Secret Paddles...
+- `0x002064F2` [serialized-string] spike clone
+- `0x00206530` [object-label] Active object 2
+- `0x0020656E` [game-text] Ryan Paddle...
+- `0x002065AC` [game-text] Art Paddle...
+- `0x002065EA` [object-label] Quick Backdrop 2
+- `0x00208F85` [object-label] Quick Backdrop 1
+- `0x00209052` [object-label] Quick Backdrop 2
+- `0x00209314` [serialized-string] As a natural element...
+- `0x00209376` [game-text] As a natural element, Aqua drowns White Paddle.  Her passion for Shifter has come true, they become Queen and King.
+- `0x002094E9` [game-text] Aqua Paddle...
+- `0x0020954B` [game-text] Aqua Paddle
+- `0x0020BC14` [object-label] Quick Backdrop 1
+- `0x0020BCE1` [object-label] Quick Backdrop 2
+- `0x0020BF9F` [serialized-string] The only reason why ...
+- `0x0020C05E` [serialized-string] They now rein as King and Queen
+- `0x0020C17D` [serialized-string] Shifter...
+- `0x0020C1DF` [serialized-string] Shifter
+- `0x0020E8A4` [object-label] Quick Backdrop 1
+- `0x0020E971` [object-label] Quick Backdrop 2
+- `0x0020EBF8` [serialized-string] Very ticked off at W...
+- `0x0020ECAE` [game-text] After butchering White Paddle, he returns the world to it's natural form
+- `0x0020EDF6` [serialized-string] Monolith...
+- `0x0020EE58` [serialized-string] Monolith
+- `0x0021151E` [object-label] Quick Backdrop 1
+- `0x002115EB` [object-label] Quick Backdrop 2
+- `0x00211838` [serialized-string] An assassin at heart...
+- `0x002118EB` [serialized-string] She makes him restore the world and then drowns him in her acid pit.
+- `0x00211A2F` [game-text] Green Paddle...
+- `0x00211A91` [game-text] Green Paddle
+- `0x0021415B` [object-label] Quick Backdrop 1
+- `0x00214228` [object-label] Quick Backdrop 2
+- `0x00214471` [serialized-string] In his past, White P...
+- `0x00214531` [game-text] He beats the living paddle gut out of them and returns to his homeland.
+- `0x00214678` [game-text] Cyber Paddle...
+- `0x002146DA` [game-text] Cyber Paddle
+- `0x00216DA4` [object-label] Quick Backdrop 1
+- `0x00216E71` [object-label] Quick Backdrop 2
+- `0x002170B2` [serialized-string] Once the leader of t...
+- `0x002171A1` [serialized-string] Bloodstone takes over and rules as the Pong Lao Leader.
+- `0x002172D8` [serialized-string] Bloodstone...
+- `0x0021733A` [serialized-string] Bloodstone
+- `0x00219A02` [object-label] Quick Backdrop 1
+- `0x00219ACF` [object-label] Quick Backdrop 2
+- `0x00219D0E` [serialized-string] No one knew his true...
+- `0x00219D70` [object-label] No one knew his true identity, he quickly takes over.  Finally defeating White Paddle and his Minions, he reveals his true form, the Rainbow Paddle.
+- `0x00219F04` [game-text] Magma Paddle...
+- `0x00219F66` [game-text] Magma Paddle
+- `0x0021C630` [object-label] Quick Backdrop 1
+- `0x0021C6FD` [object-label] Quick Backdrop 2
+- `0x0021C942` [game-text] Spike Paddle ranpage...
+- `0x0021C9A4` [game-text] Spike Paddle ranpages though the tornament and sends Chief and White Paddle to their doom.  He plans to take over the world!
+- `0x0021CB20` [game-text] Spike Paddle...
+- `0x0021CB82` [game-text] Spike Paddle
+- `0x0021F24C` [object-label] Quick Backdrop 1
+- `0x0021F319` [object-label] Quick Backdrop 2
+- `0x0021F53A` [game-text] Rock Paddle, the Was...
+- `0x0021F732` [game-text] Rock Paddle...
+- `0x0021F794` [game-text] Rock Paddle
+- `0x00221E5D` [object-label] Quick Backdrop 1
+- `0x00221F2A` [game-text] Ryan Paddle...
+- `0x00221F8C` [game-text] Ryan Paddle
+- `0x00222097` [serialized-string] The main brain of th...
+- `0x00222372` [serialized-string] East 1999 See ya all at tha crossroads...
+- `0x0022249B` [object-label] Quick Backdrop 2
+- `0x0022279D` [serialized-string] sound
+- `0x00224CD1` [object-label] Quick Backdrop 1
+- `0x00224D9E` [game-text] Art Paddle...
+- `0x00224E00` [game-text] Art Paddle
+- `0x00225466` [object-label] Active object 31
+- `0x0022582D` [serialized-string] sound
+- `0x00227D67` [object-label] Quick Backdrop 1
+- `0x00227E34` [object-label] Quick Backdrop 2
+- `0x00228074` [serialized-string] Not known as a secre...
+- `0x002280D6` [game-text] Not known as a secret paddle, Purple Paddle surprised White Paddle.  He butchers up White Paddle and turns into a playable paddle for the next game.
+- `0x0022826A` [game-text] Purple Paddle...
+- `0x002282CC` [game-text] Purple Paddle
+- `0x0022A997` [object-label] Quick Backdrop 1
+- `0x0022AA64` [object-label] Quick Backdrop 2
+- `0x0022ACA1` [game-text] White Paddle never k...
+- `0x0022AE0C` [game-text] Now every one has a chance to smoke White Paddle!
+- `0x0022AF3D` [game-text] Cigarette Paddle...
+- `0x0022AF9F` [game-text] Cigarette Paddle
+- `0x0022D66D` [object-label] Quick Backdrop 1
+- `0x0022D73A` [object-label] Quick Backdrop 2
+- `0x0022D97A` [game-text] No paddle had a clue...
+- `0x0022D9DC` [game-text] No paddle had a clue (neither did you) that Blue Paddle survived in Pong Kombat 1.  He strangles White Paddle and becomes the greatest secret paddle in histroy.
+- `0x0022DB7C` [game-text] Blue Paddle...
+- `0x0022DBDE` [game-text] Blue Paddle
+- `0x002302A7` [object-label] Quick Backdrop 1
+- `0x00230374` [object-label] Quick Backdrop 2
+- `0x002305B5` [serialized-string] After being deformed...
+- `0x002307F5` [game-text] Red Paddle...
+- `0x00230857` [game-text] Red Paddle
+- `0x00232F1F` [object-label] Quick Backdrop 1
+- `0x00232FEC` [object-label] Active object 2
+- `0x00233174` [serialized-string] tive object 4
+- `0x00233387` [serialized-string] tive object 9
+- `0x002334C6` [object-label] Active object 1
+- `0x00233693` [object-label] Active object 3
+- `0x00233803` [serialized-string] tive object 5
+- `0x0023399A` [serialized-string] tive object 6
+- `0x00233BA6` [serialized-string] ive object 7
+- `0x00233E15` [serialized-string] nnnaaattee
+- `0x00234016` [serialized-string] tive object 10
+- `0x00234167` [serialized-string] tive object 11
+- `0x00234385` [serialized-string] tive object 12
+- `0x00234520` [serialized-string] tive object 13
+- `0x0023469F` [serialized-string] tive object 14
+- `0x00234824` [serialized-string] ive object 15
+- `0x0023496E` [serialized-string] ive object 16
+- `0x00234B18` [object-label] Active object 4
+- `0x00234E75` [serialized-string] First Appea...
+- `0x00234F2C` [serialized-string] Remade By:  Ryan Sadwick
+- `0x002350FC` [serialized-string] Remade By:  Arturo Aquino
+- `0x002352A7` [serialized-string] Designed By:  Ryan Sadwick
+- `0x00235452` [serialized-string] Designed By:  Ryan Sadwick
+- `0x002355FE` [serialized-string] Designed By:  Arturo Aquino
+- `0x002357AA` [serialized-string] Designed By:  Ryan Sadwick
+- `0x00235954` [serialized-string] Designed By:  Ryan Sadwick & Arturo Aquino
+- `0x00235B2E` [serialized-string] Remade By:  Arturo Aquino
+- `0x00235C51` [serialized-string] First Appe...
+- `0x00235D08` [serialized-string] Remade By:  Ryan Sadwick & Arturo Aquino
+- `0x00235E30` [serialized-string] Mono
+- `0x00235EE4` [object-label] Shadow
+- `0x00236063` [object-label] Active object 40
+- `0x00236117` [object-label] shadow
+- `0x002362FD` [object-label] Active object 29
+- `0x002363B1` [object-label] Shadow
+- `0x00236564` [serialized-string] ve object 6
+- `0x00236614` [serialized-string] Suicide
+- `0x0023661C` [serialized-string] Blocking
+- `0x00236625` [object-label] Shadow
+- `0x0023681C` [serialized-string] cast
+- `0x00236821` [serialized-string] e object 4
+- `0x00236962` [object-label] Active object 45
+- `0x00236B6C` [object-label] Active object 43
+- `0x00236C20` [object-label] Shadow
+- `0x00236CFC` [serialized-string] cdedc
+- `0x00236D0C` [serialized-string] decce
+- `0x00236D1B` [serialized-string] decede
+- `0x00236D25` [serialized-string] dede
+- `0x00236D2D` [serialized-string] cdde
+- `0x00236D43` [serialized-string] cdecef
+- `0x00236D4D` [serialized-string] ceef
+- `0x00236D5C` [serialized-string] ceede
+- `0x00236D8B` [serialized-string] ffef
+- `0x00236DA1` [serialized-string] ddeef
+- `0x00236DCF` [object-label] Active object 32
+- `0x00236E83` [object-label] Shadow
+- `0x00237070` [object-label] Active object 6
+- `0x00237124` [object-label] Shadow
+- `0x002372D0` [object-label] Active object 28
+- `0x00237562` [object-label] Active object 5
+- `0x002378F2` [object-label] Active object 7
+- `0x00237C62` [object-label] President Of Ryan Sadwick Productions
+- `0x00237DF9` [object-label] President Of Art Entertainment
+- `0x00237F17` [object-label] Active object 8
+- `0x00238191` [serialized-string] Kombat will continue...
+- `0x002382A9` [serialized-string]    Art Entertainment
+- `0x00239FE7` [serialized-string] chuck
+- `0x0023D3BB` [object-label] Quick Backdrop 1
+- `0x0023D488` [object-label] Active object 2
+- `0x0023D645` [serialized-string] Remade By:  Ryan Sadwick & Arturo Aquino
+- `0x0023D776` [serialized-string] ject 3
+- `0x0023D7AB` [object-label] Counter 1
+- `0x0023DB5F` [object-label] Active object 44
+- `0x0023E50A` [serialized-string] ject 3
+- `0x0023E6EC` [serialized-string] nnnaaattee
+- `0x0023E8EB` [object-label] Active object 53
+- `0x0023E929` [object-label] Active object 55
+- `0x0023E96D` [serialized-string]  object 6
+- `0x0023E9A5` [object-label] Active object 54
+- `0x0023EEDB` [serialized-string] Mono 2
+- `0x0023EEE2` [serialized-string] object 30
+- `0x0023F133` [object-label] Shadow
+- `0x0023F2FF` [serialized-string] ive object 15
+- `0x0023F33D` [serialized-string] ive object 16
+- `0x0023F484` [serialized-string] ALAA 
+- `0x0023F48B` [object-label] Active object 4
+- `0x0023F55B` [serialized-string] Designed By:  Ryan Sadwick
+- `0x0023F707` [serialized-string] Designed By:  Ryan Sadwick & Arturo Aquino
+- `0x0023F8C2` [serialized-string] Designed By:  Ryan Sadwick
+- `0x0023FA72` [serialized-string] Designed By:  Brendon Mullis
+- `0x0023FC20` [serialized-string] Designed By:  Arturo Aquino
+- `0x0023FDCF` [serialized-string] Designed By:  Thai Hur
+- `0x0023FF96` [serialized-string] Remade By:  Ryan Sadwick
+- `0x0024015D` [serialized-string] Remade By:  Ryan Sadwick
+- `0x00240323` [serialized-string] Remade By:  Ryan Sadwick
+- `0x0024043B` [serialized-string] Mono
+- `0x002404EF` [object-label] Shadow
+- `0x00240721` [object-label] Active object 40
+- `0x002407D5` [object-label] shadow
+- `0x00240974` [object-label] Active object 29
+- `0x00240A28` [object-label] Shadow
+- `0x00240BA0` [serialized-string] ve object 6
+- `0x00240C50` [serialized-string] Suicide
+- `0x00240C58` [serialized-string] Blocking
+- `0x00240C61` [object-label] Shadow
+- `0x00240EC4` [serialized-string] cast
+- `0x00240EC9` [serialized-string] e object 4
+- `0x00240F02` [object-label] Active object 45
+- `0x0024115D` [object-label] Active object 43
+- `0x00241211` [object-label] Shadow
+- `0x002413D8` [object-label] Active object 32
+- `0x0024148C` [object-label] Shadow
+- `0x00241672` [object-label] Active object 6
+- `0x00241726` [object-label] Shadow
+- `0x0024192C` [object-label] Active object 28
+- `0x0024243C` [serialized-string] chuck
+- `0x0024567C` [object-label] Quick Backdrop 2
+- `0x002457AB` [game-text]     Years have passed since the defeat of White Paddle at the annual Pong Kombat Tournament and Swap Meet.  The Victor, Green Paddle, famed archer with nothing better to do that day other than triumph over evil, decided to retire to a life of writing. Good for her.
+- `0x002459B4` [object-label] Quick Backdrop 3
+- `0x00248180` [object-label] Quick Backdrop 2
+- `0x0024824D` [game-text]     White Paddle did...
+- `0x002482AF` [game-text]     White Paddle didn't get off so easy.  His superiors were Really Not Happy At All with his performance, and sent him to the outer cult of Pong Lao to be judged.
+- `0x00248452` [object-label] Quick Backdrop 3
+- `0x0024AC14` [object-label] Quick Backdrop 2
+- `0x0024AD43` [game-text]      But there... something... happened.  He met up with... something... and that something give him is soul... with... some catch... deliver the world... into... something's... hands... if... paddles... had........... hands...............
+- `0x0024AF32` [object-label] Quick Backdrop 3
+- `0x0024D6F2` [object-label] Quick Backdrop 2
+- `0x0024DAA2` [object-label] Quick Backdrop 3
+- `0x0024DCEC` [object-label] Machine Independant On
+- `0x002503A3` [object-label] Quick Backdrop 1
+- `0x00250470` [object-label] Quick Backdrop 2
+- `0x0025067B` [serialized-string] Made of acid, Acid P...
+- `0x002506DD` [game-text] Made of acid, Acid Paddle melts her way through the swap meet.  She burns White Paddle to death with her acid spit!
+- `0x00250850` [game-text] Acid Paddle...
+- `0x002508B2` [game-text] Acid Paddle
+- `0x00252F7B` [object-label] Quick Backdrop 1
+- `0x00253048` [object-label] Quick Backdrop 2
+- `0x0025325F` [serialized-string] Being the gigantic p...
+- `0x00253371` [game-text]    He plans to marry Chief Paddle
+- `0x00253492` [game-text] Awesome Paddle...
+- `0x002534F4` [game-text] Awesome Paddle
+- `0x00255BC0` [object-label] Quick Backdrop 1
+- `0x00255C8D` [object-label] Quick Backdrop 2
+- `0x00255EA4` [serialized-string] As stubborn as Chief...
+- `0x00255F06` [game-text] As stubborn as Chief is, he is smart enough to turn against White Paddle.  He reins supreme!
+- `0x00256062` [game-text] Chief Paddle...
+- `0x002560C4` [game-text] Chief Paddle
+- `0x0025878E` [object-label] Quick Backdrop 1
+- `0x0025885B` [object-label] Quick Backdrop 2
+- `0x00258A72` [serialized-string] Rumors begin spread ...
+- `0x00258AD4` [game-text] Rumors begin spread about this paddle, Plaid Paddle hears about them.  He secretly enters the meet.  He smashes White Paddle and turns everything in the world to Plaid.
+- `0x00258C7C` [game-text] Plaid Paddle...
+- `0x00258CDE` [game-text] Plaid Paddle
+- `0x0025B3A8` [object-label] Quick Backdrop 1
+- `0x0025B475` [object-label] Quick Backdrop 2
+- `0x0025B68C` [serialized-string] Crazy as Wacky is, h...
+- `0x0025B6EE` [game-text] Crazy as Wacky is, he turns against his master, White Paddle after finding out White was going to destroy Wacky's race.  Wacky went insane in the membrane.  He kills White Paddle, but then destroys himself.  Now he'll never know his true form...
+- `0x0025B8E3` [game-text] Wacky Paddle...
+- `0x0025B945` [game-text] Wacky Paddle
+- `0x0025E00F` [object-label] Quick Backdrop 1
+- `0x0025E0DC` [object-label] Quick Backdrop 2
+- `0x0025E30F` [serialized-string] Being greater than t...
+- `0x0025E371` [game-text] Being greater than thou art is, White Paddle kills every single paddle and takes over the world.  When he does this, that "SOMETHING" will be killed.  Just what he planned...
+- `0x0025E51F` [game-text] White Paddle...
+- `0x0025E581` [game-text] White Paddle
+- `0x00260C4B` [object-label] Quick Backdrop 1
+- `0x00260EE5` [object-label] Player 1, Choose You...
+- `0x00260F47` [object-label] Player 1, Choose Your Paddle
+- `0x00261063` [object-label] Quick Backdrop 3
+- `0x00261130` [object-label] Quick Backdrop 2
+- `0x002611FD` [object-label] Active object 1
+- `0x002618A0` [serialized-string] ssaver
+- `0x00263DF4` [object-label] Quick Backdrop 1
+- `0x0026408E` [object-label] Player 2, Choose You...
+- `0x002640F0` [object-label] Player 2, Choose Your Paddle
+- `0x0026420C` [object-label] Quick Backdrop 3
+- `0x002642D9` [object-label] Quick Backdrop 2
+- `0x002643A6` [object-label] Active object 1
+- `0x00264987` [serialized-string] ssaver
+- `0x00266E9D` [object-label] Quick Backdrop 4
+- `0x002670F6` [serialized-string] Mono
+- `0x0026719C` [object-label] Shadow
+- `0x00267303` [object-label] Active object 80
+- `0x00267341` [object-label] Active object 29
+- `0x002673E7` [object-label] Shadow
+- `0x00267584` [object-label] Active object 39
+- `0x0026762A` [object-label] shadow
+- `0x002677FE` [object-label] Active object 81
+- `0x002679E3` [serialized-string] ve object 6
+- `0x00267A85` [serialized-string] Suicide
+- `0x00267A8D` [serialized-string] Blocking
+- `0x00267A96` [object-label] Shadow
+- `0x00267C6D` [object-label] Active object 72
+- `0x00267DC4` [object-label] Active object 8
+- `0x00267FE6` [serialized-string] dismantlingc
+- `0x002681EE` [object-label] Active object 9
+- `0x002683D5` [object-label] Active object 24
+- `0x00268622` [object-label] 1 Player...
+- `0x00268684` [object-label] 1 Player
+- `0x0026878C` [object-label] Active object 45
+- `0x00268976` [object-label] Active object 32
+- `0x00268A1C` [object-label] Shadow
+- `0x00268BF7` [object-label] 2 Player...
+- `0x00268C59` [object-label] 2 Player
+- `0x00268D61` [object-label] Active object 25
+- `0x00268F52` [object-label] Active object 73
+- `0x00268F90` [object-label] Active object 6
+- `0x00269036` [object-label] Shadow
+- `0x002691D0` [object-label] Active object 74
+- `0x0026920E` [object-label] Active object 28
+- `0x0026947E` [object-label] Active object 75
+- `0x002694BC` [object-label] Active object 58
+- `0x002694FA` [serialized-string] fatu
+- `0x002694FF` [serialized-string] e object 1
+- `0x002695F9` [object-label] Active object 56
+- `0x00269637` [serialized-string] fatdd
+- `0x0026963E` [serialized-string] object 1
+- `0x00269736` [serialized-string] Mono 5
+- `0x0026973D` [serialized-string] object 30
+- `0x0026977A` [serialized-string]  object 6
+- `0x002697B2` [serialized-string] Mono 2
+- `0x002697B9` [serialized-string] object 30
+- `0x00269858` [object-label] Shadow
+- `0x002699BF` [object-label] Active object 76
+- `0x002699FD` [object-label] Active object 43
+- `0x00269AA3` [object-label] Shadow
+- `0x00269B6F` [serialized-string] cdedc
+- `0x00269B7F` [serialized-string] decce
+- `0x00269B8E` [serialized-string] decede
+- `0x00269B98` [serialized-string] dede
+- `0x00269BA0` [serialized-string] cdde
+- `0x00269BB6` [serialized-string] cdecef
+- `0x00269BC0` [serialized-string] ceef
+- `0x00269BCF` [serialized-string] ceede
+- `0x00269BFE` [serialized-string] ffef
+- `0x00269C14` [serialized-string] ddeef
+- `0x00269C42` [object-label] Quick Backdrop 1
+- `0x00269D0F` [object-label] Quick Backdrop 3
+- `0x00269DDC` [object-label] Counter 1
+- `0x00269F42` [object-label] Counter 2
+- `0x0026A0A8` [serialized-string] fatll 2
+- `0x0026A0B0` [serialized-string] bject 1
+- `0x0026A1A7` [serialized-string] Mono 3
+- `0x0026A1AE` [serialized-string] object 30
+- `0x0026A2EA` [object-label] Active object 7
+- `0x0026A344` [serialized-string] UUUUd
+- `0x0026A6D1` [serialized-string] Mono 4
+- `0x0026A6D8` [serialized-string] object 30
+- `0x0026A7FA` [object-label] Active object 77
+- `0x0026A838` [object-label] Active object 78
+- `0x0026A876` [serialized-string] spikewea
+- `0x0026AB86` [serialized-string] monofat
+- `0x0026ADA2` [object-label] Active object 13
+- `0x0026AFAA` [object-label] Active object 19
+- `0x0026B1E8` [object-label] Active object 22
+- `0x0026B4B4` [serialized-string] spikewea 2
+- `0x0026B5F1` [object-label] Active object 26
+- `0x0026B76B` [object-label] Active object 18
+- `0x0026B89C` [object-label] Active object 79
+- `0x0026B8DA` [serialized-string] fatrigh
+- `0x0026B8E2` [serialized-string] bject 1
+- `0x0026B9D9` [object-label] Active object 10
+- `0x0026BBE6` [object-label] Active object 30
+- `0x0026BD56` [serialized-string] fatb1
+- `0x0026BE55` [serialized-string] fatb2
+- `0x0026BF54` [serialized-string] monofatp2
+- `0x0026C166` [object-label] Active object 14
+- `0x0026C3E0` [object-label] Active object 11
+- `0x0026C514` [object-label] Active object 16
+- `0x0026C68F` [serialized-string] p1mono
+- `0x0026C696` [serialized-string] object 82
+- `0x0026C873` [serialized-string] monofatp1
+- `0x0026CA85` [object-label] Active object 17
+- `0x0026CD81` [serialized-string] bloody2
+- `0x0026D044` [serialized-string] flam
+- `0x0026D167` [serialized-string] Green fatal
+- `0x0026D298` [serialized-string] joystick error!
+- `0x0026D40B` [serialized-string] joystick problem!
+- `0x0026D51A` [object-label] Active object 82
+- `0x0026D721` [serialized-string] magfatal
+- `0x0026D8E7` [serialized-string] shottongfal
+- `0x0026DB25` [serialized-string] shifstabb
+- `0x0026DD2B` [object-label] Active object 20
+- `0x0026DE7E` [serialized-string] ive object 1
+- `0x0026DF7A` [serialized-string] down
+- `0x0026DF7F` [serialized-string] e object 2
+- `0x0026E079` [serialized-string] left
+- `0x0026E07E` [serialized-string] e object 4
+- `0x0026E178` [serialized-string] right
+- `0x0026E27E` [serialized-string] object 4
+- `0x0026E37D` [serialized-string] object 4
+- `0x0026E475` [serialized-string] monofat 2
+- `0x0026E6AE` [serialized-string] monofat 3
+- `0x0026E8DF` [serialized-string] monofat 4
+- `0x0026EB44` [object-label] Active object 61
+- `0x0026EB82` [object-label] Active object 4
+- `0x0026EBC0` [object-label] Active object 62
+- `0x0026EBFE` [serialized-string] monofat 5
+- `0x0026EE3C` [serialized-string] monofat 6
+- `0x0026F076` [serialized-string] monofat 7
+- `0x0026F29E` [object-label] Active object 64
+- `0x0026F2DC` [object-label] Active object 12
+- `0x0026F31A` [serialized-string] monofat 8
+- `0x0026F52A` [object-label] Active object 66
+- `0x0026F568` [object-label] Active object 67
+- `0x0026F5A6` [object-label] Active object 68
+- `0x0026F5E4` [object-label] Active object 69
+- `0x0026F622` [object-label] Active object 70
+- `0x0026F660` [object-label] Active object 71
+- `0x0026F86F` [serialized-string] upp2
+- `0x0026F96E` [serialized-string] downp2
+- `0x0026FA6F` [serialized-string] ikewea 7
+- `0x0026FB6E` [serialized-string] ikewea 8
+- `0x0026FE69` [object-label] Active object 27
+- `0x00270064` [object-label] Active object 31
+- `0x00270392` [object-label] Active object 33
+- `0x002705D4` [serialized-string] Aqcommo
+- `0x00270830` [serialized-string] aquadis1
+- `0x00270839` [serialized-string] ject 3
+- `0x002709F1` [serialized-string] rocky
+- `0x002709F7` [serialized-string] pon4
+- `0x00270C65` [serialized-string] ve object 26
+- `0x00270F71` [object-label] Active object 34
+- `0x0027125D` [object-label] Active object 3
+- `0x0027135C` [object-label] Active object 35
+- `0x00274C68` [serialized-string] boinglo
+- `0x00274CD6` [serialized-string] boinglo
+- `0x00274D26` [serialized-string] boinglo
+- `0x00274EB8` [serialized-string] boinglo
+- `0x002763E0` [serialized-string] impact
+- `0x00276508` [serialized-string] impact
+- `0x00276578` [serialized-string] impact
+- `0x00276644` [serialized-string] impact
+- `0x00276710` [serialized-string] impact
+- `0x002767DC` [serialized-string] impact
+- `0x002768A8` [serialized-string] impact
+- `0x00276992` [serialized-string] impact
+- `0x00276AF4` [serialized-string] impact
+- `0x00276BEE` [serialized-string] impact
+- `0x00276CE4` [object-label] Shadow
+- `0x00276D24` [serialized-string] impact
+- `0x00276E1E` [serialized-string] impact
+- `0x00276F18` [serialized-string] impact
+- `0x00277012` [serialized-string] impact
+- `0x0027710C` [serialized-string] impact
+- `0x00277206` [serialized-string] impact
+- `0x00277300` [serialized-string] impact
+- `0x002773FA` [serialized-string] impact
+- `0x0027744C` [serialized-string] offpad
+- `0x0027749E` [serialized-string] offpad
+- `0x002774F0` [serialized-string] offpad
+- `0x00277542` [serialized-string] offpad
+- `0x00277594` [serialized-string] offpad
+- `0x002775E6` [serialized-string] offpad
+- `0x00277638` [serialized-string] offpad
+- `0x0027768A` [serialized-string] offpad
+- `0x002776DC` [serialized-string] offpad
+- `0x0027772E` [serialized-string] offpad
+- `0x0027856A` [serialized-string] disman
+- `0x00278678` [serialized-string] flaw
+- `0x00278744` [serialized-string] impact
+- `0x002788EC` [serialized-string] impact
+- `0x00278B20` [serialized-string] disman
+- `0x00278E74` [serialized-string] flaw
+- `0x0027909E` [serialized-string] impact
+- `0x00279268` [serialized-string] disman
+- `0x002793A8` [serialized-string] impact
+- `0x00279654` [serialized-string] impact
+- `0x002796D2` [serialized-string] disman
+- `0x0027998E` [serialized-string] impact
+- `0x00279B2E` [serialized-string] disman
+- `0x00279BC0` [serialized-string] impact
+- `0x0027A34E` [serialized-string] disman
+- `0x0027A4E4` [serialized-string] spam
+- `0x0027A6EC` [serialized-string] disman
+- `0x0027A73E` [serialized-string] Stopped
+- `0x0027A792` [serialized-string] impact
+- `0x0027AA64` [serialized-string] disman
+- `0x0027AC04` [serialized-string] impact
+- `0x0027AEA0` [serialized-string] disman
+- `0x0027B094` [serialized-string] impact
+- `0x0027B240` [serialized-string] disman
+- `0x0027B2D2` [serialized-string] impact
+- `0x0027B3E0` [serialized-string] impact
+- `0x0027B4F4` [serialized-string] impact
+- `0x0027B608` [serialized-string] impact
+- `0x0027B71C` [serialized-string] impact
+- `0x0027B830` [serialized-string] impact
+- `0x0027B944` [serialized-string] impact
+- `0x0027BA58` [serialized-string] impact
+- `0x0027BC20` [serialized-string] impact
+- `0x0027BD20` [serialized-string] mono
+- `0x0027E5CC` [object-label] Quick Backdrop 2
+- `0x0027E877` [serialized-string] Mono
+- `0x0027E91D` [object-label] Shadow
+- `0x0027EA84` [object-label] Active object 80
+- `0x0027EAC2` [object-label] Active object 29
+- `0x0027EB68` [object-label] Shadow
+- `0x0027ED05` [object-label] Active object 39
+- `0x0027EDAB` [object-label] shadow
+- `0x0027EF7F` [object-label] Active object 81
+- `0x0027F1F1` [serialized-string] ve object 6
+- `0x0027F293` [serialized-string] Suicide
+- `0x0027F29B` [serialized-string] Blocking
+- `0x0027F2A4` [object-label] Shadow
+- `0x0027F47B` [object-label] Active object 72
+- `0x0027F5D2` [object-label] Active object 8
+- `0x0027F7F4` [serialized-string] dismantlingc
+- `0x0027F9FC` [object-label] Active object 9
+- `0x0027FBE3` [object-label] Active object 24
+- `0x0027FE30` [object-label] 1 Player...
+- `0x0027FE92` [object-label] 1 Player
+- `0x0027FF9A` [object-label] Active object 45
+- `0x00280184` [object-label] Active object 32
+- `0x0028022A` [object-label] Shadow
+- `0x00280405` [object-label] 2 Player...
+- `0x00280467` [object-label] 2 Player
+- `0x0028056F` [object-label] Active object 25
+- `0x00280760` [object-label] Active object 73
+- `0x0028079E` [object-label] Active object 6
+- `0x00280844` [object-label] Shadow
+- `0x002809DE` [object-label] Active object 74
+- `0x00280A1C` [object-label] Active object 28
+- `0x00280C8C` [object-label] Active object 75
+- `0x00280CCA` [object-label] Active object 58
+- `0x00280D08` [serialized-string] fatu
+- `0x00280D0D` [serialized-string] e object 1
+- `0x00280E07` [object-label] Active object 56
+- `0x00280E45` [serialized-string] fatdd
+- `0x00280E4C` [serialized-string] object 1
+- `0x00280F44` [serialized-string] Mono 5
+- `0x00280F4B` [serialized-string] object 30
+- `0x00280F88` [serialized-string]  object 6
+- `0x00280FC0` [serialized-string] Mono 2
+- `0x00280FC7` [serialized-string] object 30
+- `0x00281066` [object-label] Shadow
+- `0x00281202` [object-label] Active object 76
+- `0x00281240` [object-label] Active object 43
+- `0x002812E6` [object-label] Shadow
+- `0x002813B2` [serialized-string] cdedc
+- `0x002813C2` [serialized-string] decce
+- `0x002813D1` [serialized-string] decede
+- `0x002813DB` [serialized-string] dede
+- `0x002813E3` [serialized-string] cdde
+- `0x002813F9` [serialized-string] cdecef
+- `0x00281403` [serialized-string] ceef
+- `0x00281412` [serialized-string] ceede
+- `0x00281441` [serialized-string] ffef
+- `0x00281457` [serialized-string] ddeef
+- `0x00281485` [object-label] Quick Backdrop 1
+- `0x00281552` [object-label] Quick Backdrop 3
+- `0x0028161F` [object-label] Counter 1
+- `0x00281785` [object-label] Counter 2
+- `0x002818EB` [serialized-string] fatll 2
+- `0x002818F3` [serialized-string] bject 1
+- `0x002819EA` [serialized-string] Mono 3
+- `0x002819F1` [serialized-string] object 30
+- `0x00281B2D` [object-label] Active object 7
+- `0x00281B87` [serialized-string] UUUUd
+- `0x00281F14` [serialized-string] Mono 4
+- `0x00281F1B` [serialized-string] object 30
+- `0x0028203D` [object-label] Active object 77
+- `0x0028207B` [object-label] Active object 78
+- `0x002820B9` [serialized-string] spikewea
+- `0x002823C9` [serialized-string] monofat
+- `0x002826DD` [object-label] Active object 13
+- `0x002828E5` [object-label] Active object 19
+- `0x00282B23` [object-label] Active object 22
+- `0x00282DEF` [serialized-string] spikewea 2
+- `0x00282F2C` [object-label] Active object 26
+- `0x002830A6` [object-label] Active object 18
+- `0x002831D7` [object-label] Active object 79
+- `0x00283215` [serialized-string] fatrigh
+- `0x0028321D` [serialized-string] bject 1
+- `0x00283314` [object-label] Active object 10
+- `0x00283521` [object-label] Active object 30
+- `0x00283691` [serialized-string] fatb1
+- `0x00283790` [serialized-string] fatb2
+- `0x0028388F` [serialized-string] monofatp2
+- `0x00283B56` [object-label] Active object 14
+- `0x00283DD0` [object-label] Active object 11
+- `0x00283F04` [object-label] Active object 16
+- `0x0028407F` [serialized-string] p1mono
+- `0x00284086` [serialized-string] object 82
+- `0x00284263` [serialized-string] monofatp1
+- `0x00284485` [object-label] Active object 17
+- `0x002847C1` [serialized-string] bloody2
+- `0x00284A84` [serialized-string] flam
+- `0x00284BA7` [serialized-string] Green fatal
+- `0x00284CD8` [serialized-string] joystick error!
+- `0x00284E4B` [serialized-string] joystick problem!
+- `0x00284F5A` [object-label] Active object 82
+- `0x00285160` [serialized-string] magfatal
+- `0x0028532E` [serialized-string] shottongfal
+- `0x0028556C` [serialized-string] shifstabb
+- `0x00285779` [object-label] Active object 20
+- `0x002858CC` [serialized-string] ive object 1
+- `0x002859C8` [serialized-string] down
+- `0x002859CD` [serialized-string] e object 2
+- `0x00285AC7` [serialized-string] left
+- `0x00285ACC` [serialized-string] e object 4
+- `0x00285BC6` [serialized-string] right
+- `0x00285CCC` [serialized-string] object 4
+- `0x00285DCB` [serialized-string] object 4
+- `0x00285EC3` [serialized-string] monofat 2
+- `0x002861D1` [serialized-string] monofat 3
+- `0x002864F6` [serialized-string] monofat 4
+- `0x002867E4` [object-label] Active object 61
+- `0x00286822` [object-label] Active object 4
+- `0x00286860` [object-label] Active object 62
+- `0x0028689E` [serialized-string] monofat 5
+- `0x00286BBE` [serialized-string] monofat 6
+- `0x00286ED7` [serialized-string] monofat 7
+- `0x002871F5` [object-label] Active object 64
+- `0x00287233` [object-label] Active object 12
+- `0x00287271` [serialized-string] monofat 8
+- `0x00287577` [object-label] Active object 66
+- `0x002875B5` [object-label] Active object 67
+- `0x00287905` [object-label] Active object 69
+- `0x00287943` [object-label] Active object 70
+- `0x00287981` [object-label] Active object 71
+- `0x00287C93` [serialized-string] upp2
+- `0x00287D92` [serialized-string] downp2
+- `0x00287E93` [serialized-string] ikewea 7
+- `0x00287F92` [serialized-string] ikewea 8
+- `0x0028828D` [object-label] Active object 27
+- `0x00288488` [object-label] Active object 31
+- `0x002887B6` [object-label] Active object 33
+- `0x00288A27` [serialized-string] Aqcommo
+- `0x00288C83` [serialized-string] aquadis1
+- `0x00288C8C` [serialized-string] ject 3
+- `0x00288E4F` [serialized-string] rocky
+- `0x00288E55` [serialized-string] pon4
+- `0x002890C3` [serialized-string] ve object 26
+- `0x002893CF` [object-label] Active object 34
+- `0x002896EB` [object-label] Active object 3
+- `0x002897EA` [object-label] Active object 35
+- `0x0028D92D` [serialized-string] boinglo
+- `0x0028D99B` [serialized-string] boinglo
+- `0x0028D9EB` [serialized-string] boinglo
+- `0x0028DB7D` [serialized-string] boinglo
+- `0x0028F0D5` [serialized-string] impact
+- `0x0028F1FD` [serialized-string] impact
+- `0x0028F26D` [serialized-string] impact
+- `0x0028F339` [serialized-string] impact
+- `0x0028F405` [serialized-string] impact
+- `0x0028F4D1` [serialized-string] impact
+- `0x0028F59D` [serialized-string] impact
+- `0x0028F687` [serialized-string] impact
+- `0x0028F7E9` [serialized-string] impact
+- `0x0028F8E3` [serialized-string] impact
+- `0x0028F9D9` [object-label] Shadow
+- `0x0028FA19` [serialized-string] impact
+- `0x0028FB13` [serialized-string] impact
+- `0x0028FC0D` [serialized-string] impact
+- `0x0028FD07` [serialized-string] impact
+- `0x0028FE01` [serialized-string] impact
+- `0x0028FEFB` [serialized-string] impact
+- `0x0028FFF5` [serialized-string] impact
+- `0x002900EF` [serialized-string] impact
+- `0x00290141` [serialized-string] offpad
+- `0x00290193` [serialized-string] offpad
+- `0x002901E5` [serialized-string] offpad
+- `0x00290237` [serialized-string] offpad
+- `0x00290289` [serialized-string] offpad
+- `0x002902DB` [serialized-string] offpad
+- `0x0029032D` [serialized-string] offpad
+- `0x0029037F` [serialized-string] offpad
+- `0x002903D1` [serialized-string] offpad
+- `0x00290423` [serialized-string] offpad
+- `0x002912E3` [serialized-string] disman
+- `0x002913F1` [serialized-string] flaw
+- `0x002914BD` [serialized-string] impact
+- `0x00291665` [serialized-string] impact
+- `0x00291899` [serialized-string] disman
+- `0x00291BED` [serialized-string] flaw
+- `0x00291E17` [serialized-string] impact
+- `0x00291FE1` [serialized-string] disman
+- `0x00292121` [serialized-string] impact
+- `0x002923CD` [serialized-string] impact
+- `0x0029244B` [serialized-string] disman
+- `0x00292707` [serialized-string] impact
+- `0x002928A7` [serialized-string] disman
+- `0x00292939` [serialized-string] impact
+- `0x002930C7` [serialized-string] disman
+- `0x0029325D` [serialized-string] spam
+- `0x00293465` [serialized-string] disman
+- `0x002934B7` [serialized-string] Stopped
+- `0x0029350B` [serialized-string] impact
+- `0x002937DD` [serialized-string] disman
+- `0x0029397D` [serialized-string] impact
+- `0x00293C19` [serialized-string] disman
+- `0x00293E0D` [serialized-string] impact
+- `0x00293FB9` [serialized-string] disman
+- `0x0029404B` [serialized-string] impact
+- `0x00294159` [serialized-string] impact
+- `0x0029426D` [serialized-string] impact
+- `0x00294381` [serialized-string] impact
+- `0x00294495` [serialized-string] impact
+- `0x002945A9` [serialized-string] impact
+- `0x002946BD` [serialized-string] impact
+- `0x002947D1` [serialized-string] impact
+- `0x00294999` [serialized-string] impact
+- `0x00294E23` [serialized-string] begin
+- `0x0029769F` [object-label] Quick Backdrop 4
+- `0x002978DC` [serialized-string] Mono
+- `0x00297982` [object-label] Shadow
+- `0x00297AE9` [object-label] Active object 80
+- `0x00297B27` [object-label] Active object 29
+- `0x00297BCD` [object-label] Shadow
+- `0x00297D6A` [object-label] Active object 39
+- `0x00297E10` [object-label] shadow
+- `0x00297FE4` [object-label] Active object 81
+- `0x002982B8` [serialized-string] ve object 6
+- `0x0029835A` [serialized-string] Suicide
+- `0x00298362` [serialized-string] Blocking
+- `0x0029836B` [object-label] Shadow
+- `0x00298542` [object-label] Active object 72
+- `0x00298699` [object-label] Active object 8
+- `0x002988BB` [serialized-string] dismantlingc
+- `0x00298AC3` [object-label] Active object 9
+- `0x00298CAA` [object-label] Active object 24
+- `0x00298EF7` [object-label] 1 Player...
+- `0x00298F59` [object-label] 1 Player
+- `0x00299061` [object-label] Active object 45
+- `0x0029924B` [object-label] Active object 32
+- `0x002992F1` [object-label] Shadow
+- `0x002994CC` [object-label] 2 Player...
+- `0x0029952E` [object-label] 2 Player
+- `0x00299636` [object-label] Active object 25
+- `0x00299827` [object-label] Active object 73
+- `0x00299865` [object-label] Active object 6
+- `0x0029990B` [object-label] Shadow
+- `0x00299AA5` [object-label] Active object 74
+- `0x00299AE3` [object-label] Active object 28
+- `0x00299D53` [object-label] Active object 75
+- `0x00299D91` [object-label] Active object 58
+- `0x00299DCF` [serialized-string] fatu
+- `0x00299DD4` [serialized-string] e object 1
+- `0x00299ECE` [object-label] Active object 56
+- `0x00299F0C` [serialized-string] fatdd
+- `0x00299F13` [serialized-string] object 1
+- `0x0029A00B` [serialized-string] Mono 5
+- `0x0029A012` [serialized-string] object 30
+- `0x0029A04F` [serialized-string]  object 6
+- `0x0029A087` [serialized-string] Mono 2
+- `0x0029A08E` [serialized-string] object 30
+- `0x0029A12D` [object-label] Shadow
+- `0x0029A2CC` [object-label] Active object 76
+- `0x0029A30A` [object-label] Active object 43
+- `0x0029A3B0` [object-label] Shadow
+- `0x0029A47C` [serialized-string] cdedc
+- `0x0029A48C` [serialized-string] decce
+- `0x0029A49B` [serialized-string] decede
+- `0x0029A4A5` [serialized-string] dede
+- `0x0029A4AD` [serialized-string] cdde
+- `0x0029A4C3` [serialized-string] cdecef
+- `0x0029A4CD` [serialized-string] ceef
+- `0x0029A4DC` [serialized-string] ceede
+- `0x0029A50B` [serialized-string] ffef
+- `0x0029A521` [serialized-string] ddeef
+- `0x0029A54F` [object-label] Quick Backdrop 1
+- `0x0029A61C` [object-label] Quick Backdrop 3
+- `0x0029A6E9` [object-label] Counter 1
+- `0x0029A84F` [object-label] Counter 2
+- `0x0029A9B5` [serialized-string] fatll 2
+- `0x0029A9BD` [serialized-string] bject 1
+- `0x0029AAB4` [serialized-string] Mono 3
+- `0x0029AABB` [serialized-string] object 30
+- `0x0029ABF7` [object-label] Active object 7
+- `0x0029AC51` [serialized-string] UUUUd
+- `0x0029AFDE` [serialized-string] Mono 4
+- `0x0029AFE5` [serialized-string] object 30
+- `0x0029B107` [object-label] Active object 77
+- `0x0029B145` [object-label] Active object 78
+- `0x0029B183` [serialized-string] spikewea
+- `0x0029B493` [serialized-string] monofat
+- `0x0029B7D0` [object-label] Active object 13
+- `0x0029B9D8` [object-label] Active object 19
+- `0x0029BC16` [object-label] Active object 22
+- `0x0029BEE2` [serialized-string] spikewea 2
+- `0x0029C01F` [object-label] Active object 26
+- `0x0029C199` [object-label] Active object 18
+- `0x0029C2CA` [object-label] Active object 79
+- `0x0029C308` [serialized-string] fatrigh
+- `0x0029C310` [serialized-string] bject 1
+- `0x0029C407` [object-label] Active object 10
+- `0x0029C614` [object-label] Active object 30
+- `0x0029C784` [serialized-string] fatb1
+- `0x0029C883` [serialized-string] fatb2
+- `0x0029C982` [serialized-string] monofatp2
+- `0x0029CC7B` [object-label] Active object 14
+- `0x0029CEF5` [object-label] Active object 11
+- `0x0029D029` [object-label] Active object 16
+- `0x0029D1A4` [serialized-string] p1mono
+- `0x0029D1AB` [serialized-string] object 82
+- `0x0029D388` [serialized-string] monofatp1
+- `0x0029D5C2` [object-label] Active object 17
+- `0x0029D8F1` [serialized-string] bloody2
+- `0x0029DBB4` [serialized-string] flam
+- `0x0029DCD7` [serialized-string] Green fatal
+- `0x0029DE08` [serialized-string] joystick error!
+- `0x0029DF7B` [serialized-string] joystick problem!
+- `0x0029E08A` [object-label] Active object 82
+- `0x0029E299` [serialized-string] magfatal
+- `0x0029E45A` [serialized-string] shottongfal
+- `0x0029E698` [serialized-string] shifstabb
+- `0x0029E8B0` [object-label] Active object 20
+- `0x0029EA03` [serialized-string] ive object 1
+- `0x0029EAFF` [serialized-string] down
+- `0x0029EB04` [serialized-string] e object 2
+- `0x0029EBFE` [serialized-string] left
+- `0x0029EC03` [serialized-string] e object 4
+- `0x0029ECFD` [serialized-string] right
+- `0x0029EE03` [serialized-string] object 4
+- `0x0029EF02` [serialized-string] object 4
+- `0x0029EFFA` [serialized-string] monofat 2
+- `0x0029F325` [serialized-string] monofat 3
+- `0x0029F63B` [serialized-string] monofat 4
+- `0x0029F93A` [object-label] Active object 61
+- `0x0029F978` [object-label] Active object 4
+- `0x0029F9B6` [object-label] Active object 62
+- `0x0029F9F4` [serialized-string] monofat 5
+- `0x0029FCFC` [serialized-string] monofat 6
+- `0x002A0039` [serialized-string] monofat 7
+- `0x002A0350` [object-label] Active object 64
+- `0x002A038E` [object-label] Active object 12
+- `0x002A03CC` [serialized-string] monofat 8
+- `0x002A06B2` [object-label] Active object 66
+- `0x002A06F0` [object-label] Active object 67
+- `0x002A076C` [object-label] Active object 69
+- `0x002A07AA` [object-label] Active object 70
+- `0x002A07E8` [object-label] Active object 71
+- `0x002A0AB4` [serialized-string] upp2
+- `0x002A0BB3` [serialized-string] downp2
+- `0x002A0CB4` [serialized-string] ikewea 7
+- `0x002A0DB3` [serialized-string] ikewea 8
+- `0x002A10AE` [object-label] Active object 27
+- `0x002A12A9` [object-label] Active object 31
+- `0x002A15D7` [object-label] Active object 33
+- `0x002A1840` [serialized-string] Aqcommo
+- `0x002A1A9C` [serialized-string] aquadis1
+- `0x002A1AA5` [serialized-string] ject 3
+- `0x002A1C6B` [serialized-string] rocky
+- `0x002A1C71` [serialized-string] pon4
+- `0x002A1EDF` [serialized-string] ve object 26
+- `0x002A21EB` [object-label] Active object 34
+- `0x002A24F6` [object-label] Active object 3
+- `0x002A25F5` [object-label] Active object 35
+- `0x002A688C` [serialized-string] boinglo
+- `0x002A68FA` [serialized-string] boinglo
+- `0x002A694A` [serialized-string] boinglo
+- `0x002A6ADC` [serialized-string] boinglo
+- `0x002A7FDC` [serialized-string] impact
+- `0x002A8104` [serialized-string] impact
+- `0x002A8174` [serialized-string] impact
+- `0x002A8240` [serialized-string] impact
+- `0x002A830C` [serialized-string] impact
+- `0x002A83D8` [serialized-string] impact
+- `0x002A84A4` [serialized-string] impact
+- `0x002A858E` [serialized-string] impact
+- `0x002A86F0` [serialized-string] impact
+- `0x002A87EA` [serialized-string] impact
+- `0x002A88E0` [object-label] Shadow
+- `0x002A8920` [serialized-string] impact
+- `0x002A8A1A` [serialized-string] impact
+- `0x002A8B14` [serialized-string] impact
+- `0x002A8C0E` [serialized-string] impact
+- `0x002A8D08` [serialized-string] impact
+- `0x002A8E02` [serialized-string] impact
+- `0x002A8EFC` [serialized-string] impact
+- `0x002A8FF6` [serialized-string] impact
+- `0x002A9048` [serialized-string] offpad
+- `0x002A909A` [serialized-string] offpad
+- `0x002A90EC` [serialized-string] offpad
+- `0x002A913E` [serialized-string] offpad
+- `0x002A9190` [serialized-string] offpad
+- `0x002A91E2` [serialized-string] offpad
+- `0x002A9234` [serialized-string] offpad
+- `0x002A9286` [serialized-string] offpad
+- `0x002A92D8` [serialized-string] offpad
+- `0x002A932A` [serialized-string] offpad
+- `0x002AA13A` [serialized-string] disman
+- `0x002AA248` [serialized-string] flaw
+- `0x002AA314` [serialized-string] impact
+- `0x002AA4BC` [serialized-string] impact
+- `0x002AA6F0` [serialized-string] disman
+- `0x002AAA44` [serialized-string] flaw
+- `0x002AAC6E` [serialized-string] impact
+- `0x002AAE38` [serialized-string] disman
+- `0x002AAF78` [serialized-string] impact
+- `0x002AB224` [serialized-string] impact
+- `0x002AB2A2` [serialized-string] disman
+- `0x002AB55E` [serialized-string] impact
+- `0x002AB6FE` [serialized-string] disman
+- `0x002AB790` [serialized-string] impact
+- `0x002ABF1E` [serialized-string] disman
+- `0x002AC0B4` [serialized-string] spam
+- `0x002AC2BC` [serialized-string] disman
+- `0x002AC30E` [serialized-string] Stopped
+- `0x002AC362` [serialized-string] impact
+- `0x002AC634` [serialized-string] disman
+- `0x002AC7D4` [serialized-string] impact
+- `0x002ACA70` [serialized-string] disman
+- `0x002ACC64` [serialized-string] impact
+- `0x002ACE10` [serialized-string] disman
+- `0x002ACEA2` [serialized-string] impact
+- `0x002ACFB0` [serialized-string] impact
+- `0x002AD0C4` [serialized-string] impact
+- `0x002AD1D8` [serialized-string] impact
+- `0x002AD2EC` [serialized-string] impact
+- `0x002AD400` [serialized-string] impact
+- `0x002AD514` [serialized-string] impact
+- `0x002AD628` [serialized-string] impact
+- `0x002AD7F0` [serialized-string] impact
+- `0x002AD8F0` [serialized-string] blood
+- `0x002B011E` [object-label] Quick Backdrop 4
+- `0x002B03B7` [serialized-string] Mono
+- `0x002B045D` [object-label] Shadow
+- `0x002B05C4` [object-label] Active object 80
+- `0x002B0602` [object-label] Active object 29
+- `0x002B06A8` [object-label] Shadow
+- `0x002B0845` [object-label] Active object 39
+- `0x002B08EB` [object-label] shadow
+- `0x002B0ABF` [object-label] Active object 81
+- `0x002B0D23` [serialized-string] ve object 6
+- `0x002B0DC5` [serialized-string] Suicide
+- `0x002B0DCD` [serialized-string] Blocking
+- `0x002B0DD6` [object-label] Shadow
+- `0x002B0FAD` [object-label] Active object 72
+- `0x002B1104` [object-label] Active object 8
+- `0x002B1326` [serialized-string] dismantlingc
+- `0x002B152E` [object-label] Active object 9
+- `0x002B1715` [object-label] Active object 24
+- `0x002B1962` [object-label] 1 Player...
+- `0x002B19C4` [object-label] 1 Player
+- `0x002B1ACC` [object-label] Active object 45
+- `0x002B1CB6` [object-label] Active object 32
+- `0x002B1D5C` [object-label] Shadow
+- `0x002B1F37` [object-label] 2 Player...
+- `0x002B1F99` [object-label] 2 Player
+- `0x002B20A1` [object-label] Active object 25
+- `0x002B2292` [object-label] Active object 73
+- `0x002B22D0` [object-label] Active object 6
+- `0x002B2376` [object-label] Shadow
+- `0x002B2510` [object-label] Active object 74
+- `0x002B254E` [object-label] Active object 28
+- `0x002B27BE` [object-label] Active object 75
+- `0x002B27FC` [object-label] Active object 58
+- `0x002B283A` [serialized-string] fatu
+- `0x002B283F` [serialized-string] e object 1
+- `0x002B2939` [object-label] Active object 56
+- `0x002B2977` [serialized-string] fatdd
+- `0x002B297E` [serialized-string] object 1
+- `0x002B2A76` [serialized-string] Mono 5
+- `0x002B2A7D` [serialized-string] object 30
+- `0x002B2ABA` [serialized-string]  object 6
+- `0x002B2AF2` [serialized-string] Mono 2
+- `0x002B2AF9` [serialized-string] object 30
+- `0x002B2B98` [object-label] Shadow
+- `0x002B2C5D` [serialized-string] eede
+- `0x002B2C83` [serialized-string] edeced
+- `0x002B2CAB` [serialized-string] fecedc
+- `0x002B2D19` [serialized-string] eede
+- `0x002B2D37` [object-label] Active object 76
+- `0x002B2D75` [object-label] Active object 43
+- `0x002B2E1B` [object-label] Shadow
+- `0x002B2EE7` [serialized-string] cdedc
+- `0x002B2EF7` [serialized-string] decce
+- `0x002B2F06` [serialized-string] decede
+- `0x002B2F10` [serialized-string] dede
+- `0x002B2F18` [serialized-string] cdde
+- `0x002B2F2E` [serialized-string] cdecef
+- `0x002B2F38` [serialized-string] ceef
+- `0x002B2F47` [serialized-string] ceede
+- `0x002B2F76` [serialized-string] ffef
+- `0x002B2F8C` [serialized-string] ddeef
+- `0x002B2FBA` [object-label] Quick Backdrop 1
+- `0x002B3087` [object-label] Quick Backdrop 3
+- `0x002B3154` [object-label] Counter 1
+- `0x002B32BA` [object-label] Counter 2
+- `0x002B3420` [serialized-string] fatll 2
+- `0x002B3428` [serialized-string] bject 1
+- `0x002B351F` [serialized-string] Mono 3
+- `0x002B3526` [serialized-string] object 30
+- `0x002B3662` [object-label] Active object 7
+- `0x002B36BC` [serialized-string] UUUUd
+- `0x002B3A49` [serialized-string] Mono 4
+- `0x002B3A50` [serialized-string] object 30
+- `0x002B3B72` [object-label] Active object 77
+- `0x002B3BB0` [object-label] Active object 78
+- `0x002B3BEE` [serialized-string] spikewea
+- `0x002B3EFE` [serialized-string] monofat
+- `0x002B40C2` [object-label] Active object 13
+- `0x002B42CA` [object-label] Active object 19
+- `0x002B4508` [object-label] Active object 22
+- `0x002B47D4` [serialized-string] spikewea 2
+- `0x002B4911` [object-label] Active object 26
+- `0x002B4A8B` [object-label] Active object 18
+- `0x002B4BBC` [object-label] Active object 79
+- `0x002B4BFA` [serialized-string] fatrigh
+- `0x002B4C02` [serialized-string] bject 1
+- `0x002B4CF9` [object-label] Active object 10
+- `0x002B4F06` [object-label] Active object 30
+- `0x002B5076` [serialized-string] fatb1
+- `0x002B5175` [serialized-string] fatb2
+- `0x002B5274` [serialized-string] monofatp2
+- `0x002B5434` [object-label] Active object 14
+- `0x002B56AE` [object-label] Active object 11
+- `0x002B57E2` [object-label] Active object 16
+- `0x002B595D` [serialized-string] p1mono
+- `0x002B5964` [serialized-string] object 82
+- `0x002B5B41` [serialized-string] monofatp1
+- `0x002B5C88` [serialized-string] dcedc
+- `0x002B5C95` [serialized-string] dedce
+- `0x002B5CAF` [serialized-string] edecd
+- `0x002B5CE2` [serialized-string] efece
+- `0x002B5CFD` [serialized-string] eecd
+- `0x002B5D3C` [serialized-string] efece
+- `0x002B5D72` [object-label] Active object 17
+- `0x002B5ED1` [serialized-string] edceed
+- `0x002B5EE4` [serialized-string] decece
+- `0x002B5F1D` [serialized-string] ededcd
+- `0x002B5F55` [serialized-string] edcedc
+- `0x002B5F79` [serialized-string] efdece
+- `0x002B605B` [serialized-string] eede
+- `0x002B6089` [serialized-string] bloody2
+- `0x002B634C` [serialized-string] flam
+- `0x002B646F` [serialized-string] Green fatal
+- `0x002B65A0` [serialized-string] joystick error!
+- `0x002B6713` [serialized-string] joystick problem!
+- `0x002B6822` [object-label] Active object 82
+- `0x002B6927` [serialized-string] edcce
+- `0x002B6A37` [serialized-string] magfatal
+- `0x002B6C06` [serialized-string] shottongfal
+- `0x002B6E44` [serialized-string] shifstabb
+- `0x002B6F57` [serialized-string] eddce
+- `0x002B6F71` [serialized-string] edcdc
+- `0x002B6F82` [serialized-string] edcce
+- `0x002B6FBF` [serialized-string] deece
+- `0x002B705A` [object-label] Active object 20
+- `0x002B71AD` [serialized-string] ive object 1
+- `0x002B72A9` [serialized-string] down
+- `0x002B72AE` [serialized-string] e object 2
+- `0x002B73A8` [serialized-string] left
+- `0x002B73AD` [serialized-string] e object 4
+- `0x002B74A7` [serialized-string] right
+- `0x002B75AD` [serialized-string] object 4
+- `0x002B76AC` [serialized-string] object 4
+- `0x002B77A4` [serialized-string] monofat 2
+- `0x002B7971` [serialized-string] monofat 3
+- `0x002B7B3D` [serialized-string] monofat 4
+- `0x002B7D10` [object-label] Active object 61
+- `0x002B7D4E` [object-label] Active object 4
+- `0x002B7D8C` [object-label] Active object 62
+- `0x002B7DCA` [serialized-string] monofat 5
+- `0x002B7F99` [serialized-string] monofat 6
+- `0x002B8172` [serialized-string] monofat 7
+- `0x002B833D` [object-label] Active object 64
+- `0x002B837B` [object-label] Active object 12
+- `0x002B83B9` [serialized-string] monofat 8
+- `0x002B8585` [object-label] Active object 66
+- `0x002B85C3` [object-label] Active object 67
+- `0x002B8601` [object-label] Active object 15
+- `0x002B863F` [object-label] Active object 69
+- `0x002B867D` [object-label] Active object 70
+- `0x002B86BB` [object-label] Active object 71
+- `0x002B88C4` [serialized-string] upp2
+- `0x002B89C3` [serialized-string] downp2
+- `0x002B8AC4` [serialized-string] ikewea 7
+- `0x002B8BC3` [serialized-string] ikewea 8
+- `0x002B8EBE` [object-label] Active object 27
+- `0x002B90B9` [object-label] Active object 31
+- `0x002B93E7` [object-label] Active object 33
+- `0x002B9509` [serialized-string] decde
+- `0x002B9534` [serialized-string] dceed
+- `0x002B9545` [serialized-string] dedcd
+- `0x002B9563` [serialized-string] dcecd
+- `0x002B95B1` [serialized-string] decd
+- `0x002B95CC` [serialized-string] feedd
+- `0x002B95FC` [serialized-string] fece
+- `0x002B9638` [serialized-string] Aqcommo
+- `0x002B9894` [serialized-string] aquadis1
+- `0x002B989D` [serialized-string] ject 3
+- `0x002B9A57` [serialized-string] rocky
+- `0x002B9A5D` [serialized-string] pon4
+- `0x002B9CCB` [serialized-string] ve object 26
+- `0x002B9FD7` [object-label] Active object 34
+- `0x002BA0F2` [serialized-string] edecdec
+- `0x002BA12B` [serialized-string] dcddcde
+- `0x002BA156` [serialized-string] ecdc
+- `0x002BA195` [serialized-string] dcee
+- `0x002BA2F8` [object-label] Active object 3
+- `0x002BA3F7` [object-label] Active object 35
+- `0x002BA54E` [serialized-string] dcedc
+- `0x002BA55E` [serialized-string] dedce
+- `0x002BA57E` [serialized-string] edecd
+- `0x002BE6EF` [serialized-string] boinglo
+- `0x002BE75D` [serialized-string] boinglo
+- `0x002BE7AD` [serialized-string] boinglo
+- `0x002BE93F` [serialized-string] boinglo
+- `0x002BFE0B` [serialized-string] impact
+- `0x002BFEB3` [object-label] Shadow
+- `0x002BFF6F` [serialized-string] impact
+- `0x002BFFBB` [object-label] Shadow
+- `0x002C001B` [serialized-string] impact
+- `0x002C00C3` [object-label] Shadow
+- `0x002C0123` [serialized-string] impact
+- `0x002C01CB` [object-label] Shadow
+- `0x002C022B` [serialized-string] impact
+- `0x002C02D3` [serialized-string] User animation 1
+- `0x002C0333` [serialized-string] impact
+- `0x002C03DB` [object-label] Shadow
+- `0x002C043B` [serialized-string] impact
+- `0x002C04E3` [serialized-string] User animation 1
+- `0x002C0543` [serialized-string] impact
+- `0x002C05EB` [object-label] Shadow
+- `0x002C06FF` [serialized-string] impact
+- `0x002C07F9` [serialized-string] impact
+- `0x002C08EF` [object-label] Shadow
+- `0x002C092F` [serialized-string] impact
+- `0x002C0A29` [serialized-string] impact
+- `0x002C0B23` [serialized-string] impact
+- `0x002C0C1D` [serialized-string] impact
+- `0x002C0D17` [serialized-string] impact
+- `0x002C0E11` [serialized-string] impact
+- `0x002C0F0B` [serialized-string] impact
+- `0x002C1005` [serialized-string] impact
+- `0x002C1057` [serialized-string] offpad
+- `0x002C10A9` [serialized-string] offpad
+- `0x002C10FB` [serialized-string] offpad
+- `0x002C114D` [serialized-string] offpad
+- `0x002C119F` [serialized-string] offpad
+- `0x002C11F1` [serialized-string] offpad
+- `0x002C1243` [serialized-string] offpad
+- `0x002C1295` [serialized-string] offpad
+- `0x002C12E7` [serialized-string] offpad
+- `0x002C1339` [serialized-string] offpad
+- `0x002C2149` [serialized-string] disman
+- `0x002C2257` [serialized-string] flaw
+- `0x002C2323` [serialized-string] impact
+- `0x002C24CB` [serialized-string] impact
+- `0x002C26FF` [serialized-string] disman
+- `0x002C2A53` [serialized-string] flaw
+- `0x002C2C7D` [serialized-string] impact
+- `0x002C2E47` [serialized-string] disman
+- `0x002C2F87` [serialized-string] impact
+- `0x002C3233` [serialized-string] impact
+- `0x002C32B1` [serialized-string] disman
+- `0x002C356D` [serialized-string] impact
+- `0x002C370D` [serialized-string] disman
+- `0x002C379F` [serialized-string] impact
+- `0x002C3F2D` [serialized-string] disman
+- `0x002C40C3` [serialized-string] spam
+- `0x002C42CB` [serialized-string] disman
+- `0x002C431D` [serialized-string] Stopped
+- `0x002C4371` [serialized-string] impact
+- `0x002C4643` [serialized-string] disman
+- `0x002C47E3` [serialized-string] impact
+- `0x002C4A7F` [serialized-string] disman
+- `0x002C4C73` [serialized-string] impact
+- `0x002C4E1F` [serialized-string] disman
+- `0x002C4EB1` [serialized-string] impact
+- `0x002C4FD7` [serialized-string] impact
+- `0x002C50EB` [serialized-string] impact
+- `0x002C51FF` [serialized-string] impact
+- `0x002C5313` [serialized-string] impact
+- `0x002C5427` [serialized-string] impact
+- `0x002C553B` [serialized-string] impact
+- `0x002C564F` [serialized-string] impact
+- `0x002C5817` [serialized-string] impact
+- `0x002C592B` [serialized-string] Stopped
+- `0x002C595B` [serialized-string] Stopped
+- `0x002C598B` [serialized-string] Stopped
+- `0x002C59BB` [serialized-string] Stopped
+- `0x002C59EB` [serialized-string] Stopped
+- `0x002C5A1B` [serialized-string] Stopped
+- `0x002C5A4B` [serialized-string] Stopped
+- `0x002C5A7B` [serialized-string] Stopped
+- `0x002C5AAB` [serialized-string] Stopped
+- `0x002C5AF7` [serialized-string] aqua
+- `0x002C8301` [object-label] Quick Backdrop 4
+- `0x002C8528` [serialized-string] Mono
+- `0x002C85CE` [object-label] Shadow
+- `0x002C8735` [object-label] Active object 80
+- `0x002C8773` [object-label] Active object 29
+- `0x002C8819` [object-label] Shadow
+- `0x002C89B6` [object-label] Active object 39
+- `0x002C8A5C` [object-label] shadow
+- `0x002C8C30` [object-label] Active object 81
+- `0x002C8DAE` [serialized-string] ve object 6
+- `0x002C8E50` [serialized-string] Suicide
+- `0x002C8E58` [serialized-string] Blocking
+- `0x002C8E61` [object-label] Shadow
+- `0x002C9038` [object-label] Active object 72
+- `0x002C918F` [object-label] Active object 8
+- `0x002C93B1` [serialized-string] dismantlingc
+- `0x002C95B9` [object-label] Active object 9
+- `0x002C97A0` [object-label] Active object 24
+- `0x002C99ED` [object-label] 1 Player...
+- `0x002C9A4F` [object-label] 1 Player
+- `0x002C9B57` [object-label] Active object 45
+- `0x002C9D41` [object-label] Active object 32
+- `0x002C9DE7` [object-label] Shadow
+- `0x002C9FC2` [object-label] 2 Player...
+- `0x002CA024` [object-label] 2 Player
+- `0x002CA12C` [object-label] Active object 25
+- `0x002CA31D` [object-label] Active object 73
+- `0x002CA35B` [object-label] Active object 6
+- `0x002CA401` [object-label] Shadow
+- `0x002CA59B` [object-label] Active object 74
+- `0x002CA5D9` [object-label] Active object 28
+- `0x002CA849` [object-label] Active object 75
+- `0x002CA887` [object-label] Active object 58
+- `0x002CA8C5` [serialized-string] fatu
+- `0x002CA8CA` [serialized-string] e object 1
+- `0x002CA9C4` [object-label] Active object 56
+- `0x002CAA02` [serialized-string] fatdd
+- `0x002CAA09` [serialized-string] object 1
+- `0x002CAB01` [serialized-string] Mono 5
+- `0x002CAB08` [serialized-string] object 30
+- `0x002CAB45` [serialized-string]  object 6
+- `0x002CAB7D` [serialized-string] Mono 2
+- `0x002CAB84` [serialized-string] object 30
+- `0x002CAC23` [object-label] Shadow
+- `0x002CADF6` [object-label] Active object 76
+- `0x002CAE34` [object-label] Active object 43
+- `0x002CAEDA` [object-label] Shadow
+- `0x002CAFA6` [serialized-string] cdedc
+- `0x002CAFB6` [serialized-string] decce
+- `0x002CAFC5` [serialized-string] decede
+- `0x002CAFCF` [serialized-string] dede
+- `0x002CAFD7` [serialized-string] cdde
+- `0x002CAFED` [serialized-string] cdecef
+- `0x002CAFF7` [serialized-string] ceef
+- `0x002CB006` [serialized-string] ceede
+- `0x002CB035` [serialized-string] ffef
+- `0x002CB04B` [serialized-string] ddeef
+- `0x002CB079` [object-label] Quick Backdrop 1
+- `0x002CB146` [object-label] Quick Backdrop 3
+- `0x002CB213` [object-label] Counter 1
+- `0x002CB379` [object-label] Counter 2
+- `0x002CB4DF` [serialized-string] fatll 2
+- `0x002CB4E7` [serialized-string] bject 1
+- `0x002CB5DE` [serialized-string] Mono 3
+- `0x002CB5E5` [serialized-string] object 30
+- `0x002CB721` [object-label] Active object 7
+- `0x002CB77B` [serialized-string] UUUUd
+- `0x002CBB08` [serialized-string] Mono 4
+- `0x002CBB0F` [serialized-string] object 30
+- `0x002CBC31` [object-label] Active object 77
+- `0x002CBC6F` [object-label] Active object 78
+- `0x002CBCAD` [serialized-string] spikewea
+- `0x002CBFBD` [serialized-string] monofat
+- `0x002CC245` [object-label] Active object 13
+- `0x002CC44D` [object-label] Active object 19
+- `0x002CC68B` [object-label] Active object 22
+- `0x002CC957` [serialized-string] spikewea 2
+- `0x002CCA94` [object-label] Active object 26
+- `0x002CCC0E` [object-label] Active object 18
+- `0x002CCD3F` [object-label] Active object 79
+- `0x002CCD7D` [serialized-string] fatrigh
+- `0x002CCD85` [serialized-string] bject 1
+- `0x002CCE7C` [object-label] Active object 10
+- `0x002CD089` [object-label] Active object 30
+- `0x002CD1F9` [serialized-string] fatb1
+- `0x002CD2F8` [serialized-string] fatb2
+- `0x002CD3F7` [serialized-string] monofatp2
+- `0x002CD664` [object-label] Active object 14
+- `0x002CD8DE` [object-label] Active object 11
+- `0x002CDA12` [object-label] Active object 16
+- `0x002CDB8D` [serialized-string] p1mono
+- `0x002CDB94` [serialized-string] object 82
+- `0x002CDD71` [serialized-string] monofatp1
+- `0x002CDFD8` [object-label] Active object 17
+- `0x002CE2D8` [serialized-string] bloody2
+- `0x002CE59B` [serialized-string] flam
+- `0x002CE6BE` [serialized-string] Green fatal
+- `0x002CE7EF` [serialized-string] joystick error!
+- `0x002CE962` [serialized-string] joystick problem!
+- `0x002CEA71` [object-label] Active object 82
+- `0x002CECB2` [serialized-string] magfatal
+- `0x002CEE99` [serialized-string] shottongfal
+- `0x002CF0D7` [serialized-string] shifstabb
+- `0x002CF31A` [object-label] Active object 20
+- `0x002CF46D` [serialized-string] ive object 1
+- `0x002CF569` [serialized-string] down
+- `0x002CF56E` [serialized-string] e object 2
+- `0x002CF668` [serialized-string] left
+- `0x002CF66D` [serialized-string] e object 4
+- `0x002CF767` [serialized-string] right
+- `0x002CF86D` [serialized-string] object 4
+- `0x002CF96C` [serialized-string] object 4
+- `0x002CFA64` [serialized-string] monofat 2
+- `0x002CFCE5` [serialized-string] monofat 3
+- `0x002CFF64` [serialized-string] monofat 4
+- `0x002D021F` [object-label] Active object 61
+- `0x002D025D` [object-label] Active object 4
+- `0x002D029B` [object-label] Active object 62
+- `0x002D02D9` [serialized-string] monofat 5
+- `0x002D0576` [serialized-string] monofat 6
+- `0x002D07F7` [serialized-string] monofat 7
+- `0x002D0A76` [object-label] Active object 64
+- `0x002D0AB4` [object-label] Active object 12
+- `0x002D0AF2` [serialized-string] monofat 8
+- `0x002D0D59` [object-label] Active object 66
+- `0x002D0D97` [object-label] Active object 67
+- `0x002D0DD5` [serialized-string] shifstabb 2
+- `0x002D0E13` [object-label] Active object 69
+- `0x002D0E51` [object-label] Active object 70
+- `0x002D0E8F` [object-label] Active object 71
+- `0x002D0F8E` [serialized-string] upp2
+- `0x002D108D` [serialized-string] downp2
+- `0x002D118E` [serialized-string] ikewea 7
+- `0x002D128D` [serialized-string] ikewea 8
+- `0x002D1588` [object-label] Active object 27
+- `0x002D1783` [object-label] Active object 31
+- `0x002D1AB1` [object-label] Active object 33
+- `0x002D1D5D` [serialized-string] Aqcommo
+- `0x002D1FB9` [serialized-string] aquadis1
+- `0x002D1FC2` [serialized-string] ject 3
+- `0x002D219A` [serialized-string] rocky
+- `0x002D21A0` [serialized-string] pon4
+- `0x002D240E` [serialized-string] ve object 26
+- `0x002D271A` [object-label] Active object 34
+- `0x002D2A09` [object-label] Active object 3
+- `0x002D2B08` [object-label] Active object 35
+- `0x002D64FF` [serialized-string] boinglo
+- `0x002D656D` [serialized-string] boinglo
+- `0x002D65BD` [serialized-string] boinglo
+- `0x002D674F` [serialized-string] boinglo
+- `0x002D7C4B` [serialized-string] impact
+- `0x002D7D73` [serialized-string] impact
+- `0x002D7DE3` [serialized-string] impact
+- `0x002D7EAF` [serialized-string] impact
+- `0x002D7F7B` [serialized-string] impact
+- `0x002D8047` [serialized-string] impact
+- `0x002D8113` [serialized-string] impact
+- `0x002D81FD` [serialized-string] impact
+- `0x002D835F` [serialized-string] impact
+- `0x002D8459` [serialized-string] impact
+- `0x002D854F` [object-label] Shadow
+- `0x002D858F` [serialized-string] impact
+- `0x002D8689` [serialized-string] impact
+- `0x002D8783` [serialized-string] impact
+- `0x002D887D` [serialized-string] impact
+- `0x002D8977` [serialized-string] impact
+- `0x002D8A71` [serialized-string] impact
+- `0x002D8B6B` [serialized-string] impact
+- `0x002D8C65` [serialized-string] impact
+- `0x002D8CB7` [serialized-string] offpad
+- `0x002D8D09` [serialized-string] offpad
+- `0x002D8D5B` [serialized-string] offpad
+- `0x002D8DAD` [serialized-string] offpad
+- `0x002D8DFF` [serialized-string] offpad
+- `0x002D8E51` [serialized-string] offpad
+- `0x002D8EA3` [serialized-string] offpad
+- `0x002D8EF5` [serialized-string] offpad
+- `0x002D8F47` [serialized-string] offpad
+- `0x002D8F99` [serialized-string] offpad
+- `0x002D9DD5` [serialized-string] disman
+- `0x002D9EE3` [serialized-string] flaw
+- `0x002D9FAF` [serialized-string] impact
+- `0x002DA157` [serialized-string] impact
+- `0x002DA38B` [serialized-string] disman
+- `0x002DA6DF` [serialized-string] flaw
+- `0x002DA909` [serialized-string] impact
+- `0x002DAAD3` [serialized-string] disman
+- `0x002DAC13` [serialized-string] impact
+- `0x002DAEBF` [serialized-string] impact
+- `0x002DAF3D` [serialized-string] disman
+- `0x002DB1F9` [serialized-string] impact
+- `0x002DB399` [serialized-string] disman
+- `0x002DB42B` [serialized-string] impact
+- `0x002DBBB9` [serialized-string] disman
+- `0x002DBD4F` [serialized-string] spam
+- `0x002DBF57` [serialized-string] disman
+- `0x002DBFA9` [serialized-string] Stopped
+- `0x002DBFFD` [serialized-string] impact
+- `0x002DC2CF` [serialized-string] disman
+- `0x002DC46F` [serialized-string] impact
+- `0x002DC70B` [serialized-string] disman
+- `0x002DC8FF` [serialized-string] impact
+- `0x002DCAAB` [serialized-string] disman
+- `0x002DCB3D` [serialized-string] impact
+- `0x002DCC4B` [serialized-string] impact
+- `0x002DCD5F` [serialized-string] impact
+- `0x002DCE73` [serialized-string] impact
+- `0x002DCF87` [serialized-string] impact
+- `0x002DD09B` [serialized-string] impact
+- `0x002DD1AF` [serialized-string] impact
+- `0x002DD2C3` [serialized-string] impact
+- `0x002DD48B` [serialized-string] impact
+- `0x002DD58B` [serialized-string] cyber
+- `0x002DFE07` [object-label] Quick Backdrop 4
+- `0x002E00B1` [serialized-string] Mono
+- `0x002E0157` [object-label] Shadow
+- `0x002E02BE` [object-label] Active object 80
+- `0x002E02FC` [object-label] Active object 29
+- `0x002E03A2` [object-label] Shadow
+- `0x002E053F` [object-label] Active object 39
+- `0x002E05E5` [object-label] shadow
+- `0x002E07B9` [object-label] Active object 81
+- `0x002E08EF` [serialized-string] ve object 6
+- `0x002E0991` [serialized-string] Suicide
+- `0x002E0999` [serialized-string] Blocking
+- `0x002E09A2` [object-label] Shadow
+- `0x002E0B79` [object-label] Active object 72
+- `0x002E0CD0` [object-label] Active object 8
+- `0x002E0EF2` [serialized-string] dismantlingc
+- `0x002E10FA` [object-label] Active object 9
+- `0x002E12E1` [object-label] Active object 24
+- `0x002E152E` [object-label] 1 Player...
+- `0x002E1590` [object-label] 1 Player
+- `0x002E1698` [object-label] Active object 45
+- `0x002E1882` [object-label] Active object 32
+- `0x002E1928` [object-label] Shadow
+- `0x002E1B03` [object-label] 2 Player...
+- `0x002E1B65` [object-label] 2 Player
+- `0x002E1C6D` [object-label] Active object 25
+- `0x002E1E5E` [object-label] Active object 73
+- `0x002E1E9C` [object-label] Active object 6
+- `0x002E1F42` [object-label] Shadow
+- `0x002E20DC` [object-label] Active object 74
+- `0x002E211A` [object-label] Active object 28
+- `0x002E238A` [object-label] Active object 75
+- `0x002E23C8` [object-label] Active object 58
+- `0x002E2406` [serialized-string] fatu
+- `0x002E240B` [serialized-string] e object 1
+- `0x002E2505` [object-label] Active object 56
+- `0x002E2543` [serialized-string] fatdd
+- `0x002E254A` [serialized-string] object 1
+- `0x002E2642` [serialized-string] Mono 5
+- `0x002E2649` [serialized-string] object 30
+- `0x002E2686` [serialized-string]  object 6
+- `0x002E26BE` [serialized-string] Mono 2
+- `0x002E26C5` [serialized-string] object 30
+- `0x002E2764` [object-label] Shadow
+- `0x002E2939` [object-label] Active object 76
+- `0x002E2977` [object-label] Active object 43
+- `0x002E2A1D` [object-label] Shadow
+- `0x002E2AE9` [serialized-string] cdedc
+- `0x002E2AF9` [serialized-string] decce
+- `0x002E2B08` [serialized-string] decede
+- `0x002E2B12` [serialized-string] dede
+- `0x002E2B1A` [serialized-string] cdde
+- `0x002E2B30` [serialized-string] cdecef
+- `0x002E2B3A` [serialized-string] ceef
+- `0x002E2B49` [serialized-string] ceede
+- `0x002E2B78` [serialized-string] ffef
+- `0x002E2B8E` [serialized-string] ddeef
+- `0x002E2BBC` [object-label] Quick Backdrop 1
+- `0x002E2C89` [object-label] Quick Backdrop 3
+- `0x002E2D56` [object-label] Counter 1
+- `0x002E2EBC` [object-label] Counter 2
+- `0x002E3022` [serialized-string] fatll 2
+- `0x002E302A` [serialized-string] bject 1
+- `0x002E3121` [serialized-string] Mono 3
+- `0x002E3128` [serialized-string] object 30
+- `0x002E3264` [object-label] Active object 7
+- `0x002E32BE` [serialized-string] UUUUd
+- `0x002E364B` [serialized-string] Mono 4
+- `0x002E3652` [serialized-string] object 30
+- `0x002E3774` [object-label] Active object 77
+- `0x002E37B2` [object-label] Active object 78
+- `0x002E37F0` [serialized-string] spikewea
+- `0x002E3B00` [serialized-string] monofat
+- `0x002E3D04` [object-label] Active object 13
+- `0x002E3F0C` [object-label] Active object 19
+- `0x002E414A` [object-label] Active object 22
+- `0x002E4416` [serialized-string] spikewea 2
+- `0x002E4553` [object-label] Active object 26
+- `0x002E46CD` [object-label] Active object 18
+- `0x002E47FE` [object-label] Active object 79
+- `0x002E483C` [serialized-string] fatrigh
+- `0x002E4844` [serialized-string] bject 1
+- `0x002E493B` [object-label] Active object 10
+- `0x002E4B48` [object-label] Active object 30
+- `0x002E4CB8` [serialized-string] fatb1
+- `0x002E4DB7` [serialized-string] fatb2
+- `0x002E4EB6` [serialized-string] monofatp2
+- `0x002E50B7` [object-label] Active object 14
+- `0x002E5331` [object-label] Active object 11
+- `0x002E5465` [object-label] Active object 16
+- `0x002E55E0` [serialized-string] p1mono
+- `0x002E55E7` [serialized-string] object 82
+- `0x002E57C4` [serialized-string] monofatp1
+- `0x002E5900` [serialized-string] D<D:ED
+- `0x002E59B6` [serialized-string] EF:E;F
+- `0x002E5A02` [object-label] Active object 17
+- `0x002E5D08` [serialized-string] bloody2
+- `0x002E5FCB` [serialized-string] flam
+- `0x002E60EE` [serialized-string] Green fatal
+- `0x002E621F` [serialized-string] joystick error!
+- `0x002E6392` [serialized-string] joystick problem!
+- `0x002E64A1` [object-label] Active object 82
+- `0x002E66BE` [serialized-string] magfatal
+- `0x002E6891` [serialized-string] shottongfal
+- `0x002E6ACF` [serialized-string] shifstabb
+- `0x002E6BFE` [serialized-string] E8D9EE
+- `0x002E6CFC` [object-label] Active object 20
+- `0x002E6E4F` [serialized-string] ive object 1
+- `0x002E6F4B` [serialized-string] down
+- `0x002E6F50` [serialized-string] e object 2
+- `0x002E704A` [serialized-string] left
+- `0x002E704F` [serialized-string] e object 4
+- `0x002E7149` [serialized-string] right
+- `0x002E724F` [serialized-string] object 4
+- `0x002E734E` [serialized-string] object 4
+- `0x002E7446` [serialized-string] monofat 2
+- `0x002E7646` [serialized-string] monofat 3
+- `0x002E7854` [serialized-string] monofat 4
+- `0x002E7A96` [object-label] Active object 61
+- `0x002E7AD4` [object-label] Active object 4
+- `0x002E7B12` [object-label] Active object 62
+- `0x002E7B50` [serialized-string] monofat 5
+- `0x002E7D6A` [serialized-string] monofat 6
+- `0x002E7F6E` [serialized-string] monofat 7
+- `0x002E8161` [object-label] Active object 64
+- `0x002E819F` [object-label] Active object 12
+- `0x002E81DD` [serialized-string] monofat 8
+- `0x002E83CE` [object-label] Active object 66
+- `0x002E840C` [object-label] Active object 67
+- `0x002E85CE` [object-label] Active object 69
+- `0x002E860C` [object-label] Active object 70
+- `0x002E864A` [object-label] Active object 71
+- `0x002E876E` [serialized-string] upp2
+- `0x002E886D` [serialized-string] downp2
+- `0x002E896E` [serialized-string] ikewea 7
+- `0x002E8A6D` [serialized-string] ikewea 8
+- `0x002E8D68` [object-label] Active object 27
+- `0x002E8F63` [object-label] Active object 31
+- `0x002E9291` [object-label] Active object 33
+- `0x002E94F8` [serialized-string] Aqcommo
+- `0x002E9754` [serialized-string] aquadis1
+- `0x002E975D` [serialized-string] ject 3
+- `0x002E9922` [serialized-string] rocky
+- `0x002E9928` [serialized-string] pon4
+- `0x002E9B96` [serialized-string] ve object 26
+- `0x002E9EA2` [object-label] Active object 34
+- `0x002EA1C7` [object-label] Active object 3
+- `0x002EA2C6` [object-label] Active object 35
+- `0x002EA562` [object-label] Active object 36
+- `0x002EA5A0` [object-label] Active object 37
+- `0x002EA5DE` [object-label] Active object 38
+- `0x002EA61C` [object-label] Active object 1
+- `0x002EE73F` [serialized-string] boinglo
+- `0x002EE7AD` [serialized-string] boinglo
+- `0x002EE7FD` [serialized-string] boinglo
+- `0x002EE98F` [serialized-string] boinglo
+- `0x002EFE2F` [serialized-string] impact
+- `0x002EFF57` [serialized-string] impact
+- `0x002EFFC7` [serialized-string] impact
+- `0x002F0093` [serialized-string] impact
+- `0x002F015F` [serialized-string] impact
+- `0x002F022B` [serialized-string] impact
+- `0x002F02F7` [serialized-string] impact
+- `0x002F03E1` [serialized-string] impact
+- `0x002F0543` [serialized-string] impact
+- `0x002F063D` [serialized-string] impact
+- `0x002F0733` [object-label] Shadow
+- `0x002F0773` [serialized-string] impact
+- `0x002F086D` [serialized-string] impact
+- `0x002F0967` [serialized-string] impact
+- `0x002F0A61` [serialized-string] impact
+- `0x002F0B5B` [serialized-string] impact
+- `0x002F0C55` [serialized-string] impact
+- `0x002F0D4F` [serialized-string] impact
+- `0x002F0E49` [serialized-string] impact
+- `0x002F0E9B` [serialized-string] offpad
+- `0x002F0EED` [serialized-string] offpad
+- `0x002F0F3F` [serialized-string] offpad
+- `0x002F0F91` [serialized-string] offpad
+- `0x002F0FE3` [serialized-string] offpad
+- `0x002F1035` [serialized-string] offpad
+- `0x002F1087` [serialized-string] offpad
+- `0x002F10D9` [serialized-string] offpad
+- `0x002F112B` [serialized-string] offpad
+- `0x002F117D` [serialized-string] offpad
+- `0x002F2011` [serialized-string] disman
+- `0x002F211F` [serialized-string] flaw
+- `0x002F21EB` [serialized-string] impact
+- `0x002F2393` [serialized-string] impact
+- `0x002F25C7` [serialized-string] disman
+- `0x002F291B` [serialized-string] flaw
+- `0x002F2B45` [serialized-string] impact
+- `0x002F2D0F` [serialized-string] disman
+- `0x002F2E4F` [serialized-string] impact
+- `0x002F30FB` [serialized-string] impact
+- `0x002F3179` [serialized-string] disman
+- `0x002F3435` [serialized-string] impact
+- `0x002F35D5` [serialized-string] disman
+- `0x002F3667` [serialized-string] impact
+- `0x002F3DF5` [serialized-string] disman
+- `0x002F3F8B` [serialized-string] spam
+- `0x002F4193` [serialized-string] disman
+- `0x002F41E5` [serialized-string] Stopped
+- `0x002F4239` [serialized-string] impact
+- `0x002F450B` [serialized-string] disman
+- `0x002F46AB` [serialized-string] impact
+- `0x002F4947` [serialized-string] disman
+- `0x002F4B3B` [serialized-string] impact
+- `0x002F4CE7` [serialized-string] disman
+- `0x002F4D5B` [serialized-string] impact
+- `0x002F4E87` [serialized-string] impact
+- `0x002F4F9B` [serialized-string] impact
+- `0x002F50AF` [serialized-string] impact
+- `0x002F51C3` [serialized-string] impact
+- `0x002F52D7` [serialized-string] impact
+- `0x002F53EB` [serialized-string] impact
+- `0x002F54FF` [serialized-string] impact
+- `0x002F56C7` [serialized-string] impact
+- `0x002F5CF9` [serialized-string] green
+- `0x002F865F` [object-label] Quick Backdrop 2
+- `0x002F88E0` [serialized-string] Mono
+- `0x002F8986` [object-label] Shadow
+- `0x002F8AED` [object-label] Active object 80
+- `0x002F8B2B` [object-label] Active object 29
+- `0x002F8BD1` [object-label] Shadow
+- `0x002F8D6E` [object-label] Active object 39
+- `0x002F8E14` [object-label] shadow
+- `0x002F8FE8` [serialized-string] magfatal 2
+- `0x002F902A` [serialized-string] ve object 6
+- `0x002F90CC` [serialized-string] Suicide
+- `0x002F90D4` [serialized-string] Blocking
+- `0x002F90DD` [object-label] Shadow
+- `0x002F92B4` [object-label] Active object 72
+- `0x002F940B` [object-label] Active object 8
+- `0x002F962D` [serialized-string] dismantlingc
+- `0x002F9835` [object-label] Active object 9
+- `0x002F9A1C` [object-label] Active object 24
+- `0x002F9C69` [object-label] 1 Player...
+- `0x002F9CCB` [object-label] 1 Player
+- `0x002F9DD3` [object-label] Active object 45
+- `0x002F9FBD` [object-label] Active object 32
+- `0x002FA063` [object-label] Shadow
+- `0x002FA23E` [object-label] 2 Player...
+- `0x002FA2A0` [object-label] 2 Player
+- `0x002FA3A8` [object-label] Active object 25
+- `0x002FA599` [object-label] Active object 73
+- `0x002FA5D7` [object-label] Active object 6
+- `0x002FA67D` [object-label] Shadow
+- `0x002FA817` [object-label] Active object 74
+- `0x002FA855` [object-label] Active object 28
+- `0x002FAAC5` [object-label] Active object 75
+- `0x002FAB03` [object-label] Active object 58
+- `0x002FAB41` [serialized-string] fatu
+- `0x002FAB46` [serialized-string] e object 1
+- `0x002FAC40` [object-label] Active object 56
+- `0x002FAC7E` [serialized-string] fatdd
+- `0x002FAC85` [serialized-string] object 1
+- `0x002FAD7D` [serialized-string] Mono 5
+- `0x002FAD84` [serialized-string] object 30
+- `0x002FADC1` [serialized-string]  object 6
+- `0x002FADF9` [serialized-string] Mono 2
+- `0x002FAE00` [serialized-string] object 30
+- `0x002FAE9F` [object-label] Shadow
+- `0x002FB077` [object-label] Active object 76
+- `0x002FB0B5` [object-label] Active object 43
+- `0x002FB15B` [object-label] Shadow
+- `0x002FB227` [serialized-string] cdedc
+- `0x002FB237` [serialized-string] decce
+- `0x002FB246` [serialized-string] decede
+- `0x002FB250` [serialized-string] dede
+- `0x002FB258` [serialized-string] cdde
+- `0x002FB26E` [serialized-string] cdecef
+- `0x002FB278` [serialized-string] ceef
+- `0x002FB287` [serialized-string] ceede
+- `0x002FB2B6` [serialized-string] ffef
+- `0x002FB2CC` [serialized-string] ddeef
+- `0x002FB2FA` [object-label] Quick Backdrop 1
+- `0x002FB3C7` [object-label] Quick Backdrop 3
+- `0x002FB494` [object-label] Counter 1
+- `0x002FB5FA` [object-label] Counter 2
+- `0x002FB760` [serialized-string] fatll 2
+- `0x002FB768` [serialized-string] bject 1
+- `0x002FB85F` [serialized-string] Mono 3
+- `0x002FB866` [serialized-string] object 30
+- `0x002FB9A2` [object-label] Active object 7
+- `0x002FB9FC` [serialized-string] UUUUd
+- `0x002FBD89` [serialized-string] Mono 4
+- `0x002FBD90` [serialized-string] object 30
+- `0x002FBEB2` [object-label] Active object 77
+- `0x002FBEF0` [object-label] Active object 78
+- `0x002FBF2E` [serialized-string] spikewea
+- `0x002FC23E` [serialized-string] monofat
+- `0x002FC410` [object-label] Active object 13
+- `0x002FC618` [object-label] Active object 19
+- `0x002FC856` [object-label] Active object 22
+- `0x002FCB22` [serialized-string] spikewea 2
+- `0x002FCC5F` [object-label] Active object 26
+- `0x002FCDD9` [object-label] Active object 18
+- `0x002FCF0A` [object-label] Active object 79
+- `0x002FCF48` [serialized-string] fatrigh
+- `0x002FCF50` [serialized-string] bject 1
+- `0x002FD047` [object-label] Active object 10
+- `0x002FD254` [object-label] Active object 30
+- `0x002FD3C4` [serialized-string] fatb1
+- `0x002FD4C3` [serialized-string] fatb2
+- `0x002FD5C2` [serialized-string] monofatp2
+- `0x002FD78D` [object-label] Active object 14
+- `0x002FDA07` [object-label] Active object 11
+- `0x002FDB3B` [object-label] Active object 16
+- `0x002FDCB6` [serialized-string] p1mono
+- `0x002FDCBD` [serialized-string] object 82
+- `0x002FDE9A` [serialized-string] monofatp1
+- `0x002FE0D4` [object-label] Active object 17
+- `0x002FE414` [serialized-string] bloody2
+- `0x002FE6D7` [serialized-string] flam
+- `0x002FE7FA` [serialized-string] Green fatal
+- `0x002FE92B` [serialized-string] joystick error!
+- `0x002FEA9E` [serialized-string] joystick problem!
+- `0x002FEBAD` [object-label] Active object 82
+- `0x002FEDB3` [serialized-string] magfatal
+- `0x002FEF7F` [serialized-string] shottongfal
+- `0x002FF1BD` [serialized-string] shifstabb
+- `0x002FF3E7` [object-label] Active object 20
+- `0x002FF53A` [serialized-string] ive object 1
+- `0x002FF636` [serialized-string] down
+- `0x002FF63B` [serialized-string] e object 2
+- `0x002FF735` [serialized-string] left
+- `0x002FF73A` [serialized-string] e object 4
+- `0x002FF834` [serialized-string] right
+- `0x002FF93A` [serialized-string] object 4
+- `0x002FFA39` [serialized-string] object 4
+- `0x002FFB31` [serialized-string] monofat 2
+- `0x002FFCF3` [serialized-string] monofat 3
+- `0x002FFEC9` [serialized-string] monofat 4
+- `0x003000A3` [object-label] Active object 61
+- `0x003000E1` [object-label] Active object 4
+- `0x0030011F` [object-label] Active object 62
+- `0x0030015D` [serialized-string] monofat 5
+- `0x00300325` [serialized-string] monofat 6
+- `0x003004F2` [serialized-string] monofat 7
+- `0x003006BA` [object-label] Active object 64
+- `0x003006F8` [object-label] Active object 12
+- `0x00300736` [serialized-string] monofat 8
+- `0x0030090D` [object-label] Active object 66
+- `0x0030094B` [object-label] Active object 67
+- `0x00300BC4` [object-label] Active object 69
+- `0x00300C02` [object-label] Active object 70
+- `0x00300C40` [object-label] Active object 71
+- `0x00300E7B` [serialized-string] upp2
+- `0x00300F7A` [serialized-string] downp2
+- `0x0030107B` [serialized-string] ikewea 7
+- `0x0030117A` [serialized-string] ikewea 8
+- `0x00301475` [object-label] Active object 27
+- `0x00301670` [object-label] Active object 31
+- `0x0030199E` [object-label] Active object 33
+- `0x00301C1F` [serialized-string] Aqcommo
+- `0x00301E7B` [serialized-string] aquadis1
+- `0x00301E84` [serialized-string] ject 3
+- `0x0030204C` [serialized-string] rocky
+- `0x00302052` [serialized-string] pon4
+- `0x003022C0` [serialized-string] ve object 26
+- `0x003025CC` [object-label] Active object 34
+- `0x003028E5` [object-label] Active object 3
+- `0x003029E4` [object-label] Active object 35
+- `0x00306ADF` [serialized-string] boinglo
+- `0x00306B4D` [serialized-string] boinglo
+- `0x00306B9D` [serialized-string] boinglo
+- `0x00306D2F` [serialized-string] boinglo
+- `0x0030812F` [serialized-string] impact
+- `0x00308257` [serialized-string] impact
+- `0x003082C7` [serialized-string] impact
+- `0x00308393` [serialized-string] impact
+- `0x0030845F` [serialized-string] impact
+- `0x0030852B` [serialized-string] impact
+- `0x003085F7` [serialized-string] impact
+- `0x003086C3` [serialized-string] impact
+- `0x00308843` [serialized-string] impact
+- `0x0030893D` [serialized-string] impact
+- `0x00308A33` [object-label] Shadow
+- `0x00308A73` [serialized-string] impact
+- `0x00308B6D` [serialized-string] impact
+- `0x00308C67` [serialized-string] impact
+- `0x00308D61` [serialized-string] impact
+- `0x00308E5B` [serialized-string] impact
+- `0x00308F55` [serialized-string] impact
+- `0x0030904F` [serialized-string] impact
+- `0x00309149` [serialized-string] impact
+- `0x0030919B` [serialized-string] offpad
+- `0x003091ED` [serialized-string] offpad
+- `0x0030923F` [serialized-string] offpad
+- `0x00309291` [serialized-string] offpad
+- `0x003092E3` [serialized-string] offpad
+- `0x00309335` [serialized-string] offpad
+- `0x00309387` [serialized-string] offpad
+- `0x003093D9` [serialized-string] offpad
+- `0x0030942B` [serialized-string] offpad
+- `0x0030947D` [serialized-string] offpad
+- `0x0030A311` [serialized-string] disman
+- `0x0030A41F` [serialized-string] flaw
+- `0x0030A57F` [serialized-string] impact
+- `0x0030A7B3` [serialized-string] disman
+- `0x0030AB07` [serialized-string] flaw
+- `0x0030AD31` [serialized-string] impact
+- `0x0030AEFB` [serialized-string] disman
+- `0x0030B03B` [serialized-string] impact
+- `0x0030B2E7` [serialized-string] impact
+- `0x0030B365` [serialized-string] disman
+- `0x0030B5F5` [serialized-string] impact
+- `0x0030B795` [serialized-string] disman
+- `0x0030B827` [serialized-string] impact
+- `0x0030BF07` [serialized-string] disman
+- `0x0030C09D` [serialized-string] spam
+- `0x0030C2A5` [serialized-string] disman
+- `0x0030C2F7` [serialized-string] Stopped
+- `0x0030C34B` [serialized-string] impact
+- `0x0030C61D` [serialized-string] disman
+- `0x0030C7BD` [serialized-string] impact
+- `0x0030CA59` [serialized-string] disman
+- `0x0030CC4D` [serialized-string] impact
+- `0x0030CDF9` [serialized-string] disman
+- `0x0030CE6D` [serialized-string] impact
+- `0x0030D60B` [serialized-string] magma
+- `0x0030FF65` [object-label] Quick Backdrop 4
+- `0x003101D8` [serialized-string] Mono
+- `0x0031027E` [object-label] Shadow
+- `0x003103E5` [object-label] Active object 80
+- `0x00310423` [object-label] Active object 29
+- `0x003104C9` [object-label] Shadow
+- `0x00310666` [object-label] Active object 39
+- `0x0031070C` [object-label] shadow
+- `0x003108E0` [object-label] Active object 81
+- `0x00310B60` [serialized-string] ve object 6
+- `0x00310C02` [serialized-string] Suicide
+- `0x00310C0A` [serialized-string] Blocking
+- `0x00310C13` [object-label] Shadow
+- `0x00310DEA` [object-label] Active object 72
+- `0x00310F41` [object-label] Active object 8
+- `0x00311163` [serialized-string] dismantlingc
+- `0x0031136B` [object-label] Active object 9
+- `0x00311552` [object-label] Active object 24
+- `0x0031179F` [object-label] 1 Player...
+- `0x00311801` [object-label] 1 Player
+- `0x00311909` [object-label] Active object 45
+- `0x00311AF3` [object-label] Active object 32
+- `0x00311B99` [object-label] Shadow
+- `0x00311D74` [object-label] 2 Player...
+- `0x00311DD6` [object-label] 2 Player
+- `0x00311EDE` [object-label] Active object 25
+- `0x003120CF` [object-label] Active object 73
+- `0x0031210D` [object-label] Active object 6
+- `0x003121B3` [object-label] Shadow
+- `0x0031234D` [object-label] Active object 74
+- `0x0031238B` [object-label] Active object 28
+- `0x003125FB` [object-label] Active object 75
+- `0x00312639` [object-label] Active object 58
+- `0x00312677` [serialized-string] fatu
+- `0x0031267C` [serialized-string] e object 1
+- `0x00312776` [object-label] Active object 56
+- `0x003127B4` [serialized-string] fatdd
+- `0x003127BB` [serialized-string] object 1
+- `0x003128B3` [serialized-string] Mono 5
+- `0x003128BA` [serialized-string] object 30
+- `0x003128F7` [serialized-string]  object 6
+- `0x0031292F` [serialized-string] Mono 2
+- `0x00312936` [serialized-string] object 30
+- `0x003129D5` [object-label] Shadow
+- `0x00312BB2` [object-label] Active object 76
+- `0x00312BF0` [object-label] Active object 43
+- `0x00312C96` [object-label] Shadow
+- `0x00312D62` [serialized-string] cdedc
+- `0x00312D72` [serialized-string] decce
+- `0x00312D81` [serialized-string] decede
+- `0x00312D8B` [serialized-string] dede
+- `0x00312D93` [serialized-string] cdde
+- `0x00312DA9` [serialized-string] cdecef
+- `0x00312DB3` [serialized-string] ceef
+- `0x00312DC2` [serialized-string] ceede
+- `0x00312DF1` [serialized-string] ffef
+- `0x00312E07` [serialized-string] ddeef
+- `0x00312E35` [object-label] Quick Backdrop 1
+- `0x00312F02` [object-label] Quick Backdrop 3
+- `0x00312FCF` [object-label] Counter 1
+- `0x00313135` [object-label] Counter 2
+- `0x0031329B` [serialized-string] fatll 2
+- `0x003132A3` [serialized-string] bject 1
+- `0x0031339A` [serialized-string] Mono 3
+- `0x003133A1` [serialized-string] object 30
+- `0x003134DD` [object-label] Active object 7
+- `0x00313537` [serialized-string] UUUUd
+- `0x003138C4` [serialized-string] Mono 4
+- `0x003138CB` [serialized-string] object 30
+- `0x003139ED` [object-label] Active object 77
+- `0x00313A2B` [object-label] Active object 78
+- `0x00313A69` [serialized-string] spikewea
+- `0x00313D79` [serialized-string] monofat
+- `0x00313FD6` [object-label] Active object 13
+- `0x003141DE` [object-label] Active object 19
+- `0x0031441C` [object-label] Active object 22
+- `0x003146E8` [serialized-string] spikewea 2
+- `0x00314825` [object-label] Active object 26
+- `0x0031499F` [object-label] Active object 18
+- `0x00314AD0` [object-label] Active object 79
+- `0x00314B0E` [serialized-string] fatrigh
+- `0x00314B16` [serialized-string] bject 1
+- `0x00314C0D` [object-label] Active object 10
+- `0x00314E1A` [object-label] Active object 30
+- `0x00314F8A` [serialized-string] fatb1
+- `0x00315089` [serialized-string] fatb2
+- `0x00315188` [serialized-string] monofatp2
+- `0x003153CA` [object-label] Active object 14
+- `0x00315644` [object-label] Active object 11
+- `0x00315778` [object-label] Active object 16
+- `0x003158F3` [serialized-string] p1mono
+- `0x003158FA` [serialized-string] object 82
+- `0x00315AD7` [serialized-string] monofatp1
+- `0x00315CFE` [object-label] Active object 17
+- `0x0031601A` [serialized-string] bloody2
+- `0x003162DD` [serialized-string] flam
+- `0x00316400` [serialized-string] Green fatal
+- `0x00316531` [serialized-string] joystick error!
+- `0x003166A4` [serialized-string] joystick problem!
+- `0x003167B3` [object-label] Active object 82
+- `0x003169A9` [serialized-string] magfatal
+- `0x00316B7D` [serialized-string] shottongfal
+- `0x00316DBB` [serialized-string] shifstabb
+- `0x00316FC1` [object-label] Active object 20
+- `0x00317114` [serialized-string] ive object 1
+- `0x00317210` [serialized-string] down
+- `0x00317215` [serialized-string] e object 2
+- `0x0031730F` [serialized-string] left
+- `0x00317314` [serialized-string] e object 4
+- `0x0031740E` [serialized-string] right
+- `0x00317514` [serialized-string] object 4
+- `0x00317613` [serialized-string] object 4
+- `0x0031770B` [serialized-string] monofat 2
+- `0x00317973` [serialized-string] monofat 3
+- `0x00317BC5` [serialized-string] monofat 4
+- `0x00317E6E` [object-label] Active object 61
+- `0x00317EAC` [object-label] Active object 4
+- `0x00317EEA` [object-label] Active object 62
+- `0x00317F28` [serialized-string] monofat 5
+- `0x0031818E` [serialized-string] monofat 6
+- `0x00318410` [serialized-string] monofat 7
+- `0x00318675` [object-label] Active object 64
+- `0x003186B3` [object-label] Active object 12
+- `0x003186F1` [serialized-string] monofat 8
+- `0x0031892F` [object-label] Active object 66
+- `0x0031896D` [object-label] Active object 67
+- `0x003189AB` [object-label] Active object 15
+- `0x003189E9` [object-label] Active object 69
+- `0x00318A27` [object-label] Active object 70
+- `0x00318A65` [object-label] Active object 71
+- `0x00318BA3` [serialized-string] upp2
+- `0x00318CA2` [serialized-string] downp2
+- `0x00318DA3` [serialized-string] ikewea 7
+- `0x00318EA2` [serialized-string] ikewea 8
+- `0x0031919D` [object-label] Active object 27
+- `0x00319398` [object-label] Active object 31
+- `0x003196C6` [object-label] Active object 33
+- `0x0031992C` [serialized-string] Aqcommo
+- `0x00319B88` [serialized-string] aquadis1
+- `0x00319B91` [serialized-string] ject 3
+- `0x00319D4D` [serialized-string] rocky
+- `0x00319D53` [serialized-string] pon4
+- `0x00319FC1` [serialized-string] ve object 26
+- `0x0031A2CD` [object-label] Active object 34
+- `0x0031A5CB` [object-label] Active object 3
+- `0x0031A6CA` [object-label] Active object 35
+- `0x0031E0B8` [serialized-string] boinglo
+- `0x0031E126` [serialized-string] boinglo
+- `0x0031E176` [serialized-string] boinglo
+- `0x0031E308` [serialized-string] boinglo
+- `0x0031F77C` [serialized-string] impact
+- `0x0031F8A4` [serialized-string] impact
+- `0x0031F914` [serialized-string] impact
+- `0x0031F9E0` [serialized-string] impact
+- `0x0031FAAC` [serialized-string] impact
+- `0x0031FB78` [serialized-string] impact
+- `0x0031FC44` [serialized-string] impact
+- `0x0031FD2E` [serialized-string] impact
+- `0x0031FE90` [serialized-string] impact
+- `0x0031FF8A` [serialized-string] impact
+- `0x00320080` [object-label] Shadow
+- `0x003200C0` [serialized-string] impact
+- `0x003201BA` [serialized-string] impact
+- `0x003202B4` [serialized-string] impact
+- `0x003203AE` [serialized-string] impact
+- `0x003204A8` [serialized-string] impact
+- `0x003205A2` [serialized-string] impact
+- `0x0032069C` [serialized-string] impact
+- `0x00320796` [serialized-string] impact
+- `0x003207E8` [serialized-string] offpad
+- `0x0032083A` [serialized-string] offpad
+- `0x0032088C` [serialized-string] offpad
+- `0x003208DE` [serialized-string] offpad
+- `0x00320930` [serialized-string] offpad
+- `0x00320982` [serialized-string] offpad
+- `0x003209D4` [serialized-string] offpad
+- `0x00320A26` [serialized-string] offpad
+- `0x00320A78` [serialized-string] offpad
+- `0x00320ACA` [serialized-string] offpad
+- `0x00321906` [serialized-string] disman
+- `0x00321A14` [serialized-string] flaw
+- `0x00321AE0` [serialized-string] impact
+- `0x00321C88` [serialized-string] impact
+- `0x00321EBC` [serialized-string] disman
+- `0x00322210` [serialized-string] flaw
+- `0x0032243A` [serialized-string] impact
+- `0x00322604` [serialized-string] disman
+- `0x00322744` [serialized-string] impact
+- `0x003229F0` [serialized-string] impact
+- `0x00322A6E` [serialized-string] disman
+- `0x00322D2A` [serialized-string] impact
+- `0x00322ECA` [serialized-string] disman
+- `0x00322F5C` [serialized-string] impact
+- `0x003236EA` [serialized-string] disman
+- `0x00323880` [serialized-string] spam
+- `0x00323A88` [serialized-string] disman
+- `0x00323ADA` [serialized-string] Stopped
+- `0x00323B2E` [serialized-string] impact
+- `0x00323E00` [serialized-string] disman
+- `0x00323FA0` [serialized-string] impact
+- `0x0032423C` [serialized-string] disman
+- `0x00324430` [serialized-string] impact
+- `0x003245DC` [serialized-string] disman
+- `0x0032466E` [serialized-string] impact
+- `0x0032477C` [serialized-string] impact
+- `0x00324890` [serialized-string] impact
+- `0x003249A4` [serialized-string] impact
+- `0x00324AB8` [serialized-string] impact
+- `0x00324BCC` [serialized-string] impact
+- `0x00324CE0` [serialized-string] impact
+- `0x00324DF4` [serialized-string] impact
+- `0x00324FBC` [serialized-string] impact
+- `0x003250BC` [serialized-string] spike
+- `0x00327938` [object-label] Quick Backdrop 4
+- `0x00327B7F` [serialized-string] Mono
+- `0x00327C25` [object-label] Shadow
+- `0x00327D8C` [object-label] Active object 80
+- `0x00327DCA` [object-label] Active object 29
+- `0x00327E70` [object-label] Shadow
+- `0x0032800D` [object-label] Active object 39
+- `0x003280B3` [object-label] shadow
+- `0x00328287` [object-label] Active object 81
+- `0x003283FA` [serialized-string] ve object 6
+- `0x0032849C` [serialized-string] Suicide
+- `0x003284A4` [serialized-string] Blocking
+- `0x003284AD` [object-label] Shadow
+- `0x00328684` [object-label] Active object 72
+- `0x003287DB` [object-label] Active object 8
+- `0x003289FD` [serialized-string] dismantlingc
+- `0x00328C05` [object-label] Active object 9
+- `0x00328DEC` [object-label] Active object 24
+- `0x00329039` [object-label] 1 Player...
+- `0x0032909B` [object-label] 1 Player
+- `0x003291A3` [object-label] Active object 45
+- `0x0032938D` [object-label] Active object 32
+- `0x00329433` [object-label] Shadow
+- `0x0032960E` [object-label] 2 Player...
+- `0x00329670` [object-label] 2 Player
+- `0x00329778` [object-label] Active object 25
+- `0x00329969` [object-label] Active object 73
+- `0x003299A7` [object-label] Active object 6
+- `0x00329A4D` [object-label] Shadow
+- `0x00329BE7` [object-label] Active object 74
+- `0x00329C25` [object-label] Active object 28
+- `0x00329E95` [object-label] Active object 75
+- `0x00329ED3` [object-label] Active object 58
+- `0x00329F11` [serialized-string] fatu
+- `0x00329F16` [serialized-string] e object 1
+- `0x0032A010` [object-label] Active object 56
+- `0x0032A04E` [serialized-string] fatdd
+- `0x0032A055` [serialized-string] object 1
+- `0x0032A14D` [serialized-string] Mono 5
+- `0x0032A154` [serialized-string] object 30
+- `0x0032A191` [serialized-string]  object 6
+- `0x0032A1C9` [serialized-string] Mono 2
+- `0x0032A1D0` [serialized-string] object 30
+- `0x0032A26F` [object-label] Shadow
+- `0x0032A3CE` [object-label] Active object 76
+- `0x0032A40C` [object-label] Active object 43
+- `0x0032A4B2` [object-label] Shadow
+- `0x0032A57E` [serialized-string] cdedc
+- `0x0032A58E` [serialized-string] decce
+- `0x0032A59D` [serialized-string] decede
+- `0x0032A5A7` [serialized-string] dede
+- `0x0032A5AF` [serialized-string] cdde
+- `0x0032A5C5` [serialized-string] cdecef
+- `0x0032A5CF` [serialized-string] ceef
+- `0x0032A5DE` [serialized-string] ceede
+- `0x0032A60D` [serialized-string] ffef
+- `0x0032A623` [serialized-string] ddeef
+- `0x0032A651` [object-label] Quick Backdrop 1
+- `0x0032A71E` [object-label] Quick Backdrop 3
+- `0x0032A7EB` [object-label] Counter 1
+- `0x0032A951` [object-label] Counter 2
+- `0x0032AAB7` [serialized-string] fatll 2
+- `0x0032AABF` [serialized-string] bject 1
+- `0x0032ABB6` [serialized-string] Mono 3
+- `0x0032ABBD` [serialized-string] object 30
+- `0x0032ACF9` [object-label] Active object 7
+- `0x0032AD53` [serialized-string] UUUUd
+- `0x0032B0E0` [serialized-string] Mono 4
+- `0x0032B0E7` [serialized-string] object 30
+- `0x0032B209` [object-label] Active object 77
+- `0x0032B247` [object-label] Active object 78
+- `0x0032B285` [serialized-string] spikewea
+- `0x0032B595` [serialized-string] monofat
+- `0x0032B79C` [object-label] Active object 13
+- `0x0032B9A4` [object-label] Active object 19
+- `0x0032BBE2` [object-label] Active object 22
+- `0x0032BEAE` [serialized-string] spikewea 2
+- `0x0032BFEB` [object-label] Active object 26
+- `0x0032C165` [object-label] Active object 18
+- `0x0032C296` [object-label] Active object 79
+- `0x0032C2D4` [serialized-string] fatrigh
+- `0x0032C2DC` [serialized-string] bject 1
+- `0x0032C3D3` [object-label] Active object 10
+- `0x0032C5E0` [object-label] Active object 30
+- `0x0032C750` [serialized-string] fatb1
+- `0x0032C84F` [serialized-string] fatb2
+- `0x0032C94E` [serialized-string] monofatp2
+- `0x0032CB3A` [object-label] Active object 14
+- `0x0032CDB4` [object-label] Active object 11
+- `0x0032CEE8` [object-label] Active object 16
+- `0x0032D063` [serialized-string] p1mono
+- `0x0032D06A` [serialized-string] object 82
+- `0x0032D247` [serialized-string] monofatp1
+- `0x0032D457` [object-label] Active object 17
+- `0x0032D740` [serialized-string] bloody2
+- `0x0032DA03` [serialized-string] flam
+- `0x0032DB26` [serialized-string] Green fatal
+- `0x0032DC57` [serialized-string] joystick error!
+- `0x0032DDCA` [serialized-string] joystick problem!
+- `0x0032DED9` [object-label] Active object 82
+- `0x0032E0D2` [serialized-string] magfatal
+- `0x0032E2A7` [serialized-string] shottongfal
+- `0x0032E4E5` [serialized-string] shifstabb
+- `0x0032E6EA` [object-label] Active object 20
+- `0x0032E83D` [serialized-string] ive object 1
+- `0x0032E939` [serialized-string] down
+- `0x0032E93E` [serialized-string] e object 2
+- `0x0032EA38` [serialized-string] left
+- `0x0032EA3D` [serialized-string] e object 4
+- `0x0032EB37` [serialized-string] right
+- `0x0032EC3D` [serialized-string] object 4
+- `0x0032ED3C` [serialized-string] object 4
+- `0x0032EE34` [serialized-string] monofat 2
+- `0x0032F044` [serialized-string] monofat 3
+- `0x0032F244` [serialized-string] monofat 4
+- `0x0032F482` [object-label] Active object 61
+- `0x0032F4C0` [object-label] Active object 4
+- `0x0032F4FE` [object-label] Active object 62
+- `0x0032F53C` [serialized-string] monofat 5
+- `0x0032F75F` [serialized-string] monofat 6
+- `0x0032F981` [serialized-string] monofat 7
+- `0x0032FB86` [object-label] Active object 64
+- `0x0032FBC4` [object-label] Active object 12
+- `0x0032FC02` [serialized-string] monofat 8
+- `0x0032FDFC` [object-label] Active object 66
+- `0x0032FE3A` [object-label] Active object 67
+- `0x0032FE78` [serialized-string] spam1
+- `0x0032FEB6` [object-label] Active object 69
+- `0x0032FEF4` [object-label] Active object 70
+- `0x0032FF32` [object-label] Active object 71
+- `0x003300C9` [serialized-string] upp2
+- `0x003301C8` [serialized-string] downp2
+- `0x003302C9` [serialized-string] ikewea 7
+- `0x003303C8` [serialized-string] ikewea 8
+- `0x003306C3` [object-label] Active object 27
+- `0x003308BE` [object-label] Active object 31
+- `0x00330BEC` [object-label] Active object 33
+- `0x00330E29` [serialized-string] Aqcommo
+- `0x00331085` [serialized-string] aquadis1
+- `0x0033108E` [serialized-string] ject 3
+- `0x00331249` [serialized-string] rocky
+- `0x0033124F` [serialized-string] pon4
+- `0x003314BD` [serialized-string] ve object 26
+- `0x003317C9` [object-label] Active object 34
+- `0x00331ACC` [object-label] Active object 3
+- `0x00331BCB` [object-label] Active object 35
+- `0x00335640` [serialized-string] boinglo
+- `0x003356AE` [serialized-string] boinglo
+- `0x003356FE` [serialized-string] boinglo
+- `0x00335890` [serialized-string] boinglo
+- `0x00336D30` [serialized-string] impact
+- `0x00336E58` [serialized-string] impact
+- `0x00336EC8` [serialized-string] impact
+- `0x00336F94` [serialized-string] impact
+- `0x00337060` [serialized-string] impact
+- `0x0033712C` [serialized-string] impact
+- `0x003371F8` [serialized-string] impact
+- `0x003372C4` [serialized-string] impact
+- `0x00337444` [serialized-string] impact
+- `0x0033753E` [serialized-string] impact
+- `0x00337634` [object-label] Shadow
+- `0x00337674` [serialized-string] impact
+- `0x0033776E` [serialized-string] impact
+- `0x00337868` [serialized-string] impact
+- `0x00337962` [serialized-string] impact
+- `0x00337A5C` [serialized-string] impact
+- `0x00337B56` [serialized-string] impact
+- `0x00337C50` [serialized-string] impact
+- `0x00337D4A` [serialized-string] impact
+- `0x00337D9C` [serialized-string] offpad
+- `0x00337DEE` [serialized-string] offpad
+- `0x00337E40` [serialized-string] offpad
+- `0x00337E92` [serialized-string] offpad
+- `0x00337EE4` [serialized-string] offpad
+- `0x00337F36` [serialized-string] offpad
+- `0x00337F88` [serialized-string] offpad
+- `0x00337FDA` [serialized-string] offpad
+- `0x0033802C` [serialized-string] offpad
+- `0x0033807E` [serialized-string] offpad
+- `0x00338EBA` [serialized-string] disman
+- `0x00338FC8` [serialized-string] flaw
+- `0x00339094` [serialized-string] impact
+- `0x0033923C` [serialized-string] impact
+- `0x00339470` [serialized-string] disman
+- `0x003397C4` [serialized-string] flaw
+- `0x003399EE` [serialized-string] impact
+- `0x00339BB8` [serialized-string] disman
+- `0x00339CF8` [serialized-string] impact
+- `0x00339FA4` [serialized-string] impact
+- `0x0033A022` [serialized-string] disman
+- `0x0033A2DE` [serialized-string] impact
+- `0x0033A47E` [serialized-string] disman
+- `0x0033A510` [serialized-string] impact
+- `0x0033AC9E` [serialized-string] disman
+- `0x0033AE34` [serialized-string] spam
+- `0x0033B03C` [serialized-string] disman
+- `0x0033B08E` [serialized-string] Stopped
+- `0x0033B0E2` [serialized-string] impact
+- `0x0033B3B4` [serialized-string] disman
+- `0x0033B554` [serialized-string] impact
+- `0x0033B7F0` [serialized-string] disman
+- `0x0033B9E4` [serialized-string] impact
+- `0x0033BB90` [serialized-string] disman
+- `0x0033BC22` [serialized-string] impact
+- `0x0033BD30` [serialized-string] impact
+- `0x0033BE44` [serialized-string] impact
+- `0x0033BF58` [serialized-string] impact
+- `0x0033C06C` [serialized-string] impact
+- `0x0033C180` [serialized-string] impact
+- `0x0033C294` [serialized-string] impact
+- `0x0033C3A8` [serialized-string] impact
+- `0x0033C570` [serialized-string] impact
+- `0x0033C74E` [serialized-string] shifter

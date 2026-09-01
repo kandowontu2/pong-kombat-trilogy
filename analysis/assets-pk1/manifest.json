@@ -1,0 +1,3186 @@
+[
+  {
+    "source": "A_BLUE.GRA",
+    "sourceBytes": 16519,
+    "sourceSha256": "527B502AB734BA97DF4C708CAF9437343032213FA977E25590DAE6E240231534",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 16486,
+    "path": "audio/a_blue.wav"
+  },
+  {
+    "source": "A_BOUNCE.GRA",
+    "sourceBytes": 16543,
+    "sourceSha256": "8C138BE2AF50A15E76CA50087DBB87E1336A023FBD2805EDE822F1538EA99217",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 16510,
+    "path": "audio/a_bounce.wav"
+  },
+  {
+    "source": "A_F1.GRA",
+    "sourceBytes": 13090,
+    "sourceSha256": "FDC802B66721C40C902C6BE3258220BA27792FFEB4947AE2564359271804F704",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 13057,
+    "path": "audio/a_f1.wav"
+  },
+  {
+    "source": "A_F2.GRA",
+    "sourceBytes": 13989,
+    "sourceSha256": "C87F969D083CC3AF72E6AC05A8E387AEC8F358295F64AF7C5E306EEA2CDD64B0",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 13956,
+    "path": "audio/a_f2.wav"
+  },
+  {
+    "source": "A_F3.GRA",
+    "sourceBytes": 12253,
+    "sourceSha256": "BA7CCA7F5B2DACF705351F96904DDF0AC2FE7011DEC068B0F66D969862F36E56",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 12220,
+    "path": "audio/a_f3.wav"
+  },
+  {
+    "source": "A_F4.GRA",
+    "sourceBytes": 40674,
+    "sourceSha256": "2E31740B7BF515E3DFB5E97C8FD3436F26459EAE35F60CEB0E957EED60F09039",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 11111,
+    "sampleWidth": 2,
+    "sampleFrames": 40641,
+    "path": "audio/a_f4.wav"
+  },
+  {
+    "source": "A_FINISH.GRA",
+    "sourceBytes": 7586,
+    "sourceSha256": "4BBFB8ED97EEA7CD1CBB5C7D2E207757D9E8EDB3D2B5A9BEC191628C2F05C6C5",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 7553,
+    "path": "audio/a_finish.wav"
+  },
+  {
+    "source": "A_FLAW.GRA",
+    "sourceBytes": 14633,
+    "sourceSha256": "0D87D2B16374BDF9BBB1AB70DA5B8C6585A7B5AAEEAE6BF3547A78237A253FF9",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 14600,
+    "path": "audio/a_flaw.wav"
+  },
+  {
+    "source": "A_GREEN.GRA",
+    "sourceBytes": 16275,
+    "sourceSha256": "3C5684683C27425011F4F4E1D38D666CEDA33DFB14339920BF80BC8DE9D60212",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 16242,
+    "path": "audio/a_green.wav"
+  },
+  {
+    "source": "A_MONO.GRA",
+    "sourceBytes": 7335,
+    "sourceSha256": "51178F3730E5AAF5A37C4E5F7882E509532A97B1F54FB55CCC4BC210415BC388",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 7302,
+    "path": "audio/a_mono.wav"
+  },
+  {
+    "source": "A_PURPLE.GRA",
+    "sourceBytes": 14173,
+    "sourceSha256": "936A4D2854FE82CE2CCBD9F403F58D04D5310E88CD4218CE4B8B59D1D8BF8C75",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 14140,
+    "path": "audio/a_purple.wav"
+  },
+  {
+    "source": "A_RED.GRA",
+    "sourceBytes": 16599,
+    "sourceSha256": "A9CC089903C6699E30D948F659C04EC5DFA71225FAB27ABF97D4013E2F42876B",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 16566,
+    "path": "audio/a_red.wav"
+  },
+  {
+    "source": "A_WHITE.GRA",
+    "sourceBytes": 15647,
+    "sourceSha256": "34F04903697F8809BA45B2A187DD54134CD3861315B0D1002F540C59122666BB",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 15614,
+    "path": "audio/a_white.wav"
+  },
+  {
+    "source": "A_WIN.GRA",
+    "sourceBytes": 8655,
+    "sourceSha256": "D7A007B4B52D1AFD943143010EDB439C6B15D9BF810A2A0548DC91583E53EB67",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 8622,
+    "path": "audio/a_win.wav"
+  },
+  {
+    "source": "A_YELLOW.GRA",
+    "sourceBytes": 15933,
+    "sourceSha256": "4D81B6A32FADB9221CAB185E7B7D0A82708A20272DBB54FE8DADC3FA21C202A8",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 15900,
+    "path": "audio/a_yellow.wav"
+  },
+  {
+    "source": "BALLS.GRA",
+    "sourceBytes": 1000,
+    "sourceSha256": "3F7256EBDDDBE19D4B422D725DD6824E8087A0924DABA5ECF4A287286BBC4D52",
+    "type": "raw-sheet",
+    "frames": 8,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png"
+    ],
+    "dimensions": [
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        11
+      ]
+    ],
+    "path": "sprites/balls"
+  },
+  {
+    "source": "BLUEBIO.GRA",
+    "sourceBytes": 75880,
+    "sourceSha256": "24D467C53D168D44271621FF0614F40C2848FF4111F8C21E3458FB12A39F5BF9",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 17,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/bluebio"
+  },
+  {
+    "source": "BOUNCE.GRA",
+    "sourceBytes": 5152,
+    "sourceSha256": "CDC92C551DB961B5AC5B546F755A2C03F85829D80E702544BCD6AE36C0A32117",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        143,
+        36
+      ]
+    ],
+    "path": "sprites/bounce"
+  },
+  {
+    "source": "COMIC.GRA",
+    "sourceBytes": 50062,
+    "sourceSha256": "354EFE583016AE4FB2FF676FA877DD1AD2A7502BD56E7E828D66691875CB5CA2",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/comic.png"
+  },
+  {
+    "source": "FATAL1.GRA",
+    "sourceBytes": 2692,
+    "sourceSha256": "044FE0EA2CD3B4A89F812B51B09745ED87D60F1E97B9180086EE433C181DEB60",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        128,
+        21
+      ]
+    ],
+    "path": "sprites/fatal1"
+  },
+  {
+    "source": "FATAL2.GRA",
+    "sourceBytes": 3940,
+    "sourceSha256": "0436D88C2E90B590AF2F4243721DBFD03552DEB4507C86F08570B7186E82028F",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        96,
+        41
+      ]
+    ],
+    "path": "sprites/fatal2"
+  },
+  {
+    "source": "FATEND1.GRA",
+    "sourceBytes": 3353,
+    "sourceSha256": "D7D008B2E17C9748857F3F9114B9E2AE78AAC33E3551EC40A44E24A4CFAE2F26",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend1.png"
+  },
+  {
+    "source": "FATEND2.GRA",
+    "sourceBytes": 3996,
+    "sourceSha256": "90ED2D199977D78CC1070225C5FAAC993C323AC269FE147798C739F563EC3298",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend2.png"
+  },
+  {
+    "source": "FATEND3.GRA",
+    "sourceBytes": 3425,
+    "sourceSha256": "185837C31860CAE3E1215F9AD883C3AA27C3FA1B85B852ECCA51D87E02DB1F74",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend3.png"
+  },
+  {
+    "source": "FATEND4.GRA",
+    "sourceBytes": 3389,
+    "sourceSha256": "2414AD98126D997CE981091D4992C404BECEF8116E3857AFD2F0AC11483CA287",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend4.png"
+  },
+  {
+    "source": "FATEND5.GRA",
+    "sourceBytes": 4653,
+    "sourceSha256": "822B96C76166EEC94349B664E12E940A969E23EC25965621786AE8E516A5744D",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend5.png"
+  },
+  {
+    "source": "FATEND6.GRA",
+    "sourceBytes": 4646,
+    "sourceSha256": "66CFAEF09A562991318F38FDD75C65439C1405D9C96A422CA0998341DE257628",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend6.png"
+  },
+  {
+    "source": "FATEND7.GRA",
+    "sourceBytes": 3683,
+    "sourceSha256": "CBDC69B272A8A9F7072AF3FFC4DFF199C76FDF4E76F0776D36061086E3EF2E3E",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend7.png"
+  },
+  {
+    "source": "FATEND8.GRA",
+    "sourceBytes": 3357,
+    "sourceSha256": "7901499B791A652412B6095EB5FAD34EFB606C733A4C45121F6322EDD5276DCD",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/fatend8.png"
+  },
+  {
+    "source": "FATFLI1.GRA",
+    "sourceBytes": 50620,
+    "sourceSha256": "3B02266E376C086D8733AE470622C47C57C427BFBC66EE87E3C49644C25F6A75",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 45,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png",
+      "0030.png",
+      "0031.png",
+      "0032.png",
+      "0033.png",
+      "0034.png",
+      "0035.png",
+      "0036.png",
+      "0037.png",
+      "0038.png",
+      "0039.png",
+      "0040.png",
+      "0041.png",
+      "0042.png",
+      "0043.png",
+      "0044.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli1"
+  },
+  {
+    "source": "FATFLI2.GRA",
+    "sourceBytes": 8454,
+    "sourceSha256": "1D7BBF55CCD118BE485581A0F0C9214F2E352E64D0D8A5C73378D6DC11468CD7",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 46,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png",
+      "0030.png",
+      "0031.png",
+      "0032.png",
+      "0033.png",
+      "0034.png",
+      "0035.png",
+      "0036.png",
+      "0037.png",
+      "0038.png",
+      "0039.png",
+      "0040.png",
+      "0041.png",
+      "0042.png",
+      "0043.png",
+      "0044.png",
+      "0045.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli2"
+  },
+  {
+    "source": "FATFLI3.GRA",
+    "sourceBytes": 11440,
+    "sourceSha256": "4645EA4EBC8F8F21D839C5B8D1AB54B0DB4D2878627392BBD30E49EE569C1524",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 42,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png",
+      "0030.png",
+      "0031.png",
+      "0032.png",
+      "0033.png",
+      "0034.png",
+      "0035.png",
+      "0036.png",
+      "0037.png",
+      "0038.png",
+      "0039.png",
+      "0040.png",
+      "0041.png"
+    ],
+    "durationsMs": [
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85
+    ],
+    "path": "animations/fatfli3"
+  },
+  {
+    "source": "FATFLI4.GRA",
+    "sourceBytes": 8384,
+    "sourceSha256": "BA5F7F1E22E0C11F7C869CC327F60BE30D6F397DE1C353AEBD99DECA6EFDE613",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 30,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli4"
+  },
+  {
+    "source": "FATFLI5.GRA",
+    "sourceBytes": 13446,
+    "sourceSha256": "90146892D8C3FFBA299DC0C15ECDD316E971EC50B90FD9908FD1DF42C5B93B18",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 50,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png",
+      "0030.png",
+      "0031.png",
+      "0032.png",
+      "0033.png",
+      "0034.png",
+      "0035.png",
+      "0036.png",
+      "0037.png",
+      "0038.png",
+      "0039.png",
+      "0040.png",
+      "0041.png",
+      "0042.png",
+      "0043.png",
+      "0044.png",
+      "0045.png",
+      "0046.png",
+      "0047.png",
+      "0048.png",
+      "0049.png"
+    ],
+    "durationsMs": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "path": "animations/fatfli5"
+  },
+  {
+    "source": "FATFLI6.GRA",
+    "sourceBytes": 6134,
+    "sourceSha256": "A252F0233D19D12D15FB7873D506F18B339230B3F769FB65CB8ECD42F8AE364D",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 17,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli6"
+  },
+  {
+    "source": "FATFLI7.GRA",
+    "sourceBytes": 6654,
+    "sourceSha256": "88ECB7171A4490A87ACCF568C13F73D8CE86A3BFD2950DD7E7BEE52603453B6D",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 30,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png",
+      "0026.png",
+      "0027.png",
+      "0028.png",
+      "0029.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli7"
+  },
+  {
+    "source": "FATFLI8.GRA",
+    "sourceBytes": 5060,
+    "sourceSha256": "8C45F66FAAA0B2CC04466F163F2FB413FB3AEDC518A25EEB86FEDFFC73DB9E1D",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 26,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png",
+      "0021.png",
+      "0022.png",
+      "0023.png",
+      "0024.png",
+      "0025.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/fatfli8"
+  },
+  {
+    "source": "FINISH.GRA",
+    "sourceBytes": 8928,
+    "sourceSha256": "D9EB527E09FFBD8C6E2AA1BB59FC14AFD4EA3EA51A5F57527484CD85AEDACD99",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        194,
+        46
+      ]
+    ],
+    "path": "sprites/finish"
+  },
+  {
+    "source": "FLAWLESS.GRA",
+    "sourceBytes": 808,
+    "sourceSha256": "1A94A25A244D3ECE9ADB99431C821647C95ECB7BAB77EAA826518E7E958B6716",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        67,
+        12
+      ]
+    ],
+    "path": "sprites/flawless"
+  },
+  {
+    "source": "GREENBIO.GRA",
+    "sourceBytes": 124476,
+    "sourceSha256": "C827F57C8263CC337E1BE7A70DF507E5A45ED0CB936E823EB776CC15C6B44699",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 18,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/greenbio"
+  },
+  {
+    "source": "INTRO1.GRA",
+    "sourceBytes": 6278,
+    "sourceSha256": "85E591FBAD87249C97EFCC5D2B6DFB5961793130EFB442BB1C275FD497478C5A",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro1.png"
+  },
+  {
+    "source": "INTRO2.GRA",
+    "sourceBytes": 8297,
+    "sourceSha256": "7A3D87F4677CC4BBADA49F16A9D4BA53E0A0A2AF946B83A0BC4F0C3D5B3D90B1",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro2.png"
+  },
+  {
+    "source": "INTRO3.GRA",
+    "sourceBytes": 46094,
+    "sourceSha256": "61D651F739A1958864F4CE6F9FC3AF2509906A0AFE0EC630514EF8238C0D0488",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro3.png"
+  },
+  {
+    "source": "INTRO4.GRA",
+    "sourceBytes": 35996,
+    "sourceSha256": "3D84E30E193769231CFD47FD6BBBF825CA0F7F8BB1ADA3133EE23FAA907C7A08",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro4.png"
+  },
+  {
+    "source": "INTRO5.GRA",
+    "sourceBytes": 42617,
+    "sourceSha256": "0421D122443C0EB05719F0D860CF6CC0ECFFDCED2ED44024B5709C0E87AEC78C",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro5.png"
+  },
+  {
+    "source": "INTRO6.GRA",
+    "sourceBytes": 60442,
+    "sourceSha256": "AAE4FEAB88A819C85FA0428989226F398D8189041B52CCEF876C702DA003BFA5",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/intro6.png"
+  },
+  {
+    "source": "KOMBAT.GRA",
+    "sourceBytes": 43902,
+    "sourceSha256": "2374D518C242E88820A3EACBFDE2178D7566E43B44A0707E5EBF0BEA9ABD9D0F",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/kombat.png"
+  },
+  {
+    "source": "MATCH.GRA",
+    "sourceBytes": 1962,
+    "sourceSha256": "B20A937C4924AAA784429288AD7229EAAB406F859CE2D005D2EFD4E4AF3FDC27",
+    "type": "pcx",
+    "width": 127,
+    "height": 21,
+    "frames": 1,
+    "path": "stills/match.png"
+  },
+  {
+    "source": "NICK.GRA",
+    "sourceBytes": 3368,
+    "sourceSha256": "D078EE1F2FE38B0F418506160B4F5CBAEA10FE93EA76DEAC82C04501938C4B47",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        58,
+        58
+      ]
+    ],
+    "path": "sprites/nick"
+  },
+  {
+    "source": "NIFTY.GRA",
+    "sourceBytes": 7102,
+    "sourceSha256": "E835913F731324B2600E303B08AABDF1024D9DFD199B9BEA31CCEEEB58D8665F",
+    "type": "raw-sheet",
+    "frames": 3,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png"
+    ],
+    "dimensions": [
+      [
+        89,
+        10
+      ],
+      [
+        148,
+        23
+      ],
+      [
+        233,
+        12
+      ]
+    ],
+    "path": "sprites/nifty"
+  },
+  {
+    "source": "NIFTY1.GRA",
+    "sourceBytes": 10909,
+    "sourceSha256": "4222CA401F24C35E95E370A22E5605CDA6EA96DAC6E7038575DB0662CE91CA22",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 10876,
+    "path": "audio/nifty1.wav"
+  },
+  {
+    "source": "NIFTY2.GRA",
+    "sourceBytes": 34366,
+    "sourceSha256": "6D200830841AC1E39207346A84AC68EBB5C263A9761EAF2AE4996850C9D8CE7D",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 34333,
+    "path": "audio/nifty2.wav"
+  },
+  {
+    "source": "NIFTY3.GRA",
+    "sourceBytes": 23653,
+    "sourceSha256": "BCECF054CEC01929914EA14717BE1DE495CA93CDA6BDA8D424CE11A93F573DA6",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 23620,
+    "path": "audio/nifty3.wav"
+  },
+  {
+    "source": "P1Z1.GRA",
+    "sourceBytes": 1771,
+    "sourceSha256": "8DB8CB47D48D4936D2CC5F6EA2CD30B21E4A5750605BCAD32FDEDBADAB88086D",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p1z1"
+  },
+  {
+    "source": "P1Z2.GRA",
+    "sourceBytes": 1771,
+    "sourceSha256": "8DB8CB47D48D4936D2CC5F6EA2CD30B21E4A5750605BCAD32FDEDBADAB88086D",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p1z2"
+  },
+  {
+    "source": "P2Z1.GRA",
+    "sourceBytes": 1387,
+    "sourceSha256": "5CAF01D3F84815A0C842943DB9059633696303FCFB4C6182679A6842411B4E4F",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p2z1"
+  },
+  {
+    "source": "P2Z2.GRA",
+    "sourceBytes": 1387,
+    "sourceSha256": "C00F7E0F666C33B17A064DE22A4D61FB87FE84323061768E2EC07E6BC5881FA3",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        25,
+        9
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p2z2"
+  },
+  {
+    "source": "P3Z1.GRA",
+    "sourceBytes": 2557,
+    "sourceSha256": "FF09531BB19F51978492A89191BD64D21CD61870224AA8C5AE146CA86DFB8AC9",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p3z1"
+  },
+  {
+    "source": "P3Z2.GRA",
+    "sourceBytes": 2557,
+    "sourceSha256": "39EBBDF5FF5E4C6DC6C4C305EAA0B2F7E1A680EF2FA14E5425009A3CE1FDB4C8",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p3z2"
+  },
+  {
+    "source": "P4Z1.GRA",
+    "sourceBytes": 2203,
+    "sourceSha256": "9460D1B1DB66053DDD8AF3290B91B3A683E479E48AE8AE7D39EE9A6644A4B392",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p4z1"
+  },
+  {
+    "source": "P4Z2.GRA",
+    "sourceBytes": 2203,
+    "sourceSha256": "B62C85A4B0A12AB24F6D8CF7E3A01F033CF3D4EE20C3470E15996BE33249EA16",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p4z2"
+  },
+  {
+    "source": "P5Z1.GRA",
+    "sourceBytes": 2827,
+    "sourceSha256": "A98495DE3C9BB4322C9E2E7D6BD3B657935A0C158D75AC21E4180562D21A31D4",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p5z1"
+  },
+  {
+    "source": "P5Z2.GRA",
+    "sourceBytes": 2827,
+    "sourceSha256": "9146562395504C910AB14A1AE1388611573CD3B85A46CC3B3214864A9CE05D88",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        31,
+        15
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p5z2"
+  },
+  {
+    "source": "P6Z1.GRA",
+    "sourceBytes": 1771,
+    "sourceSha256": "8DB8CB47D48D4936D2CC5F6EA2CD30B21E4A5750605BCAD32FDEDBADAB88086D",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p6z1"
+  },
+  {
+    "source": "P6Z2.GRA",
+    "sourceBytes": 1771,
+    "sourceSha256": "8DB8CB47D48D4936D2CC5F6EA2CD30B21E4A5750605BCAD32FDEDBADAB88086D",
+    "type": "raw-sheet",
+    "frames": 7,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png"
+    ],
+    "dimensions": [
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "path": "sprites/p6z2"
+  },
+  {
+    "source": "P7Z1.GRA",
+    "sourceBytes": 4722,
+    "sourceSha256": "CD589605CBBCBE8A3D1C3DA2ABAF817D60AC095662C3234775CB6B52642E39BE",
+    "type": "raw-sheet",
+    "frames": 6,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png"
+    ],
+    "dimensions": [
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ]
+    ],
+    "path": "sprites/p7z1"
+  },
+  {
+    "source": "P7Z2.GRA",
+    "sourceBytes": 4722,
+    "sourceSha256": "CD589605CBBCBE8A3D1C3DA2ABAF817D60AC095662C3234775CB6B52642E39BE",
+    "type": "raw-sheet",
+    "frames": 6,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png"
+    ],
+    "dimensions": [
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        27
+      ]
+    ],
+    "path": "sprites/p7z2"
+  },
+  {
+    "source": "P8Z1.GRA",
+    "sourceBytes": 684,
+    "sourceSha256": "123BFB3E8F6DA4C3E42FF3B5FD988D9D64D5814C5810494DE9E9EA4564674C12",
+    "type": "raw-sheet",
+    "frames": 6,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png"
+    ],
+    "dimensions": [
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ]
+    ],
+    "path": "sprites/p8z1"
+  },
+  {
+    "source": "P8Z2.GRA",
+    "sourceBytes": 684,
+    "sourceSha256": "123BFB3E8F6DA4C3E42FF3B5FD988D9D64D5814C5810494DE9E9EA4564674C12",
+    "type": "raw-sheet",
+    "frames": 6,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png"
+    ],
+    "dimensions": [
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ],
+      [
+        22,
+        5
+      ]
+    ],
+    "path": "sprites/p8z2"
+  },
+  {
+    "source": "PADDLES.GRA",
+    "sourceBytes": 1232,
+    "sourceSha256": "8E5704F6FDAA27DD9ED41CFCC7601F04AFFF0CFE32EAF00E19AF7D62C00D6C83",
+    "type": "raw-sheet",
+    "frames": 8,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png"
+    ],
+    "dimensions": [
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        5,
+        30
+      ]
+    ],
+    "path": "sprites/paddles"
+  },
+  {
+    "source": "PURPBIO.GRA",
+    "sourceBytes": 97804,
+    "sourceSha256": "52D56D3FFC1681BF7E9F917645433E2A2F09E37456839C502BC5EF198865BC2B",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 21,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/purpbio"
+  },
+  {
+    "source": "REDBIO.GRA",
+    "sourceBytes": 83164,
+    "sourceSha256": "0CDCFE80DF99CD4095DA6FFF1B007B3663C4FFA389179E731CD54CA67E8949B1",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 12,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/redbio"
+  },
+  {
+    "source": "SCORES.GRA",
+    "sourceBytes": 1040,
+    "sourceSha256": "9EFBDBEECFAA2D9D31A2C561F8CBD48F21DB71FE3C7988E75C3304E13EA7BDF8",
+    "type": "raw-sheet",
+    "frames": 10,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png"
+    ],
+    "dimensions": [
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        10
+      ]
+    ],
+    "path": "sprites/scores"
+  },
+  {
+    "source": "SELECT.GRA",
+    "sourceBytes": 52122,
+    "sourceSha256": "B22CAC02F0CA360AA067C16F955EA6DAB4314E19EA2B8531B662C7035BBFB953",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/select.png"
+  },
+  {
+    "source": "SELECT0.GRA",
+    "sourceBytes": 19101,
+    "sourceSha256": "FA4BDF84002FA99058800AED4E0AAB9EB14918363E29E49573A33E2208A3D419",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/select0.png"
+  },
+  {
+    "source": "SELECT1.GRA",
+    "sourceBytes": 1940,
+    "sourceSha256": "42B776F306D388837CA4F5BCD11C5C14C1B902160D141FA6E91A9443E1215E9A",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        44,
+        44
+      ]
+    ],
+    "path": "sprites/select1"
+  },
+  {
+    "source": "SELECT2.GRA",
+    "sourceBytes": 1940,
+    "sourceSha256": "CE1298365A40AA25924EEB001ADE8B4B2093888021A0E2CFC2041B7EA92BAA75",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        44,
+        44
+      ]
+    ],
+    "path": "sprites/select2"
+  },
+  {
+    "source": "SPEW.GRA",
+    "sourceBytes": 165296,
+    "sourceSha256": "0AEC222E767404DF124FA0C689883F11F418FDCF9D30C24626C35B0797E0ECD3",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 18,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png"
+    ],
+    "durationsMs": [
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214,
+      214
+    ],
+    "path": "animations/spew"
+  },
+  {
+    "source": "SPEW_W1.GRA",
+    "sourceBytes": 8947,
+    "sourceSha256": "A25C19E6ED6C7EDEA510386E182C57EA8FE0938FD2AAD9E5B1B16961D095862E",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spew_w1.png"
+  },
+  {
+    "source": "SPEW_W2.GRA",
+    "sourceBytes": 9432,
+    "sourceSha256": "F04EB485E69C71330B76E021E83E01C012390AB4F4BCCD8DAF7F187870DD35B2",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spew_w2.png"
+  },
+  {
+    "source": "SPEW_W3.GRA",
+    "sourceBytes": 13552,
+    "sourceSha256": "F0811953165B93ADA2AE7D5E1C21E33F5174E59A737DC19545A4041D67B603CD",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spew_w3.png"
+  },
+  {
+    "source": "SPEW_W4.GRA",
+    "sourceBytes": 21748,
+    "sourceSha256": "6F90E6A5482F8FA2F2BA971636CAAE86FC3AFFE1AB94A52087AB094BB5C2AF0C",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spew_w4.png"
+  },
+  {
+    "source": "SPEW_W5.GRA",
+    "sourceBytes": 34467,
+    "sourceSha256": "6C1FF0941CCE60F0D0B876C596BB3D4968C58E33AD28BCCB956B22905A50CAA3",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spew_w5.png"
+  },
+  {
+    "source": "SPEWM.GRA",
+    "sourceBytes": 30914,
+    "sourceSha256": "8929754B7EFDBAD8006C0B02E9849C4DDB4F4AE0F2BD113CADF9C9144D3BD288",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spewm.png"
+  },
+  {
+    "source": "SPEWS.GRA",
+    "sourceBytes": 32700,
+    "sourceSha256": "BB6BF7B21DBAD7C8389A3D946E6B0F4B3038DC596044EDD2DF94CF88A1FACE1B",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/spews.png"
+  },
+  {
+    "source": "STAFF.GRA",
+    "sourceBytes": 28273,
+    "sourceSha256": "450500083FBB673269C8922E698A5C1D54BE8EC89A5C08C657EC904D0E85CBD2",
+    "type": "raw-sheet",
+    "frames": 8,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png"
+    ],
+    "dimensions": [
+      [
+        62,
+        61
+      ],
+      [
+        59,
+        60
+      ],
+      [
+        60,
+        60
+      ],
+      [
+        56,
+        57
+      ],
+      [
+        60,
+        60
+      ],
+      [
+        61,
+        62
+      ],
+      [
+        54,
+        56
+      ],
+      [
+        61,
+        61
+      ]
+    ],
+    "path": "sprites/staff"
+  },
+  {
+    "source": "SUCK.GRA",
+    "sourceBytes": 12964,
+    "sourceSha256": "F32D0B80B171C6826565CFA7146C1FF8F5DEFE60BC1B0E484AB4337E53AE52C0",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        144,
+        90
+      ]
+    ],
+    "path": "sprites/suck"
+  },
+  {
+    "source": "SWITCH.GRA",
+    "sourceBytes": 993,
+    "sourceSha256": "235A6E3F8473120E70D161FED98966F611937DBABE5A5BCE4F3ED52646ED8CD7",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        43,
+        23
+      ]
+    ],
+    "path": "sprites/switch"
+  },
+  {
+    "source": "TABLE1.GRA",
+    "sourceBytes": 3070,
+    "sourceSha256": "08062AC08BBF7789F9B8CE0EE267AF57D2AA9871A3422FF683C073BAD00B3A2E",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        73,
+        42
+      ]
+    ],
+    "path": "sprites/table1"
+  },
+  {
+    "source": "TABLE2.GRA",
+    "sourceBytes": 14876,
+    "sourceSha256": "C043150BA9E1C726013A3A369C8F2C060C4629A104B11AB25E70059EA28B7146",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/table2.png"
+  },
+  {
+    "source": "TAUNT.GRA",
+    "sourceBytes": 41758,
+    "sourceSha256": "58DEFA85266D6007193C90E6532F3195824BE18A2C40A78356013D96705A9CB0",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/taunt.png"
+  },
+  {
+    "source": "TAUNTB.GRA",
+    "sourceBytes": 35334,
+    "sourceSha256": "9D0C6DF05345C7C608BDC59703E1D5D453A4DBF50CD33D67F1D5001EEB08BAEE",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/tauntb.png"
+  },
+  {
+    "source": "TAUNTC.GRA",
+    "sourceBytes": 11222,
+    "sourceSha256": "58D562BC15023D564C4146EB4432943FB6E0B3877A8C4907D9A1D22F1FF70777",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/tauntc.png"
+  },
+  {
+    "source": "VACID.GRA",
+    "sourceBytes": 59433,
+    "sourceSha256": "74C642F3C8AD0A853B18BAD457C6D65F37449E836D0D4DE39B3DDA71397D2845",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 59400,
+    "path": "audio/vacid.wav"
+  },
+  {
+    "source": "VBOOM.GRA",
+    "sourceBytes": 21827,
+    "sourceSha256": "88CFA6365D31A1A8B9A597405984C6DB267CD33ABB8F04FD364F7F2F35F4A5FF",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 11111,
+    "sampleWidth": 2,
+    "sampleFrames": 21794,
+    "path": "audio/vboom.wav"
+  },
+  {
+    "source": "VEVIL.GRA",
+    "sourceBytes": 20236,
+    "sourceSha256": "B25F0718AFD59F497567693C339D57F1A4DAA3CF32A38504EDF6F636B11FA292",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 8000,
+    "sampleWidth": 2,
+    "sampleFrames": 20203,
+    "path": "audio/vevil.wav"
+  },
+  {
+    "source": "VFSCR.GRA",
+    "sourceBytes": 19702,
+    "sourceSha256": "20D1A0F9BDBFB5C9BDCE57874780841C4CF9899E9F3E737121AFAED7722797C0",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 8000,
+    "sampleWidth": 2,
+    "sampleFrames": 19669,
+    "path": "audio/vfscr.wav"
+  },
+  {
+    "source": "VGLASS.GRA",
+    "sourceBytes": 36552,
+    "sourceSha256": "ECC199CE659FA06EEEB09C4EE343B531342B19AA9C6A8ABF5A003514CE9A8462",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 11111,
+    "sampleWidth": 2,
+    "sampleFrames": 36519,
+    "path": "audio/vglass.wav"
+  },
+  {
+    "source": "VHURT.GRA",
+    "sourceBytes": 17825,
+    "sourceSha256": "E7720E807312C61FE08F43DFDBF10BF3D86DF735C076D49458182AB9175DB8AA",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 11111,
+    "sampleWidth": 2,
+    "sampleFrames": 17792,
+    "path": "audio/vhurt.wav"
+  },
+  {
+    "source": "VIMPALE.GRA",
+    "sourceBytes": 21701,
+    "sourceSha256": "42D1BAB876057057388ECFB72A7303D87150AD2453C5674D65AAC912F94EF0AF",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 21668,
+    "path": "audio/vimpale.wav"
+  },
+  {
+    "source": "VJOSH.GRA",
+    "sourceBytes": 20893,
+    "sourceSha256": "3FF9917B6E6A382B459AC840E284AD47C3BC70E69F5815FF6000B3F92B95AC1F",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 20860,
+    "path": "audio/vjosh.wav"
+  },
+  {
+    "source": "VMSCR.GRA",
+    "sourceBytes": 18847,
+    "sourceSha256": "A593B8D1858A101A22106C3474D8AC5763A9DB93A105461D16A76E9D21E74CD8",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 18814,
+    "path": "audio/vmscr.wav"
+  },
+  {
+    "source": "VNICK.GRA",
+    "sourceBytes": 22837,
+    "sourceSha256": "9ED1E2B0A8A525624B67C3E529E888262653A963F04B00E6030D36A9F19C37A4",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 22804,
+    "path": "audio/vnick.wav"
+  },
+  {
+    "source": "VS1.GRA",
+    "sourceBytes": 10501,
+    "sourceSha256": "B97215D1F2C289917B11E464F66BCEC0F3D7EED22FADD37993FFCB21CFE41222",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs1.png"
+  },
+  {
+    "source": "VS2.GRA",
+    "sourceBytes": 10447,
+    "sourceSha256": "A6A2D7501AE68516741F8EE0FE8AF9807D62044A54AFEBC67C77BD012CD6AD9E",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs2.png"
+  },
+  {
+    "source": "VS3.GRA",
+    "sourceBytes": 7140,
+    "sourceSha256": "4F9B8C8750F94005F73DBFFF5A7294EAE44CBCAF29E97C84A5EFECB65A21AFC0",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs3.png"
+  },
+  {
+    "source": "VS4.GRA",
+    "sourceBytes": 6401,
+    "sourceSha256": "7BBE779D44AE7BBA0156663C8C05359DE9EEBDBA07EC898A936CE2396EB0DE49",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs4.png"
+  },
+  {
+    "source": "VS5.GRA",
+    "sourceBytes": 7424,
+    "sourceSha256": "774482F4EE67719026E001D6F236E195961B770A7F4FD1A158B8369FD0C23B3E",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs5.png"
+  },
+  {
+    "source": "VS6.GRA",
+    "sourceBytes": 6658,
+    "sourceSha256": "66A17E6BA4D24C15D98754F64939FDCFE0CA40B0ECEAED3128D999A5990DC82D",
+    "type": "pcx",
+    "width": 160,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/vs6.png"
+  },
+  {
+    "source": "VSTART.GRA",
+    "sourceBytes": 15487,
+    "sourceSha256": "EC698D28B2A17F6BA7BC550B5D30A95F1048714C02B2F2EF6985D2EC97BD16FA",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 15454,
+    "path": "audio/vstart.wav"
+  },
+  {
+    "source": "VWARN.GRA",
+    "sourceBytes": 23266,
+    "sourceSha256": "01C6EFD34CBC80F4F5D39BB14419BC7E2477D5C423E500294F35F9A36E17E62C",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 8000,
+    "sampleWidth": 2,
+    "sampleFrames": 23233,
+    "path": "audio/vwarn.wav"
+  },
+  {
+    "source": "VWHOOPS.GRA",
+    "sourceBytes": 9835,
+    "sourceSha256": "A6CE041AC8B59F70F9362C2FEB66B7B67CE6E7E93F8074DB0C21D71BCE8BD957",
+    "type": "voc",
+    "blockTypes": [
+      1
+    ],
+    "channels": 1,
+    "sampleRate": 10989,
+    "sampleWidth": 2,
+    "sampleFrames": 9802,
+    "path": "audio/vwhoops.wav"
+  },
+  {
+    "source": "WINNER1.GRA",
+    "sourceBytes": 13434,
+    "sourceSha256": "FDF5036FC3180B7FB192C8CEA55ED8F8A9E854A26CB4FE89E844EA589205C13F",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/winner1.png"
+  },
+  {
+    "source": "WINNER2.GRA",
+    "sourceBytes": 14550,
+    "sourceSha256": "FFE1C20597D68F0FE7A8E86FEB7758F4950BA865EA363A614B7176C26213AA48",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/winner2.png"
+  },
+  {
+    "source": "WINNER3.GRA",
+    "sourceBytes": 11371,
+    "sourceSha256": "E4C2A347F46A8CF8A0E04DE311171305443EB69BE180A941754014E7D65C1634",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/winner3.png"
+  },
+  {
+    "source": "WINNER4.GRA",
+    "sourceBytes": 10337,
+    "sourceSha256": "3407E2F0F4733779CF2E221C780755B13606DF195618EE31A455F626F9420A0D",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/winner4.png"
+  },
+  {
+    "source": "WINNER5.GRA",
+    "sourceBytes": 12649,
+    "sourceSha256": "F70739F9C644BDA57B05761C403F0DFCE307551D98881E3BBF06D41DB9330E8C",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/winner5.png"
+  },
+  {
+    "source": "WINPAD.GRA",
+    "sourceBytes": 4823,
+    "sourceSha256": "60D309FFE8C15DCF5F8D06C8AFFB578AF79F2A07AFD9A2619BC5347986F7FECA",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        61,
+        79
+      ]
+    ],
+    "path": "sprites/winpad"
+  },
+  {
+    "source": "WINS.GRA",
+    "sourceBytes": 2413,
+    "sourceSha256": "36B8D84A9E64D2785288BD84971BDD321AFB6712409EB883A326A1A93B665F55",
+    "type": "raw-sheet",
+    "frames": 1,
+    "frameFiles": [
+      "0000.png"
+    ],
+    "dimensions": [
+      [
+        73,
+        33
+      ]
+    ],
+    "path": "sprites/wins"
+  },
+  {
+    "source": "YELLBIO.GRA",
+    "sourceBytes": 132770,
+    "sourceSha256": "752983F1CFF03E6C89347B3EE1928AA39FFDCAF1CAF53428B73C54F061B0CC01",
+    "type": "fli",
+    "width": 320,
+    "height": 200,
+    "frames": 21,
+    "frameFiles": [
+      "0000.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "0009.png",
+      "0010.png",
+      "0011.png",
+      "0012.png",
+      "0013.png",
+      "0014.png",
+      "0015.png",
+      "0016.png",
+      "0017.png",
+      "0018.png",
+      "0019.png",
+      "0020.png"
+    ],
+    "durationsMs": [
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71,
+      71
+    ],
+    "path": "animations/yellbio"
+  },
+  {
+    "source": "ZONE1.GRA",
+    "sourceBytes": 18212,
+    "sourceSha256": "63DA9332A00B726725A3A6D3FC9BF6860AD9679ED4479F2EDB64E4CAA4951E7E",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone1.png"
+  },
+  {
+    "source": "ZONE1T.GRA",
+    "sourceBytes": 2057,
+    "sourceSha256": "A32241D5971AFC27F15786E6DE46A046CBC8A61881C45A999467884E43E91852",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone1t.png"
+  },
+  {
+    "source": "ZONE2.GRA",
+    "sourceBytes": 39419,
+    "sourceSha256": "B65E6FF86629BC0A10568BE423A48CAA3247AC508A48ED2AC4AECE55156A26D3",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone2.png"
+  },
+  {
+    "source": "ZONE2S.GRA",
+    "sourceBytes": 30870,
+    "sourceSha256": "AEF49C600194F110747E7AA57A670A1B2723E120B2B6E959CFE4CFD2D90AA636",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone2s.png"
+  },
+  {
+    "source": "ZONE2T.GRA",
+    "sourceBytes": 1571,
+    "sourceSha256": "49141BE22C83485BAC44EF0F3E34A3973C2430B949DA706775EC6A24D0C3FD73",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone2t.png"
+  },
+  {
+    "source": "ZONE3.GRA",
+    "sourceBytes": 27929,
+    "sourceSha256": "AFE06B79A67FAEC46326BE61F9810F304C11F3827B1EEEFA3BCCDCD4256F25D8",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone3.png"
+  },
+  {
+    "source": "ZONE3S.GRA",
+    "sourceBytes": 25439,
+    "sourceSha256": "8A32E480F53CD94C5441166FBD324F7DB9A42F71957992F7A930B0E6CAB14ACF",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone3s.png"
+  },
+  {
+    "source": "ZONE3T.GRA",
+    "sourceBytes": 2513,
+    "sourceSha256": "75826BF15058478888FE727B344B4C58A9F39781ADF5FEC993006ABB553A5745",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone3t.png"
+  },
+  {
+    "source": "ZONE4.GRA",
+    "sourceBytes": 21220,
+    "sourceSha256": "F678A05663E316B17FE74487F61FA7A5FC820B4440388399DE21E7E6BABFE3B8",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone4.png"
+  },
+  {
+    "source": "ZONE4T.GRA",
+    "sourceBytes": 1745,
+    "sourceSha256": "D936E65223E42E558BCF6ACA34128030A2FE3045CB67C964404AFD3971ED76E8",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone4t.png"
+  },
+  {
+    "source": "ZONE5.GRA",
+    "sourceBytes": 42676,
+    "sourceSha256": "DEB65289211A4292951B98C5062EF3659FA56F0895AE4B9FF9F48387F1889641",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone5.png"
+  },
+  {
+    "source": "ZONE5T.GRA",
+    "sourceBytes": 2132,
+    "sourceSha256": "CD97AFCAFB11511720B3C8EE480F361C953AC05EDD8739AC90E8FFDE181B107A",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone5t.png"
+  },
+  {
+    "source": "ZONE6.GRA",
+    "sourceBytes": 21351,
+    "sourceSha256": "B69C1055C293821368DDAFD999E010D6F6A93665EFC28D46A67135BBE3E6FF31",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone6.png"
+  },
+  {
+    "source": "ZONE6T.GRA",
+    "sourceBytes": 2194,
+    "sourceSha256": "DBD180FF7BB6A840156CA25A54A85D03E7D29A9E88E9C5E04B289B93760BA192",
+    "type": "pcx",
+    "width": 320,
+    "height": 25,
+    "frames": 1,
+    "path": "stills/zone6t.png"
+  },
+  {
+    "source": "ZONE7.GRA",
+    "sourceBytes": 50892,
+    "sourceSha256": "160DE97B7CC24911B3170971C5CC11A42864CD98CCDB8CC6AAFAB54B1E33092E",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone7.png"
+  },
+  {
+    "source": "ZONE8.GRA",
+    "sourceBytes": 64897,
+    "sourceSha256": "716F1B42FA1E75C3E9D88D5C446A2671A016D22C1B397800CAF27CBB1D166F3E",
+    "type": "pcx",
+    "width": 320,
+    "height": 200,
+    "frames": 1,
+    "path": "stills/zone8.png"
+  }
+]

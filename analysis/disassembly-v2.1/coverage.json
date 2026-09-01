@@ -1,0 +1,56 @@
+[
+  {
+    "segment": 0,
+    "resource_bytes": 24,
+    "function_bytes": 0,
+    "metadata_bytes": 24
+  },
+  {
+    "segment": 1,
+    "resource_bytes": 47236,
+    "function_bytes": 46008,
+    "metadata_bytes": 1228
+  },
+  {
+    "segment": 2,
+    "resource_bytes": 8214,
+    "function_bytes": 7708,
+    "metadata_bytes": 506
+  },
+  {
+    "segment": 3,
+    "resource_bytes": 38580,
+    "function_bytes": 37150,
+    "metadata_bytes": 1430
+  },
+  {
+    "segment": 4,
+    "resource_bytes": 71872,
+    "function_bytes": 69806,
+    "metadata_bytes": 2066
+  },
+  {
+    "segment": 5,
+    "resource_bytes": 2160,
+    "function_bytes": 2112,
+    "metadata_bytes": 48
+  },
+  {
+    "segment": 6,
+    "resource_bytes": 5094,
+    "function_bytes": 4630,
+    "metadata_bytes": 464
+  },
+  {
+    "segment": 8,
+    "resource_bytes": 182,
+    "function_bytes": 174,
+    "metadata_bytes": 8
+  },
+  {
+    "segment": 9,
+    "resource_bytes": 56,
+    "function_bytes": 48,
+    "metadata_bytes": 8
+  }
+]

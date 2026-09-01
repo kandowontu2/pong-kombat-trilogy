@@ -1,0 +1,8 @@
+[package]
+name = "pict_decoder"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxideav-pict = { version = "0.0.4", default-features = false }
+png = "0.18.0"

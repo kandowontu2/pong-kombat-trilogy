@@ -1,0 +1,38 @@
+# Generated build and test output
+/build/
+/build-*/
+/dist/
+/self-test*/
+
+# Preserved originals and large intermediate recovery trees are local-only.
+/reference/
+/analysis/originals/
+/analysis/reference/
+/analysis/resources-v2.0/
+/analysis/resources-v2.1/
+/analysis/resources-v2.1-patch/
+/analysis/assets-v2.1/
+/analysis/assets-v2.1-complete/
+/analysis/assets-v2.1-decoded/
+/analysis/assets-v2.1-full/
+/analysis/pict-test/
+/analysis/*.rsrc
+
+# Visual QA sheets are derived from the embedded PK2 images.
+/analysis/assets-pk2/contact-sheets/
+
+# Local extraction tool distributions and compiler output
+/tools/unar/
+/tools/unarWindows.zip
+/tools/pict_decoder/target/
+/tools/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+*.VC.db
+.vs/
