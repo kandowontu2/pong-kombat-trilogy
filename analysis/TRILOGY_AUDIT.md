@@ -86,16 +86,16 @@ The cheat hotkey is registered globally by the app and routed only to the active
 
 ## Verification contract
 
-The hidden `--self-test <directory>` path validates all 2,952 embedded media records and renders 26 deterministic BMPs. It also checks:
+The hidden `--self-test <directory>` path validates all 2,952 embedded media records and renders 27 deterministic BMPs. It also checks:
 
 1. All three launch paths and logical canvas changes.
 2. Shared controller settings and a remapped input path.
 3. Every published regular-character PK1/PK2 projectile sequence.
 4. Every published regular-character PK1 fatality and PK2 dismantle sequence, plus all twelve PK2 secret-paddle projectile inputs and the `RYANART` selection route.
 5. PK1, PK2, and PK3 terminal lifecycle returns.
-6. Launcher, intro, mode, select, VS, match, cheat, fatality, and dismantle rendering.
+6. Launcher, credits, intro, mode, select, VS, match, cheat, fatality, and dismantle rendering.
 7. All 16 embedded PK2 MIDI/RMID records through the native parser.
 
 The live window test starts the release as a normal GUI process, locates its HWND, performs two `Alt+Enter` transitions, verifies removal/restoration of the overlapped style, verifies monitor-sized expansion, and closes the same window. Final packaging additionally checks the PE GUI subsystem, system-only imports, embedded resource count, relocated self-test behavior, release byte size, and SHA-256.
 
-Final release: `dist/Pong Kombat Trilogy.exe`, 23,569,315 bytes, SHA-256 `5D9F93BFE9A0A90041D7A2068B610189D03C9D52009E138666ACB158BBC75478`. A relocation test launches that exact copy with `%TEMP%` as its working directory and must return 0 while producing all 26 reference frames without any companion files.
+Final release v1.0.1: `dist/Pong Kombat Trilogy.exe`, 23,574,038 bytes, SHA-256 `B2D6D9720A0FC499D052F33902669BAB33BEF2FE6EEAD945351B05B6BC71789F`. A relocation test launched that exact copy with `%TEMP%` as its working directory, returned 0, and produced all 27 reference frames without any companion files.

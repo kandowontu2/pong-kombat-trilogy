@@ -109,6 +109,12 @@ int runSelfTest(const std::filesystem::path& output) {
     if (!renderer.saveBmp((output / L"12-shared-controller-settings.bmp").c_str())) return 39;
     tap(collection, VK_ESCAPE);
     if (!collection.atLauncher()) return 40;
+    tap(collection, VK_DOWN);
+    tap(collection, VK_RETURN);
+    collection.render();
+    if (!renderer.saveBmp((output / L"27-trilogy-credits.bmp").c_str())) return 61;
+    tap(collection, VK_ESCAPE);
+    if (!collection.atLauncher()) return 62;
 
     pk3::LegacyGame pk1Lifecycle(pk3::LegacyGame::Edition::PongKombat, renderer, audio);
     pk1Lifecycle.initialize();

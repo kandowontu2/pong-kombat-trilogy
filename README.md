@@ -10,7 +10,7 @@ The packaged release is:
 dist/Pong Kombat Trilogy.exe
 ```
 
-Release size: 23,569,315 bytes. SHA-256: `5D9F93BFE9A0A90041D7A2068B610189D03C9D52009E138666ACB158BBC75478`.
+Release v1.0.1 size: 23,574,038 bytes. SHA-256: `B2D6D9720A0FC499D052F33902669BAB33BEF2FE6EEAD945351B05B6BC71789F`.
 
 The current packaged build is also available from the public [GitHub Releases page](https://github.com/kandowontu/pong-kombat-trilogy/releases/latest).
 
@@ -23,6 +23,15 @@ Global controls:
 - `Esc`: pause an active match, close an overlay, or return from a menu.
 
 Controller Settings is available directly in the trilogy launcher. It supports two independently assigned XInput slots and remappable direction/action bindings. The settings are shared by all three games and saved under the current Windows user.
+
+## Credits
+
+- **Pong Kombat:** Stefan Gagne (code, art, sound, and 3-D rendering); Nick Steele, Julio DeLeon, David Hunt, Josh Saxon, and George Sopko.
+- **Pong Kombat 2:** Ryan Sadwick / Sadwick Productions and Arturo Aquino / Art Entertainment; based on Pong Kombat by Gagne Software, used with permission; documentation by Stefan Gagne.
+- **Pong Kombat 3:** Brandon Kuroda; contributions from Brandon Yowell, Nathan Rosen, Graeme Humphries, Misha Sakellaropoulo, and Brandon Miguel.
+- **Native Windows preservation port:** kandowontu, with engineering assistance from OpenAI Codex.
+
+The same attribution is available from **Credits** in the executable's trilogy launcher.
 
 PK1 retains its original keyboard layout: Player 1 uses `W`, `X`, and left `Shift`; Player 2 uses the arrow keys and right `Shift`. In one-player tournament mode the human is Player 2, as in the DOS release. PK2 retains arrows plus left `Shift`/`Ctrl` for Player 1 and numpad `8/2/4/6`, `+`, and `Enter` for Player 2. PK3 controls and the complete recovered move/kode reference are documented in [GAMEPLAY_REFERENCE.md](analysis/GAMEPLAY_REFERENCE.md).
 
@@ -56,7 +65,7 @@ Start-Process -FilePath $exe `
   -WindowStyle Hidden -Wait
 ```
 
-This validates all 2,952 embedded media resources, exercises the three state machines, all published PK1/PK2 regular-character move and finisher sequences, all twelve PK2 secret-paddle projectile inputs, shared controller configuration, the hidden cheat overlays, and every terminal return path. It writes 26 reference BMPs. `tests/window_smoke_test.ps1` separately verifies a live `Alt+Enter` fullscreen round trip.
+This validates all 2,952 embedded media resources, exercises the three state machines, all published PK1/PK2 regular-character move and finisher sequences, all twelve PK2 secret-paddle projectile inputs, shared controller configuration, the credits screen, the hidden cheat overlays, and every terminal return path. It writes 27 reference BMPs. `tests/window_smoke_test.ps1` separately verifies a live `Alt+Enter` fullscreen round trip.
 
 ## Preservation and audit record
 

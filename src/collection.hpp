@@ -22,11 +22,12 @@ public:
     bool atLauncher() const { return active_ == Active::Launcher; }
 
 private:
-    enum class Active { Launcher, PongKombat, PongKombat2, PongKombat3, Settings };
+    enum class Active { Launcher, PongKombat, PongKombat2, PongKombat3, Settings, Credits };
 
     void launchSelection();
     void returnToLauncher();
     void renderLauncher();
+    void renderCredits();
 
     Renderer& renderer_;
     AudioEngine& audio_;
