@@ -10,9 +10,9 @@ The packaged release is:
 dist/Pong Kombat Trilogy.exe
 ```
 
-Release v1.0.1 size: 23,574,038 bytes. SHA-256: `B2D6D9720A0FC499D052F33902669BAB33BEF2FE6EEAD945351B05B6BC71789F`.
+Release v1.0.1 size: 23,574,038 bytes. SHA-256: `45D39A8D47FA74B109F7048FE69A73ADEB1667C5236038AB57B79844A83B6A72`.
 
-The current packaged build is also available from the public [GitHub Releases page](https://github.com/kandowontu/pong-kombat-trilogy/releases/latest).
+The current packaged build is also available from the public [GitHub Releases page](https://github.com/kandowontu2/pong-kombat-trilogy/releases/latest).
 
 Global controls:
 
@@ -29,7 +29,7 @@ Controller Settings is available directly in the trilogy launcher. It supports t
 - **Pong Kombat:** Stefan Gagne (code, art, sound, and 3-D rendering); Nick Steele, Julio DeLeon, David Hunt, Josh Saxon, and George Sopko.
 - **Pong Kombat 2:** Ryan Sadwick / Sadwick Productions and Arturo Aquino / Art Entertainment; based on Pong Kombat by Gagne Software, used with permission; documentation by Stefan Gagne.
 - **Pong Kombat 3:** Brandon Kuroda; contributions from Brandon Yowell, Nathan Rosen, Graeme Humphries, Misha Sakellaropoulo, and Brandon Miguel.
-- **Native Windows preservation port:** kandowontu, with engineering assistance from OpenAI Codex.
+- **Native Windows preservation port:** kandowontu2, with engineering assistance from OpenAI Codex.
 
 The same attribution is available from **Credits** in the executable's trilogy launcher.
 
