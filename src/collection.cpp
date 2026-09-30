@@ -162,7 +162,7 @@ void Collection::renderCredits() {
     renderer_.text("Misha Sakellaropoulo and Brandon Miguel", rect(20, 282, 620, 302), 9, RGB(155, 155, 165));
 
     renderer_.text("NATIVE WINDOWS PRESERVATION PORT", rect(30, 312, 610, 337), 14, RGB(240, 45, 25));
-    renderer_.text("kandowontu2 - preservation project and release", rect(40, 337, 600, 358), 11,
+    renderer_.text("kandowontu - preservation project and release", rect(40, 337, 600, 358), 11,
                    RGB(225, 225, 225));
     renderer_.text("Engineering assistance: OpenAI Codex", rect(40, 357, 600, 378), 11, RGB(225, 225, 225));
 

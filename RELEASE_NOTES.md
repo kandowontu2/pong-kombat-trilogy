@@ -23,4 +23,4 @@ This is the complete native Windows preservation release of Pong Kombat 1.5, Pon
 
 The release build passes the deterministic embedded-resource and gameplay self-test, producing all 27 expected reference frames. It also passes a live window smoke test covering the `Alt+Enter` windowed/fullscreen round trip.
 
-Standalone executable SHA-256: `45D39A8D47FA74B109F7048FE69A73ADEB1667C5236038AB57B79844A83B6A72`
+Standalone executable SHA-256: `13F179F8CFAD70090DB3433C7E435E30A9261C491F57B20C35DD7B31D3FC7B84`
