@@ -15,7 +15,7 @@ This is the complete native Windows preservation release of Pong Kombat 1.5, Pon
 
 ## Downloads
 
-- **Pong Kombat Trilogy.exe** — standalone executable; no installation or external assets required.
+- **Pong-Kombat-Trilogy.exe** — standalone executable; no installation or external assets required.
 - **Pong-Kombat-Trilogy-v1.0.1-Windows-x64.zip** — executable plus the readme, preservation notice, release notes, and gameplay reference.
 - **SHA256SUMS.txt** — SHA-256 checksums for both downloadable builds.
 
